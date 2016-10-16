@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		629739D6EBAE30F8D0DD267B /* Pods_Crave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54140294E73E5A90303013E4 /* Pods_Crave.framework */; };
 		C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31CB96D1DB30B7400918582 /* CraveApi.swift */; };
 		C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D401DB2B1460024E577 /* AppDelegate.swift */; };
 		C3319D431DB2B1460024E577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D421DB2B1460024E577 /* ViewController.swift */; };
 		C3319D461DB2B1460024E577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3319D441DB2B1460024E577 /* Main.storyboard */; };
 		C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3319D471DB2B1460024E577 /* Assets.xcassets */; };
 		C3319D4B1DB2B1460024E577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */; };
+		C339D73E1DB310A400BC4D66 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D73D1DB310A400BC4D66 /* MapView.swift */; };
+		C339D74E1DB3431700BC4D66 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D74D1DB3431700BC4D66 /* Requests.swift */; };
+		C339D7501DB34BCE00BC4D66 /* nearbyRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D74F1DB34BCE00BC4D66 /* nearbyRestaurants.swift */; };
+		C339D7521DB34C2C00BC4D66 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7511DB34C2C00BC4D66 /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54140294E73E5A90303013E4 /* Pods_Crave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94716F2416C1071B15E4D3F5 /* Pods-Crave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crave/Pods-Crave.debug.xcconfig"; sourceTree = "<group>"; };
 		C31CB96D1DB30B7400918582 /* CraveApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraveApi.swift; sourceTree = "<group>"; };
 		C3319D3D1DB2B1460024E577 /* Crave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3319D401DB2B1460024E577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		C3319D471DB2B1460024E577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3319D4A1DB2B1460024E577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3319D4C1DB2B1460024E577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C339D73D1DB310A400BC4D66 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C339D74D1DB3431700BC4D66 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		C339D74F1DB34BCE00BC4D66 /* nearbyRestaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearbyRestaurants.swift; sourceTree = "<group>"; };
+		C339D7511DB34C2C00BC4D66 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		F08716CB759CD475E761BF23 /* Pods-Crave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crave.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crave/Pods-Crave.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,16 +43,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629739D6EBAE30F8D0DD267B /* Pods_Crave.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CB654741E3E75B5873FA690 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94716F2416C1071B15E4D3F5 /* Pods-Crave.debug.xcconfig */,
+				F08716CB759CD475E761BF23 /* Pods-Crave.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE18AB2079E9C41CE07C1E9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54140294E73E5A90303013E4 /* Pods_Crave.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C31CB96F1DB30B8600918582 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				C31CB96D1DB30B7400918582 /* CraveApi.swift */,
+				C339D74D1DB3431700BC4D66 /* Requests.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -50,6 +81,8 @@
 			children = (
 				C3319D3F1DB2B1460024E577 /* Crave */,
 				C3319D3E1DB2B1460024E577 /* Products */,
+				3CB654741E3E75B5873FA690 /* Pods */,
+				AE18AB2079E9C41CE07C1E9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +99,10 @@
 			children = (
 				C31CB96F1DB30B8600918582 /* Network */,
 				C3319D401DB2B1460024E577 /* AppDelegate.swift */,
+				C339D74F1DB34BCE00BC4D66 /* nearbyRestaurants.swift */,
+				C339D7511DB34C2C00BC4D66 /* Restaurant.swift */,
 				C3319D421DB2B1460024E577 /* ViewController.swift */,
+				C339D73D1DB310A400BC4D66 /* MapView.swift */,
 				C3319D441DB2B1460024E577 /* Main.storyboard */,
 				C3319D471DB2B1460024E577 /* Assets.xcassets */,
 				C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */,
@@ -82,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3319D4F1DB2B1460024E577 /* Build configuration list for PBXNativeTarget "Crave" */;
 			buildPhases = (
+				72FDE9B6A45F80B325A1D447 /* [CP] Check Pods Manifest.lock */,
 				C3319D391DB2B1460024E577 /* Sources */,
 				C3319D3A1DB2B1460024E577 /* Frameworks */,
 				C3319D3B1DB2B1460024E577 /* Resources */,
+				3EAD9005211260CDC53D8EA1 /* [CP] Embed Pods Frameworks */,
+				57F7AF38C0363BD49691945A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -107,6 +146,7 @@
 				TargetAttributes = {
 					C3319D3C1DB2B1460024E577 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -142,14 +182,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EAD9005211260CDC53D8EA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crave/Pods-Crave-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57F7AF38C0363BD49691945A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Crave/Pods-Crave-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72FDE9B6A45F80B325A1D447 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3319D391DB2B1460024E577 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C3319D431DB2B1460024E577 /* ViewController.swift in Sources */,
+				C339D73E1DB310A400BC4D66 /* MapView.swift in Sources */,
 				C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */,
+				C339D7521DB34C2C00BC4D66 /* Restaurant.swift in Sources */,
+				C339D74E1DB3431700BC4D66 /* Requests.swift in Sources */,
 				C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */,
+				C339D7501DB34BCE00BC4D66 /* nearbyRestaurants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +360,7 @@
 		};
 		C3319D501DB2B1460024E577 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94716F2416C1071B15E4D3F5 /* Pods-Crave.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Crave/Info.plist;
@@ -280,6 +373,7 @@
 		};
 		C3319D511DB2B1460024E577 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F08716CB759CD475E761BF23 /* Pods-Crave.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Crave/Info.plist;

@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import GoogleMaps
+
+//Unneeded Global Variables for location
+let ColbyLat = 44.56362
+let ColbyLon = -69.6604
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        GMSServices.provideAPIKey("AIzaSyDYB7hpothkX4P8pvkuvoswkhhmciARvlY")
+        
         return true
     }
 

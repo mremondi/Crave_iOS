@@ -7,7 +7,7 @@
 //
 
 struct CraveApi {
-    let API_ENDPOINT = "https://guarded-caverns-87227.herokuapp.com/api/"
+    let API_ENDPOINT = "https://guarded-caverns-87227.herokuapp.com/api"
     
     let RESTAURANTS_ENPOINT = "/restaurants"
     let MENUS_ENDPOINT = "/menus"
