@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31CB96D1DB30B7400918582 /* CraveApi.swift */; };
 		C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D401DB2B1460024E577 /* AppDelegate.swift */; };
 		C3319D431DB2B1460024E577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D421DB2B1460024E577 /* ViewController.swift */; };
 		C3319D461DB2B1460024E577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3319D441DB2B1460024E577 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C31CB96D1DB30B7400918582 /* CraveApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraveApi.swift; sourceTree = "<group>"; };
 		C3319D3D1DB2B1460024E577 /* Crave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3319D401DB2B1460024E577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3319D421DB2B1460024E577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31CB96F1DB30B8600918582 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C31CB96D1DB30B7400918582 /* CraveApi.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		C3319D341DB2B1460024E577 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		C3319D3F1DB2B1460024E577 /* Crave */ = {
 			isa = PBXGroup;
 			children = (
+				C31CB96F1DB30B8600918582 /* Network */,
 				C3319D401DB2B1460024E577 /* AppDelegate.swift */,
 				C3319D421DB2B1460024E577 /* ViewController.swift */,
 				C3319D441DB2B1460024E577 /* Main.storyboard */,
@@ -137,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3319D431DB2B1460024E577 /* ViewController.swift in Sources */,
+				C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */,
 				C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +309,7 @@
 				C3319D511DB2B1460024E577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
