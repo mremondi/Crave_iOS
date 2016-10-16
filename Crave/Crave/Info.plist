@@ -34,5 +34,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>requestWhenInUseAuthorization</key>
+	<string>Rocket Driver Mobile needs location services enabled in order to track your location for deliveries.</string>
 </dict>
 </plist>

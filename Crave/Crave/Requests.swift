@@ -21,7 +21,7 @@ public class Requests{
     func callRequest(nearbyRestaurants: NearbyRestaurants){
         
         url = ca.API_ENDPOINT + ca.RESTAURANTS_ENPOINT
-        url = url + "/" + String(ColbyLat) + "/" + String(ColbyLon)
+        url = url + "/" + String(locationManagerClass.getLocationLatitude()) + "/" + String(locationManagerClass.getLocationLongitude())
         
         Alamofire.request(url).responseJSON { response in
             debugPrint(response)

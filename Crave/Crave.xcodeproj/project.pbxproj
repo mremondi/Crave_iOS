@@ -10,7 +10,6 @@
 		629739D6EBAE30F8D0DD267B /* Pods_Crave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54140294E73E5A90303013E4 /* Pods_Crave.framework */; };
 		C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31CB96D1DB30B7400918582 /* CraveApi.swift */; };
 		C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D401DB2B1460024E577 /* AppDelegate.swift */; };
-		C3319D431DB2B1460024E577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D421DB2B1460024E577 /* ViewController.swift */; };
 		C3319D461DB2B1460024E577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3319D441DB2B1460024E577 /* Main.storyboard */; };
 		C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3319D471DB2B1460024E577 /* Assets.xcassets */; };
 		C3319D4B1DB2B1460024E577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,16 @@
 		C339D74E1DB3431700BC4D66 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D74D1DB3431700BC4D66 /* Requests.swift */; };
 		C339D7501DB34BCE00BC4D66 /* nearbyRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D74F1DB34BCE00BC4D66 /* nearbyRestaurants.swift */; };
 		C339D7521DB34C2C00BC4D66 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7511DB34C2C00BC4D66 /* Restaurant.swift */; };
+		C339D7571DB3E94000BC4D66 /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7551DB3E94000BC4D66 /* NearMeViewController.swift */; };
+		C339D75A1DB3F8F200BC4D66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7591DB3F8F200BC4D66 /* ProfileViewController.swift */; };
+		C339D75C1DB3F8FC00BC4D66 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D75B1DB3F8FC00BC4D66 /* FavoritesViewController.swift */; };
+		C339D75E1DB3F90400BC4D66 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D75D1DB3F90400BC4D66 /* SearchViewController.swift */; };
+		C339D7601DB3FE1400BC4D66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D75F1DB3FE1400BC4D66 /* LoginViewController.swift */; };
+		C339D7621DB3FE2000BC4D66 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7611DB3FE2000BC4D66 /* LoginView.swift */; };
+		C339D76A1DB40D9C00BC4D66 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7691DB40D9C00BC4D66 /* Extensions.swift */; };
+		C339D76C1DB40F1B00BC4D66 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D76B1DB40F1B00BC4D66 /* Delegates.swift */; };
+		C339D76E1DB413C100BC4D66 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D76D1DB413C100BC4D66 /* ProfileView.swift */; };
+		C339D7701DB4191700BC4D66 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D76F1DB4191700BC4D66 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +35,6 @@
 		C31CB96D1DB30B7400918582 /* CraveApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraveApi.swift; sourceTree = "<group>"; };
 		C3319D3D1DB2B1460024E577 /* Crave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3319D401DB2B1460024E577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3319D421DB2B1460024E577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3319D451DB2B1460024E577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3319D471DB2B1460024E577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3319D4A1DB2B1460024E577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +43,16 @@
 		C339D74D1DB3431700BC4D66 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		C339D74F1DB34BCE00BC4D66 /* nearbyRestaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearbyRestaurants.swift; sourceTree = "<group>"; };
 		C339D7511DB34C2C00BC4D66 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		C339D7551DB3E94000BC4D66 /* NearMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
+		C339D7591DB3F8F200BC4D66 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C339D75B1DB3F8FC00BC4D66 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		C339D75D1DB3F90400BC4D66 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C339D75F1DB3FE1400BC4D66 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C339D7611DB3FE2000BC4D66 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C339D7691DB40D9C00BC4D66 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C339D76B1DB40F1B00BC4D66 /* Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
+		C339D76D1DB413C100BC4D66 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C339D76F1DB4191700BC4D66 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F08716CB759CD475E761BF23 /* Pods-Crave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crave.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crave/Pods-Crave.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +90,7 @@
 			children = (
 				C31CB96D1DB30B7400918582 /* CraveApi.swift */,
 				C339D74D1DB3431700BC4D66 /* Requests.swift */,
+				C339D76F1DB4191700BC4D66 /* LocationManager.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -98,17 +117,73 @@
 			isa = PBXGroup;
 			children = (
 				C31CB96F1DB30B8600918582 /* Network */,
+				C339D7631DB3FE2A00BC4D66 /* Classes */,
+				C339D7641DB3FE3A00BC4D66 /* NearMe */,
+				C339D7661DB3FE4600BC4D66 /* Profile */,
+				C339D7651DB3FE4100BC4D66 /* Login */,
+				C339D7671DB3FE5400BC4D66 /* Favorites */,
+				C339D7681DB3FE5A00BC4D66 /* Search */,
+				C339D7691DB40D9C00BC4D66 /* Extensions.swift */,
+				C339D76B1DB40F1B00BC4D66 /* Delegates.swift */,
 				C3319D401DB2B1460024E577 /* AppDelegate.swift */,
-				C339D74F1DB34BCE00BC4D66 /* nearbyRestaurants.swift */,
-				C339D7511DB34C2C00BC4D66 /* Restaurant.swift */,
-				C3319D421DB2B1460024E577 /* ViewController.swift */,
-				C339D73D1DB310A400BC4D66 /* MapView.swift */,
 				C3319D441DB2B1460024E577 /* Main.storyboard */,
-				C3319D471DB2B1460024E577 /* Assets.xcassets */,
 				C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */,
+				C3319D471DB2B1460024E577 /* Assets.xcassets */,
 				C3319D4C1DB2B1460024E577 /* Info.plist */,
 			);
 			path = Crave;
+			sourceTree = "<group>";
+		};
+		C339D7631DB3FE2A00BC4D66 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C339D7511DB34C2C00BC4D66 /* Restaurant.swift */,
+				C339D74F1DB34BCE00BC4D66 /* nearbyRestaurants.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C339D7641DB3FE3A00BC4D66 /* NearMe */ = {
+			isa = PBXGroup;
+			children = (
+				C339D73D1DB310A400BC4D66 /* MapView.swift */,
+				C339D7551DB3E94000BC4D66 /* NearMeViewController.swift */,
+			);
+			name = NearMe;
+			sourceTree = "<group>";
+		};
+		C339D7651DB3FE4100BC4D66 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C339D7611DB3FE2000BC4D66 /* LoginView.swift */,
+				C339D75F1DB3FE1400BC4D66 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C339D7661DB3FE4600BC4D66 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C339D7591DB3F8F200BC4D66 /* ProfileViewController.swift */,
+				C339D76D1DB413C100BC4D66 /* ProfileView.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		C339D7671DB3FE5400BC4D66 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				C339D75B1DB3F8FC00BC4D66 /* FavoritesViewController.swift */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		C339D7681DB3FE5A00BC4D66 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C339D75D1DB3F90400BC4D66 /* SearchViewController.swift */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,13 +310,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3319D431DB2B1460024E577 /* ViewController.swift in Sources */,
+				C339D75E1DB3F90400BC4D66 /* SearchViewController.swift in Sources */,
 				C339D73E1DB310A400BC4D66 /* MapView.swift in Sources */,
+				C339D76C1DB40F1B00BC4D66 /* Delegates.swift in Sources */,
+				C339D75C1DB3F8FC00BC4D66 /* FavoritesViewController.swift in Sources */,
+				C339D7701DB4191700BC4D66 /* LocationManager.swift in Sources */,
 				C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */,
 				C339D7521DB34C2C00BC4D66 /* Restaurant.swift in Sources */,
+				C339D7571DB3E94000BC4D66 /* NearMeViewController.swift in Sources */,
+				C339D76E1DB413C100BC4D66 /* ProfileView.swift in Sources */,
+				C339D7621DB3FE2000BC4D66 /* LoginView.swift in Sources */,
 				C339D74E1DB3431700BC4D66 /* Requests.swift in Sources */,
+				C339D76A1DB40D9C00BC4D66 /* Extensions.swift in Sources */,
 				C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */,
+				C339D75A1DB3F8F200BC4D66 /* ProfileViewController.swift in Sources */,
 				C339D7501DB34BCE00BC4D66 /* nearbyRestaurants.swift in Sources */,
+				C339D7601DB3FE1400BC4D66 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

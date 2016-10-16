@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import CoreLocation
 
 //Unneeded Global Variables for location
 let ColbyLat = 44.56362

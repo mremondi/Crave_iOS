@@ -10,29 +10,36 @@ import UIKit
 import GoogleMaps
 import CoreData
 
-class MapView: UIView {
+public class MapView{
     
     var viewMap = UIView()
+    var mapView = GMSMapView()
     
-    func create()->GMSMapView{
+    func create()->UIView{
         
         //General Initializers
         let width = UIScreen.main.bounds.width
         let height = UIScreen.main.bounds.height
 
         //Google Maps
-        let camera = GMSCameraPosition.camera(withLatitude: ColbyLat,longitude: ColbyLon, zoom: 12)
-        let mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 63, width: width, height: height*9/10-53), camera: camera)
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-        mapView.settings.compassButton = true
+        let camera = GMSCameraPosition.camera(withLatitude: locationManagerClass.getLocationLatitude(),longitude: locationManagerClass.getLocationLongitude(), zoom: 12)
+        mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 63, width: width, height: height*9/10-45), camera: camera)
+        //mapView.isMyLocationEnabled = true
+        //mapView.settings.myLocationButton = true
+        //mapView.settings.compassButton = true
         viewMap.addSubview(mapView)
         
         
         let imageName = "ColbySeal"
         let image = UIImage(named: imageName)
         
-        
+        //Marker For Current Location
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: locationManagerClass.getLocationLatitude(), longitude: locationManagerClass.getLocationLongitude())
+        marker.title = "Current Location"
+        marker.icon = GMSMarker.markerImage(with: UIColor.black)
+        marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0.5)
+        marker.map = mapView
 
         
         //Marker For Colby College
@@ -45,11 +52,12 @@ class MapView: UIView {
         markerOrigin.userData = NSURL.init(fileURLWithPath: "https://www.colby.edu/")
         markerOrigin.map = mapView
         
-        return mapView
+        
+        return viewMap
     }
     
     
-    func UpdateMap(restaurants: NearbyRestaurants, mapView: GMSMapView) {
+    func UpdateMap(restaurants: NearbyRestaurants) {
         
         for thing in restaurants.getNearbyRestaurants(){
             
@@ -63,10 +71,6 @@ class MapView: UIView {
             markerOrigin.map = mapView
            
         }
-    }
-    
-    func getView() -> UIView{
-        return viewMap
     }
     
     /*
