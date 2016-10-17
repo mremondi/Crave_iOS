@@ -10,9 +10,10 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
-//Unneeded Global Variables for location
+//Global Variables
 let ColbyLat = 44.56362
 let ColbyLon = -69.6604
+let requests = Requests()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

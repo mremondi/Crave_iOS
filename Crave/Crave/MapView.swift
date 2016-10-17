@@ -58,7 +58,8 @@ public class MapView{
     
     
     func UpdateMap(restaurants: NearbyRestaurants) {
-        
+        NotificationCenter.default.removeObserver(self)
+
         for thing in restaurants.getNearbyRestaurants(){
             
             let markerOrigin = GMSMarker()

@@ -30,6 +30,9 @@ class LoginViewController: UIViewController, LoginInitializationDelegate {
         self.view = loginView.create()
         self.hideKeyboardWhenTappedAround()
         
+        //Listener for the login, if successful or not
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.finishLogin), name:NSNotification.Name(rawValue: "LoginIdentifier"), object: nil)
+        
         locationManagerClass.enableLocation()
         // Do any additional setup after loading the view.
     }
@@ -40,8 +43,29 @@ class LoginViewController: UIViewController, LoginInitializationDelegate {
     }
     
     func Login(username: String, password: String) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
+        requests.requestLogin(email: username, password: password)
+    }
+    
+    func finishLogin(notification: Notification){
+        guard let userInfo = notification.userInfo,
+            let message  = userInfo["Result"] as? String else {
+                print("No userInfo found in notification")
+                return
+        }
+        
+        if (message == "Fail"){
+            let alert = UIAlertController(title: "Error",
+                                          message:"Incorrect password and/or email.",
+                preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        else{
+            NotificationCenter.default.removeObserver(self)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
     }
     
     /*

@@ -18,9 +18,7 @@ class NearMeViewController: UIViewController {
         super.viewDidLoad()
         
         
-        
-        let requests = Requests()
-        requests.callRequest(nearbyRestaurants: nearbyRestaurants)
+        requests.requestNearbyRestaurants(nearbyRestaurants: nearbyRestaurants)
         
         //General Initializers
         let width = UIScreen.main.bounds.width

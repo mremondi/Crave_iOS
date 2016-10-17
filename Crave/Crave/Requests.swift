@@ -18,7 +18,7 @@ public class Requests{
     
     let ca = CraveApi()
     
-    func callRequest(nearbyRestaurants: NearbyRestaurants){
+    func requestNearbyRestaurants(nearbyRestaurants: NearbyRestaurants){
         
         url = ca.API_ENDPOINT + ca.RESTAURANTS_ENPOINT
         url = url + "/" + String(locationManagerClass.getLocationLatitude()) + "/" + String(locationManagerClass.getLocationLongitude())
@@ -68,4 +68,30 @@ public class Requests{
         }
     }
     
+    func requestLogin(email: String, password: String){
+        
+        url = ca.API_ENDPOINT + ca.LOGIN_ENPOINT
+        
+        data = ["email" : email, "password" : password]
+        
+        headers = ["Content-Type" : "application/x-www-form-urlencoded"]
+        
+        //Sending the request
+        Alamofire.request(url, method: .post, parameters: data, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LoginIdentifier"), object: nil, userInfo: ["Result" : "Fail"])
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LoginIdentifier"), object: nil, userInfo: ["Result" : "Success"])
+                }
+        }
+
+    }
 }
