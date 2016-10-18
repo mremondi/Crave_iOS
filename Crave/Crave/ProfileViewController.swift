@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, LogoutDelegate {
+class ProfileViewController: UIViewController, ProfileDelegate {
 
      let profileView = ProfileView()
     
@@ -102,6 +102,9 @@ class ProfileViewController: UIViewController, LogoutDelegate {
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
+    func Update(email: String, name: String) {
+        requests.requestUpdate(email: email, name: name, id: profile.getID())
+    }
 
     /*
     // MARK: - Navigation

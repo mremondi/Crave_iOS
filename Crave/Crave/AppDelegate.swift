@@ -7,6 +7,14 @@
 //
 
 import UIKit
+import GoogleMaps
+import CoreLocation
+
+//Global Variables
+let ColbyLat = 44.56362
+let ColbyLon = -69.6604
+let requests = Requests()
+var profile = Profile(id: "", email: "", gender: "", website: "", name: "", location: "")
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        GMSServices.provideAPIKey("AIzaSyDYB7hpothkX4P8pvkuvoswkhhmciARvlY")
+        
         return true
     }
 

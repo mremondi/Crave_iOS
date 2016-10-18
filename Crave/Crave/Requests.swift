@@ -89,9 +89,53 @@ public class Requests{
                 
                 if let value = response.result.value {
                     let todo = JSON(value)
+                    
+                    
+                    let id = todo["_id"] //string
+                    let email = todo["email"] //string
+                    let ratings = todo["ratings"] //array
+                    let profileJson = todo["profile"] //dictionary
+                    let gender = profileJson["gender"] //string
+                    let restaurants = profileJson["restaurants"] //array
+                    let picture = profileJson["picture"] //unknown
+                    let website = profileJson["website"] //string
+                    let name = profileJson["name"] //name
+                    let location = profileJson["location"] //string
+                    
+                    
+
+                    profile = Profile(id: String(describing: id), email: String(describing: email), gender: String(describing: gender), website: String(describing: website), name: String(describing: name), location: String(describing: location))
+                    
+                    print(todo)
                      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LoginIdentifier"), object: nil, userInfo: ["Result" : "Success"])
                 }
         }
 
+    }
+    
+    func requestUpdate(email: String, name: String, id: String){
+        
+        url = ca.API_ENDPOINT + ca.UPDATE_USER_ENDPOINT
+        
+        data = ["email" : email, "name" : name, "id" : id]
+        
+        headers = ["Content-Type" : "application/x-www-form-urlencoded"]
+        
+        //Sending the request
+        Alamofire.request(url, method: .post, parameters: data, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                    print ("SUCCESS")
+                }
+        }
+        
     }
 }

@@ -12,6 +12,7 @@ protocol LoginInitializationDelegate: class {
     func Login(username: String, password: String)
 }
 
-protocol LogoutDelegate: class{
+protocol ProfileDelegate: class{
     func Logout()
+    func Update(email: String, name: String)
 }
