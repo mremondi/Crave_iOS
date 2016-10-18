@@ -15,4 +15,6 @@ protocol LoginInitializationDelegate: class {
 protocol ProfileDelegate: class{
     func Logout()
     func Update(email: String, name: String)
+    func ChangePassword(password: String)
+    func passwordMismatch(error: String)
 }

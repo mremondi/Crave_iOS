@@ -133,9 +133,57 @@ public class Requests{
                 
                 if let value = response.result.value {
                     let todo = JSON(value)
-                    print ("SUCCESS")
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
                 }
         }
         
     }
+    
+    func requestChangePassword(password: String, id: String){
+        
+        url = ca.API_ENDPOINT + ca.UPDATE_PASSWORD
+        
+        data = ["password" : password, "id" : id]
+        
+        headers = ["Content-Type" : "application/x-www-form-urlencoded"]
+        
+        //Sending the request
+        Alamofire.request(url, method: .post, parameters: data, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
+                }
+        }
+        
+    }
+    
+    func requestLogout(){
+        
+        url = ca.API_ENDPOINT + ca.LOGOUT_ENDPOINT
+        
+        //Sending the request
+        Alamofire.request(url, method: .get)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                }
+        }
+        
+    }
+
 }

@@ -21,6 +21,9 @@ class ProfileViewController: UIViewController, ProfileDelegate {
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
         
+        //Listener for the profile
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.refresh), name:NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
+        
         let button = UIButton()
         //set image for button
         button.setImage(UIImage(named: "map"), for: UIControlState())
@@ -98,12 +101,35 @@ class ProfileViewController: UIViewController, ProfileDelegate {
     }
     
     func Logout() {
+        profile.clear()
+        requests.requestLogout()
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     func Update(email: String, name: String) {
         requests.requestUpdate(email: email, name: name, id: profile.getID())
+    }
+    
+    func ChangePassword(password: String) {
+        requests.requestChangePassword(password: password, id: profile.getID())
+    }
+    
+    func refresh(){
+        let alert = UIAlertController(title: "Success",
+                                      message:"Information changed.",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        self.viewDidLoad()
+    }
+    
+    func passwordMismatch(error: String){
+        let alert = UIAlertController(title: "Error",
+                                      message:error,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
     /*
