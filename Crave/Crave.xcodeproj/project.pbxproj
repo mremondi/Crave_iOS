@@ -224,6 +224,7 @@
 				TargetAttributes = {
 					C3319D3C1DB2B1460024E577 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L56NK942R6;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -450,7 +451,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 94716F2416C1071B15E4D3F5 /* Pods-Crave.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				DEVELOPMENT_TEAM = L56NK942R6;
 				INFOPLIST_FILE = Crave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Crave.Crave;
@@ -463,7 +465,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F08716CB759CD475E761BF23 /* Pods-Crave.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				DEVELOPMENT_TEAM = L56NK942R6;
 				INFOPLIST_FILE = Crave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Crave.Crave;

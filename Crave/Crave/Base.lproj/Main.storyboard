@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" title="login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--profile-->
         <scene sceneID="VuS-Kv-Jzl">
             <objects>
-                <viewController storyboardIdentifier="profile" id="F5B-3R-Wf7" customClass="ProfileViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" title="profile" id="F5B-3R-Wf7" customClass="ProfileViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oXU-Ur-fsH"/>
                         <viewControllerLayoutGuide type="bottom" id="VrC-If-1WV"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="1936" y="-493"/>
         </scene>
-        <!--Near Me View Controller-->
+        <!--nearMe-->
         <scene sceneID="Gr6-P8-MJi">
             <objects>
-                <viewController storyboardIdentifier="nearMe" id="UXf-kA-PRu" customClass="NearMeViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nearMe" title="nearMe" id="UXf-kA-PRu" customClass="NearMeViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="euw-pS-OEJ"/>
                         <viewControllerLayoutGuide type="bottom" id="fqp-WU-epC"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1960" y="176"/>
         </scene>
-        <!--View Controller-->
+        <!--search-->
         <scene sceneID="lcQ-3n-TL6">
             <objects>
-                <viewController id="HJD-Dn-0cM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="search" title="search" id="HJD-Dn-0cM" customClass="SearchViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xtr-3y-OAn"/>
                         <viewControllerLayoutGuide type="bottom" id="7t0-MW-6wg"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="2764" y="197"/>
         </scene>
-        <!--Favorites View Controller-->
+        <!--favorites-->
         <scene sceneID="7Jb-PR-Ox3">
             <objects>
-                <viewController storyboardIdentifier="favorites" id="A69-In-bgT" customClass="FavoritesViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="favorites" title="favorites" id="A69-In-bgT" customClass="FavoritesViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XHS-zA-2Vf"/>
                         <viewControllerLayoutGuide type="bottom" id="YOC-9I-F5V"/>
@@ -102,7 +102,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRb-Pc-ePJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EHU-1A-djO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EHU-1A-djO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

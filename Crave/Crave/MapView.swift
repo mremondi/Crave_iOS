@@ -24,9 +24,9 @@ public class MapView{
         //Google Maps
         let camera = GMSCameraPosition.camera(withLatitude: locationManagerClass.getLocationLatitude(),longitude: locationManagerClass.getLocationLongitude(), zoom: 12)
         mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 63, width: width, height: height*9/10-45), camera: camera)
-        //mapView.isMyLocationEnabled = true
-        //mapView.settings.myLocationButton = true
-        //mapView.settings.compassButton = true
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        mapView.settings.compassButton = true
         viewMap.addSubview(mapView)
         
         
@@ -41,7 +41,7 @@ public class MapView{
         marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0.5)
         marker.map = mapView
 
-        
+        /*
         //Marker For Colby College
         let markerOrigin = GMSMarker()
         markerOrigin.position = CLLocationCoordinate2D(latitude: ColbyLat, longitude: ColbyLon)
@@ -51,7 +51,7 @@ public class MapView{
         markerOrigin.infoWindowAnchor = CGPoint(x: 0.5, y: 0.5)
         markerOrigin.userData = NSURL.init(fileURLWithPath: "https://www.colby.edu/")
         markerOrigin.map = mapView
-        
+        */
         
         return viewMap
     }

@@ -29,6 +29,7 @@ class LoginViewController: UIViewController, LoginInitializationDelegate {
         loginView.delegate = self
         self.view = loginView.create()
         self.hideKeyboardWhenTappedAround()
+        self.dismissKeyboard()
         
         //Listener for the login, if successful or not
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.finishLogin), name:NSNotification.Name(rawValue: "LoginIdentifier"), object: nil)

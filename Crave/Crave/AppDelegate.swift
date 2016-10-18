@@ -11,8 +11,8 @@ import GoogleMaps
 import CoreLocation
 
 //Global Variables
-let ColbyLat = 44.56362
-let ColbyLon = -69.6604
+//let ColbyLat = 44.56362
+//let ColbyLon = -69.6604
 let requests = Requests()
 var profile = Profile(id: "", email: "", gender: "", website: "", name: "", location: "")
 
@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GMSServices.provideAPIKey("AIzaSyDYB7hpothkX4P8pvkuvoswkhhmciARvlY")
+        
+        locationManagerClass.enableLocation()
         
         return true
     }
