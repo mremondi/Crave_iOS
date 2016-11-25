@@ -10,10 +10,12 @@ import UIKit
 import GoogleMaps
 import CoreData
 
-public class MapView{
+public class MapView: UIView, GMSMapViewDelegate{
     
     var viewMap = UIView()
     var mapView = GMSMapView()
+    weak var delegate: MapTransitionDelegate?
+
     
     func create()->UIView{
         
@@ -27,31 +29,9 @@ public class MapView{
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         mapView.settings.compassButton = true
+        mapView.delegate = self
         viewMap.addSubview(mapView)
-        
-        
-        let imageName = "ColbySeal"
-        let image = UIImage(named: imageName)
-        
-        //Marker For Current Location
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: locationManagerClass.getLocationLatitude(), longitude: locationManagerClass.getLocationLongitude())
-        marker.title = "Current Location"
-        marker.icon = GMSMarker.markerImage(with: UIColor.black)
-        marker.infoWindowAnchor = CGPoint(x: 0.5, y: 0.5)
-        marker.map = mapView
 
-        /*
-        //Marker For Colby College
-        let markerOrigin = GMSMarker()
-        markerOrigin.position = CLLocationCoordinate2D(latitude: ColbyLat, longitude: ColbyLon)
-        markerOrigin.icon = image
-        markerOrigin.title = "Colby College"
-        //markerOrigin.snippet = "Colby College"
-        markerOrigin.infoWindowAnchor = CGPoint(x: 0.5, y: 0.5)
-        markerOrigin.userData = NSURL.init(fileURLWithPath: "https://www.colby.edu/")
-        markerOrigin.map = mapView
-        */
         
         return viewMap
     }
@@ -65,15 +45,24 @@ public class MapView{
             let markerOrigin = GMSMarker()
             markerOrigin.position = CLLocationCoordinate2D(latitude: thing.getLat(), longitude: thing.getLon())
             //markerOrigin.icon = UIImage(named: "ColbySeal")
+            markerOrigin.userData = thing.getId()
             markerOrigin.title = thing.getName()
             //markerOrigin.snippet = "Colby College"
-            markerOrigin.infoWindowAnchor = CGPoint(x: 0.5, y: 0.5)
+           
             //markerOrigin.userData = NSURL.init(fileURLWithPath: "https://www.colby.edu/")
             markerOrigin.map = mapView
            
         }
     }
     
+    func mapView(_ mapView: GMSMapView!, didTap marker: GMSMarker!) -> Bool {
+        return false
+    }
+    
+    func mapView(_ mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) -> Bool {
+        delegate?.InfoWindowClicked(id: marker.userData as! String)
+        return false
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

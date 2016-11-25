@@ -19,7 +19,7 @@
 		C339D7521DB34C2C00BC4D66 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7511DB34C2C00BC4D66 /* Restaurant.swift */; };
 		C339D7571DB3E94000BC4D66 /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7551DB3E94000BC4D66 /* NearMeViewController.swift */; };
 		C339D75A1DB3F8F200BC4D66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7591DB3F8F200BC4D66 /* ProfileViewController.swift */; };
-		C339D75C1DB3F8FC00BC4D66 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D75B1DB3F8FC00BC4D66 /* FavoritesViewController.swift */; };
+		C339D75C1DB3F8FC00BC4D66 /* CravingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D75B1DB3F8FC00BC4D66 /* CravingsViewController.swift */; };
 		C339D75E1DB3F90400BC4D66 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D75D1DB3F90400BC4D66 /* SearchViewController.swift */; };
 		C339D7601DB3FE1400BC4D66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D75F1DB3FE1400BC4D66 /* LoginViewController.swift */; };
 		C339D7621DB3FE2000BC4D66 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D7611DB3FE2000BC4D66 /* LoginView.swift */; };
@@ -28,6 +28,9 @@
 		C339D76E1DB413C100BC4D66 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D76D1DB413C100BC4D66 /* ProfileView.swift */; };
 		C339D7701DB4191700BC4D66 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339D76F1DB4191700BC4D66 /* LocationManager.swift */; };
 		C395F0B21DB5A20C00A61651 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395F0B11DB5A20C00A61651 /* Profile.swift */; };
+		C3C413E61DE7D1B200DF5563 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413E51DE7D1B200DF5563 /* MoreViewController.swift */; };
+		C3C413EA1DE8F42200DF5563 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413E91DE8F42200DF5563 /* RestaurantView.swift */; };
+		C3C413EC1DE8F42F00DF5563 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413EB1DE8F42F00DF5563 /* RestaurantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +49,7 @@
 		C339D7511DB34C2C00BC4D66 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		C339D7551DB3E94000BC4D66 /* NearMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		C339D7591DB3F8F200BC4D66 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C339D75B1DB3F8FC00BC4D66 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		C339D75B1DB3F8FC00BC4D66 /* CravingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CravingsViewController.swift; sourceTree = "<group>"; };
 		C339D75D1DB3F90400BC4D66 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C339D75F1DB3FE1400BC4D66 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C339D7611DB3FE2000BC4D66 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -55,6 +58,9 @@
 		C339D76D1DB413C100BC4D66 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C339D76F1DB4191700BC4D66 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C395F0B11DB5A20C00A61651 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		C3C413E51DE7D1B200DF5563 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		C3C413E91DE8F42200DF5563 /* RestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		C3C413EB1DE8F42F00DF5563 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		F08716CB759CD475E761BF23 /* Pods-Crave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crave.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crave/Pods-Crave.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,12 +124,14 @@
 		C3319D3F1DB2B1460024E577 /* Crave */ = {
 			isa = PBXGroup;
 			children = (
+				C3C413E81DE8F40200DF5563 /* RestaurantView */,
+				C3C413E71DE7D1BB00DF5563 /* More */,
 				C31CB96F1DB30B8600918582 /* Network */,
 				C339D7631DB3FE2A00BC4D66 /* Classes */,
 				C339D7641DB3FE3A00BC4D66 /* NearMe */,
 				C339D7661DB3FE4600BC4D66 /* Profile */,
 				C339D7651DB3FE4100BC4D66 /* Login */,
-				C339D7671DB3FE5400BC4D66 /* Favorites */,
+				C339D7671DB3FE5400BC4D66 /* Cravings */,
 				C339D7681DB3FE5A00BC4D66 /* Search */,
 				C339D7691DB40D9C00BC4D66 /* Extensions.swift */,
 				C339D76B1DB40F1B00BC4D66 /* Delegates.swift */,
@@ -173,12 +181,12 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
-		C339D7671DB3FE5400BC4D66 /* Favorites */ = {
+		C339D7671DB3FE5400BC4D66 /* Cravings */ = {
 			isa = PBXGroup;
 			children = (
-				C339D75B1DB3F8FC00BC4D66 /* FavoritesViewController.swift */,
+				C339D75B1DB3F8FC00BC4D66 /* CravingsViewController.swift */,
 			);
-			name = Favorites;
+			name = Cravings;
 			sourceTree = "<group>";
 		};
 		C339D7681DB3FE5A00BC4D66 /* Search */ = {
@@ -187,6 +195,23 @@
 				C339D75D1DB3F90400BC4D66 /* SearchViewController.swift */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		C3C413E71DE7D1BB00DF5563 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				C3C413E51DE7D1B200DF5563 /* MoreViewController.swift */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		C3C413E81DE8F40200DF5563 /* RestaurantView */ = {
+			isa = PBXGroup;
+			children = (
+				C3C413E91DE8F42200DF5563 /* RestaurantView.swift */,
+				C3C413EB1DE8F42F00DF5563 /* RestaurantViewController.swift */,
+			);
+			name = RestaurantView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,14 +340,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C395F0B21DB5A20C00A61651 /* Profile.swift in Sources */,
+				C3C413EC1DE8F42F00DF5563 /* RestaurantViewController.swift in Sources */,
 				C339D75E1DB3F90400BC4D66 /* SearchViewController.swift in Sources */,
 				C339D73E1DB310A400BC4D66 /* MapView.swift in Sources */,
 				C339D76C1DB40F1B00BC4D66 /* Delegates.swift in Sources */,
-				C339D75C1DB3F8FC00BC4D66 /* FavoritesViewController.swift in Sources */,
+				C339D75C1DB3F8FC00BC4D66 /* CravingsViewController.swift in Sources */,
 				C339D7701DB4191700BC4D66 /* LocationManager.swift in Sources */,
 				C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */,
 				C339D7521DB34C2C00BC4D66 /* Restaurant.swift in Sources */,
 				C339D7571DB3E94000BC4D66 /* NearMeViewController.swift in Sources */,
+				C3C413EA1DE8F42200DF5563 /* RestaurantView.swift in Sources */,
+				C3C413E61DE7D1B200DF5563 /* MoreViewController.swift in Sources */,
 				C339D76E1DB413C100BC4D66 /* ProfileView.swift in Sources */,
 				C339D7621DB3FE2000BC4D66 /* LoginView.swift in Sources */,
 				C339D74E1DB3431700BC4D66 /* Requests.swift in Sources */,

@@ -23,6 +23,15 @@ public class NearbyRestaurants{
     
     func clear(){
         nearbyRestaurants = []
-
+    }
+    
+    func getRestaurant(id: String)->Restaurant?{
+        for thing in nearbyRestaurants{
+            if (thing.getId() == id){
+                return thing
+            }
+        }
+        
+        return nil
     }
 }

@@ -20,6 +20,8 @@ public class Requests{
     
     func requestNearbyRestaurants(nearbyRestaurants: NearbyRestaurants){
         
+        nearbyRestaurants.clear()
+        
         url = ca.API_ENDPOINT + ca.RESTAURANTS_ENPOINT
         url = url + "/" + String(locationManagerClass.getLocationLatitude()) + "/" + String(locationManagerClass.getLocationLongitude())
         
@@ -40,6 +42,8 @@ public class Requests{
                     let url = thing.1["restaurant_url"]
                     let tagList = thing.1["tags"]
                     let zipcode = thing.1["zipcode"]
+                    let id = thing.1["_id"]
+                    let photoURL = thing.1["restaurant_logo_URL"]
                     
                     var loc:[Double] = []
                     for thing in locations{
@@ -58,7 +62,7 @@ public class Requests{
                     for thing in tagList{
                         tags.append(String(describing: thing.1))
                     }
-                    let restaurantToAdd = Restaurant(name: String(describing: name), address: String(describing: address), loc: loc, zipcode: String(describing: zipcode), tags: tags, menus: menus, url: String(describing: url), createDate: String(describing: createDate))
+                    let restaurantToAdd = Restaurant(id: String(describing: id), name: String(describing: name), address: String(describing: address), loc: loc, zipcode: String(describing: zipcode), tags: tags, menus: menus, url: String(describing: url), createDate: String(describing: createDate), photoURL: String(describing: photoURL))
                     
                     nearbyRestaurants.add(restaurant: restaurantToAdd)
                 }
