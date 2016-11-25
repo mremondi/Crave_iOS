@@ -15,6 +15,7 @@ import CoreLocation
 //let ColbyLon = -69.6604
 let requests = Requests()
 var profile = Profile(id: "", email: "", gender: "", website: "", name: "", location: "")
+let nearbyRestaurants = NearbyRestaurants()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

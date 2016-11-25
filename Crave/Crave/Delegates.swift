@@ -18,3 +18,7 @@ protocol ProfileDelegate: class{
     func ChangePassword(password: String)
     func passwordMismatch(error: String)
 }
+
+protocol MapTransitionDelegate: class{
+    func InfoWindowClicked(id: String)
+}
