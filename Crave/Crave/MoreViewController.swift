@@ -8,10 +8,14 @@
 
 import UIKit
 
-class MoreViewController: UIViewController {
+class MoreViewController: UIViewController, MoreTransitionDelegate {
+    
+    let moreView = MoreView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        moreView.delegate = self
         
         self.navigationItem.title = "More"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
@@ -73,6 +77,8 @@ class MoreViewController: UIViewController {
         self.navigationController?.toolbar.barTintColor = UIColor.red
         
         
+        self.view = moreView.create()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -88,12 +94,6 @@ class MoreViewController: UIViewController {
         
     }
     
-    func goToProfile(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "profile") as? ProfileViewController
-        self.navigationController?.pushViewController(vc!, animated: false)
-        
-    }
-    
     func goToNearMe(){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
         self.navigationController?.pushViewController(vc!, animated: false)
@@ -105,6 +105,17 @@ class MoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func ProfileButtonClicked() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "profile") as? ProfileViewController
+        self.navigationController?.pushViewController(vc!, animated: false)
+    }
+    
+    func AboutUSButtonClicked() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "aboutUs") as? AboutUsViewController
+        self.navigationController?.pushViewController(vc!, animated: false)
+    }
+    
+   
     
     /*
      // MARK: - Navigation

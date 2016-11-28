@@ -22,3 +22,8 @@ protocol ProfileDelegate: class{
 protocol MapTransitionDelegate: class{
     func InfoWindowClicked(id: String)
 }
+
+protocol MoreTransitionDelegate: class{
+    func ProfileButtonClicked()
+    func AboutUSButtonClicked()
+}
