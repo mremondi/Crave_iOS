@@ -9,17 +9,18 @@
 import UIKit
 import GoogleMaps
 
+
 class NearMeViewController: UIViewController, MapTransitionDelegate {
     
 
     let mapView = MapView()
-    
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         requests.requestNearbyRestaurants(nearbyRestaurants: nearbyRestaurants)
+        currentRestaurantMenus.clear()
         
         //General Initializers
         let width = UIScreen.main.bounds.width
@@ -126,11 +127,30 @@ class NearMeViewController: UIViewController, MapTransitionDelegate {
     
     func InfoWindowClicked(id: String) {
         
+        VCUtils.showActivityIndicator(uiView: self.view)
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "restaurant") as? RestaurantViewController
         
         vc?.restID = id
         
-        self.navigationController?.pushViewController(vc!, animated: false)
+        let restaurant = nearbyRestaurants.getRestaurant(id: id)
+        
+        for menuID in (restaurant?.getMenus())!{
+            print(menuID)
+            requests.requestMenu(menuID: menuID)
+        }
+        
+        let deadlineTime = DispatchTime.now() + .seconds(3)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            VCUtils.hideActivityIndicator(uiView: self.view)
+            self.navigationController?.pushViewController(vc!, animated: false)
+        }
+        
+        
+        
+
+        
+       
     }
     
     

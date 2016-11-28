@@ -18,9 +18,10 @@ public class Restaurant{
     var createDate: String
     var id: String
     var photoURL: String
-    
+    var phoneNumber: String
+
     init(id:String, name:String, address: String, loc: [Double], zipcode: String, tags: [String], menus: [String],
-         url: String, createDate: String, photoURL: String){
+         url: String, createDate: String, photoURL: String, phoneNumber: String){
         
         self.id = id
         self.name = name
@@ -32,6 +33,7 @@ public class Restaurant{
         self.url = url
         self.createDate = createDate
         self.photoURL = photoURL
+        self.phoneNumber = phoneNumber
     }
     
     func getName()->String{
@@ -76,5 +78,9 @@ public class Restaurant{
     
     func getPhotoURL()->String{
         return photoURL
+    }
+    
+    func getPhoneNumber()->String{
+        return phoneNumber
     }
 }

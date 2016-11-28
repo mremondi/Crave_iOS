@@ -16,6 +16,8 @@ import CoreLocation
 let requests = Requests()
 var profile = Profile(id: "", email: "", gender: "", website: "", name: "", location: "")
 let nearbyRestaurants = NearbyRestaurants()
+let currentRestaurantMenus = CurrentRestaurantMenus()
+let VCUtils = ViewControllerUtils()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

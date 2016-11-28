@@ -39,11 +39,12 @@ public class Requests{
                     let createDate = thing.1["create_date"]
                     let locations = thing.1["loc"]["coordinates"]
                     let menuList = thing.1["menus"]
-                    let url = thing.1["restaurant_url"]
+                    let url = thing.1["restaurant_URL"]
                     let tagList = thing.1["tags"]
                     let zipcode = thing.1["zipcode"]
                     let id = thing.1["_id"]
                     let photoURL = thing.1["restaurant_logo_URL"]
+                    let phoneNumber = thing.1["phone_number"]
                     
                     var loc:[Double] = []
                     for thing in locations{
@@ -62,12 +63,41 @@ public class Requests{
                     for thing in tagList{
                         tags.append(String(describing: thing.1))
                     }
-                    let restaurantToAdd = Restaurant(id: String(describing: id), name: String(describing: name), address: String(describing: address), loc: loc, zipcode: String(describing: zipcode), tags: tags, menus: menus, url: String(describing: url), createDate: String(describing: createDate), photoURL: String(describing: photoURL))
+                    let restaurantToAdd = Restaurant(id: String(describing: id), name: String(describing: name), address: String(describing: address), loc: loc, zipcode: String(describing: zipcode), tags: tags, menus: menus, url: String(describing: url), createDate: String(describing: createDate), photoURL: String(describing: photoURL), phoneNumber: String(describing: phoneNumber))
                     
                     nearbyRestaurants.add(restaurant: restaurantToAdd)
                 }
                 
                  NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NotificationIdentifier"), object: nil)
+            }
+        }
+    }
+    
+    func requestMenu(menuID: String){
+        
+        url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
+        url = url + "/" + menuID
+        Alamofire.request(url).responseJSON { response in
+            guard response.result.error == nil else {
+                // got an error in getting the data, need to handle it
+                print("error calling POST on /todos/1")
+                print(response.result.error!)
+                return
+            }
+            
+            if let value = response.result.value {
+                let todo = JSON(value)
+                
+                let id = String(describing: todo["_id"])
+                let menuName = String(describing: todo["menuName"])
+                let restaurantID = String(describing: todo["restaurantId"])
+                let sections = todo["sections"]
+                let items = todo["items"]
+                let create_date = String(describing: todo["create_date"])
+                
+                let menu = Menu(id: id, menuName: menuName, restaurantID: restaurantID, sections: [], items: [], create_date: create_date)
+                
+                currentRestaurantMenus.add(menu: menu)
             }
         }
     }

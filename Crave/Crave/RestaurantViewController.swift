@@ -12,6 +12,7 @@ class RestaurantViewController: UIViewController {
 
     var restID = ""
     
+    @IBOutlet weak var scrollView: UIScrollView!
     let restaurantView = RestaurantView()
     
     override func viewDidLoad() {
@@ -65,7 +66,16 @@ class RestaurantViewController: UIViewController {
         self.setToolbarItems(navigationBarButtonItemsArray, animated: true)
         self.navigationController?.toolbar.barTintColor = UIColor.red
         
-        self.view = restaurantView.create(id: restID)
+        let view = restaurantView.create(id: restID)
+        
+        view.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+200)
+        //scrollView.backgroundColor = UIColor.white
+        //scrollView.touchesShouldCancel(in: scrollView)
+        //scrollView.delaysContentTouches = false
+        
+        //scrollView.addSubview(view)
+        
+        self.view = view
         
         // Do any additional setup after loading the view.
     }
@@ -100,6 +110,10 @@ class RestaurantViewController: UIViewController {
         
     }
 
+    func CallButtonClicked() {
+        print("Hello")
+    }
+    
     /*
     // MARK: - Navigation
 

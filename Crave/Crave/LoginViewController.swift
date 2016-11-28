@@ -44,6 +44,7 @@ class LoginViewController: UIViewController, LoginInitializationDelegate {
     }
     
     func Login(username: String, password: String) {
+        VCUtils.showActivityIndicator(uiView: self.view)
         requests.requestLogin(email: username, password: password)
     }
     
@@ -53,6 +54,9 @@ class LoginViewController: UIViewController, LoginInitializationDelegate {
                 print("No userInfo found in notification")
                 return
         }
+        
+        VCUtils.hideActivityIndicator(uiView: self.view)
+        
         
         if (message == "Fail"){
             let alert = UIAlertController(title: "Error",
