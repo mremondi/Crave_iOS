@@ -48,8 +48,19 @@ class MenuView: UIView {
                 //The menu item rating and item price
                 let ratingPriceLabel = UILabel(frame: CGRect(x: 0, y: 0, width: width-5, height: 30))
                 
+                var rating = (Double(item.rating)!)
+                
+                if (item.rating != "0"){
+                    rating = (Double(item.rating)!/Double(item.numberOfRatings)!)
+                    if (rating > 5.0){
+                        rating = rating/2
+                    }
+                }
+                
+                
+                
                 if ((item.rating != "0")&&(item.rating != "null")){
-                    ratingPriceLabel.text = "Price: $" + String(format: "%.2f", Double(item.price)!) + " Rating: " + item.rating
+                    ratingPriceLabel.text = "Price: $" + String(format: "%.2f", Double(item.price)!) + " Rating: " + String(format: "%.2f", rating)
                 }
                 else if ((item.price != "0")&&(item.price != "null")){
                     ratingPriceLabel.text = "Price: $" + String(format: "%.2f", Double(item.price)!)

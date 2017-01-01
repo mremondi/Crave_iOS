@@ -18,7 +18,7 @@ class LoginViewController: UIViewController, LoginInitializationDelegate {
         super.viewDidLoad()
 
         self.navigationItem.title = "Crave"
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Milkshake", size: 40)!,  NSForegroundColorAttributeName: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.red
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true

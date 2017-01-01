@@ -135,7 +135,11 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //The rating (user's rating) and the price of the item
         let cellItemPriceAndRatingLabel = UILabel(frame: CGRect(x: 10, y: 10, width: cell.bounds.width-20, height: (cell.bounds.height/2-10)))
-        cellItemPriceAndRatingLabel.text = "Price: $" + String(format: "%.2f", Double(filteredData[indexPath.row].price)!) + " Rating: " + ratingData[indexPath.row].rating
+        var ratingValue = Double(filteredData[indexPath.row].rating)!/Double(filteredData[indexPath.row].numberOfRatings)!
+        if (ratingValue > 5.0){
+            ratingValue = ratingValue/2
+        }
+        cellItemPriceAndRatingLabel.text = "Price: $" + String(format: "%.2f", Double(filteredData[indexPath.row].price)!) + " Rating: " + String(format: "%.2f", ratingValue)
         cellItemPriceAndRatingLabel.textColor = UIColor.darkGray
         cellItemPriceAndRatingLabel.font = UIFont(name: "Helvetica", size: 12)
         cellItemPriceAndRatingLabel.textAlignment = .right

@@ -18,7 +18,6 @@ class NearMeViewController: UIViewController, MapTransitionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         requests.requestNearbyRestaurants(nearbyRestaurants: nearbyRestaurants)
         currentRestaurantMenus.clear()
         

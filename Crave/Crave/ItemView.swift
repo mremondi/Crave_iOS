@@ -37,6 +37,7 @@ class ItemView: UIView {
         restaurantTitle.frame = CGRect(x: 10, y: 60, width: width-20, height: 60)
         restaurantTitle.text = item.restaurantName
         restaurantTitle.font = UIFont(name: "Helvetica", size: 30)
+        restaurantTitle.adjustsFontSizeToFitWidth = true
         restaurantTitle.textColor = UIColor.black
         restaurantTitle.textAlignment = .center
         view.addSubview(restaurantTitle)
@@ -55,13 +56,13 @@ class ItemView: UIView {
         //Set up the item name
         itemName.frame = CGRect(x: 0, y: 0, width: width-0, height: 40)
         itemName.text = item.name
-        itemName.font = UIFont(name: "Helvetica", size: 20)
+        itemName.font = UIFont(name: "Helvetica", size: 18)
         itemName.textColor = UIColor.darkGray
         itemName.textAlignment = .left
         //Set up the item price
         itemPrice.frame = CGRect(x: 0, y: 0, width: width-10, height: 40)
         itemPrice.text = "$" + String(format: "%.2f", Double(item.price)!)
-        itemName.font = UIFont(name: "Helvetica", size: 20)
+        itemName.font = UIFont(name: "Helvetica", size: 15)
         itemPrice.textColor = UIColor.darkGray
         itemPrice.textAlignment = .right
         
@@ -104,7 +105,10 @@ class ItemView: UIView {
         cosmosView.frame = CGRect(x: 0, y: 475, width: width, height: 50)
         
         if ((item.rating != "0")&&(item.rating != "null")){
-            cosmosView.rating = (Double(item.rating)!/10.0)*5.0
+            cosmosView.rating = (Double(item.rating)!/Double(item.numberOfRatings)!)
+            if (cosmosView.rating > 5.0){
+                cosmosView.rating = cosmosView.rating/2
+            }
         }
         else{
             cosmosView.rating = 0.0

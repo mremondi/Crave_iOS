@@ -30,6 +30,7 @@
 		C3418B201E179470005364F0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3418B1F1E17946F005364F0 /* MenuViewController.swift */; };
 		C3418B221E1827A9005364F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3418B211E1827A9005364F0 /* MenuView.swift */; };
 		C395F0B21DB5A20C00A61651 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395F0B11DB5A20C00A61651 /* Profile.swift */; };
+		C39AC5111E1982AD00261557 /* Milkshake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3EC446E1E19804D00711602 /* Milkshake.ttf */; };
 		C3C413E61DE7D1B200DF5563 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413E51DE7D1B200DF5563 /* MoreViewController.swift */; };
 		C3C413EA1DE8F42200DF5563 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413E91DE8F42200DF5563 /* RestaurantView.swift */; };
 		C3C413EC1DE8F42F00DF5563 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413EB1DE8F42F00DF5563 /* RestaurantViewController.swift */; };
@@ -37,7 +38,6 @@
 		C3EC44431E18524200711602 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44421E18524200711602 /* MenuItem.swift */; };
 		C3EC44461E18B74C00711602 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44451E18B74C00711602 /* ItemViewController.swift */; };
 		C3EC44481E18B75900711602 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44471E18B75900711602 /* ItemView.swift */; };
-		C3EC444A1E18D6B900711602 /* Milkshake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3EC44491E18D6B900711602 /* Milkshake.ttf */; };
 		C3EC44561E19014B00711602 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44551E19014B00711602 /* Rating.swift */; };
 		C3EC44671E192F4D00711602 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44661E192F4D00711602 /* RatingViewController.swift */; };
 		C3EC44691E192F5500711602 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44681E192F5500711602 /* CosmosDistrib.swift */; };
@@ -85,11 +85,11 @@
 		C3EC44421E18524200711602 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		C3EC44451E18B74C00711602 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		C3EC44471E18B75900711602 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
-		C3EC44491E18D6B900711602 /* Milkshake.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Milkshake.ttf; sourceTree = "<group>"; };
 		C3EC44551E19014B00711602 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		C3EC44661E192F4D00711602 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		C3EC44681E192F5500711602 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		C3EC446A1E192F9600711602 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
+		C3EC446E1E19804D00711602 /* Milkshake.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Milkshake.ttf; sourceTree = "<group>"; };
 		C3FB1E081DEB4594008EA1F8 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C3FB1E0A1DEB464B008EA1F8 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C3FB1E0C1DEBAF3C008EA1F8 /* CurrentRestaurantMenus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRestaurantMenus.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		C3319D3F1DB2B1460024E577 /* Crave */ = {
 			isa = PBXGroup;
 			children = (
-				C3EC444B1E18D6BD00711602 /* Fonts */,
+				C3EC44701E19805600711602 /* fonts */,
 				C3EC44441E18B74000711602 /* Item */,
 				C3418B1E1E17945C005364F0 /* Menu */,
 				C3FB1E101DEBBAEC008EA1F8 /* AboutUs */,
@@ -283,12 +283,12 @@
 			name = Item;
 			sourceTree = "<group>";
 		};
-		C3EC444B1E18D6BD00711602 /* Fonts */ = {
+		C3EC44701E19805600711602 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C3EC44491E18D6B900711602 /* Milkshake.ttf */,
+				C3EC446E1E19804D00711602 /* Milkshake.ttf */,
 			);
-			name = Fonts;
+			name = fonts;
 			sourceTree = "<group>";
 		};
 		C3FB1E101DEBBAEC008EA1F8 /* AboutUs */ = {
@@ -365,8 +365,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3319D4B1DB2B1460024E577 /* LaunchScreen.storyboard in Resources */,
+				C39AC5111E1982AD00261557 /* Milkshake.ttf in Resources */,
 				C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */,
-				C3EC444A1E18D6B900711602 /* Milkshake.ttf in Resources */,
 				C3319D461DB2B1460024E577 /* Main.storyboard in Resources */,
 				C3EC446B1E192F9600711602 /* RatingViewController.xib in Resources */,
 			);
@@ -583,7 +583,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 94716F2416C1071B15E4D3F5 /* Pods-Crave.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				DEVELOPMENT_TEAM = L56NK942R6;
 				INFOPLIST_FILE = Crave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -597,7 +597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F08716CB759CD475E761BF23 /* Pods-Crave.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				DEVELOPMENT_TEAM = L56NK942R6;
 				INFOPLIST_FILE = Crave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

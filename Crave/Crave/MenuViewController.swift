@@ -16,7 +16,7 @@ class MenuViewController: UIViewController, MenuTransitionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let view = menuView.create(sections: menuSections)
         view.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height+3700)
         
