@@ -22,7 +22,7 @@ class MoreView: UIView {
         
         //General Initializers
         let width = UIScreen.main.bounds.width
-        let height = UIScreen.main.bounds.height
+        //let height = UIScreen.main.bounds.height
         view.backgroundColor = UIColor.white
         
         //Get My Profile Button

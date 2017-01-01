@@ -23,8 +23,8 @@ class NearMeViewController: UIViewController, MapTransitionDelegate {
         currentRestaurantMenus.clear()
         
         //General Initializers
-        let width = UIScreen.main.bounds.width
-        let height = UIScreen.main.bounds.height
+        //let width = UIScreen.main.bounds.width
+        //let height = UIScreen.main.bounds.height
         mapView.delegate = self
         
         //Listener for updater
@@ -103,18 +103,26 @@ class NearMeViewController: UIViewController, MapTransitionDelegate {
     }
     
     func goToSearch(){
+        
+        requests.getAllItems()
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
         self.navigationController?.pushViewController(vc!, animated: false)
         
     }
     
     func goToFavorites(){
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
+        
+        requests.requestUserRatings(id: profile.getID(), vc: vc!)
+        
         self.navigationController?.pushViewController(vc!, animated: false)
         
     }
     
     func goToMore(){
+    
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreViewController
         self.navigationController?.pushViewController(vc!, animated: false)
         
@@ -127,7 +135,7 @@ class NearMeViewController: UIViewController, MapTransitionDelegate {
     
     func InfoWindowClicked(id: String) {
         
-        VCUtils.showActivityIndicator(uiView: self.view)
+        //VCUtils.showActivityIndicator(uiView: self.view)
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "restaurant") as? RestaurantViewController
         
@@ -135,16 +143,13 @@ class NearMeViewController: UIViewController, MapTransitionDelegate {
         
         let restaurant = nearbyRestaurants.getRestaurant(id: id)
         
-        for menuID in (restaurant?.getMenus())!{
-            print(menuID)
-            requests.requestMenu(menuID: menuID)
-        }
+        requests.requestMenu(menuIDs: (restaurant?.getMenus())!, vc: vc!)
         
-        let deadlineTime = DispatchTime.now() + .seconds(3)
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-            VCUtils.hideActivityIndicator(uiView: self.view)
-            self.navigationController?.pushViewController(vc!, animated: false)
-        }
+        //let deadlineTime = DispatchTime.now() + .seconds(3)
+        //DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            //VCUtils.hideActivityIndicator(uiView: self.view)
+        self.navigationController?.pushViewController(vc!, animated: false)
+        //}
         
         
         

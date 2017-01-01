@@ -6,5 +6,7 @@ target ‘Crave’ do
 	pod 'GoogleMaps’
 	pod 'Alamofire', '~> 4.0'
 	pod 'SwiftyJSON'
+	pod 'Cosmos', '~> 7.0'
+	pod 'PopupDialog', '~> 0.5’
 
 end

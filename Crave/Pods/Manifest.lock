@@ -1,22 +1,28 @@
 PODS:
   - Alamofire (4.0.1)
+  - Cosmos (7.0.0)
   - GoogleMaps (2.0.1):
     - GoogleMaps/Maps (= 2.0.1)
   - GoogleMaps/Base (2.0.1)
   - GoogleMaps/Maps (2.0.1):
     - GoogleMaps/Base (= 2.0.1)
+  - PopupDialog (0.5.2)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - Cosmos (~> 7.0)
   - GoogleMaps
+  - PopupDialog (~> 0.5)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Cosmos: 2c8299147138758f6ebbb247cf1aeed77998bdf9
   GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  PopupDialog: 437bd12f5bd884449dc5a8b624043b7d935df2b8
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 7565158c9c80d465f591bf6842a87a2099366e1d
+PODFILE CHECKSUM: f0abb29f2b18c3a1f82ee64658a19df7e068a98f
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0.beta.3

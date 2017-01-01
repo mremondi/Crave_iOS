@@ -8,16 +8,37 @@
 
 import UIKit
 
-class CravingsViewController: UIViewController {
+class CravingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    let tableView = UITableView()
+    
+    var ratingData:[Rating] = []
+    var data: [MenuItem] = []
+    var filteredData: [MenuItem]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "Previous Ratings"
+        self.navigationItem.title = "Your Cravings"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.red
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
+        
+        //General Initializers
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        view.backgroundColor = UIColor.white
+        
+        //Create the table view for all of the user's rated items
+        tableView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        //registering the cell's class
+        tableView.dataSource = self
+        tableView.delegate = self
+        filteredData = data
+        self.view.addSubview(tableView)
+        
         
         let button = UIView()
         button.frame = CGRect(x: 0, y: 0, width: 36, height: 40)
@@ -77,6 +98,8 @@ class CravingsViewController: UIViewController {
     }
 
     func goToSearch(){
+        requests.getAllItems()
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
         self.navigationController?.pushViewController(vc!, animated: false)
         
@@ -98,6 +121,57 @@ class CravingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
+        
+        //The name of the item
+        let cellItemTitleLabel = UILabel(frame: CGRect(x: 10, y: 10, width: cell.bounds.width-10, height: (cell.bounds.height/2-10)))
+        cellItemTitleLabel.text = filteredData[indexPath.row].name
+        cellItemTitleLabel.textColor = UIColor.darkGray
+        cellItemTitleLabel.font = UIFont(name: "Helvetica", size: 12)
+        cellItemTitleLabel.textAlignment = .left
+        cell.addSubview(cellItemTitleLabel)
+        
+        //The rating (user's rating) and the price of the item
+        let cellItemPriceAndRatingLabel = UILabel(frame: CGRect(x: 10, y: 10, width: cell.bounds.width-20, height: (cell.bounds.height/2-10)))
+        cellItemPriceAndRatingLabel.text = "Price: $" + String(format: "%.2f", Double(filteredData[indexPath.row].price)!) + " Rating: " + ratingData[indexPath.row].rating
+        cellItemPriceAndRatingLabel.textColor = UIColor.darkGray
+        cellItemPriceAndRatingLabel.font = UIFont(name: "Helvetica", size: 12)
+        cellItemPriceAndRatingLabel.textAlignment = .right
+        cell.addSubview(cellItemPriceAndRatingLabel)
+        
+        //The title of the restaurant
+        let cellRestaurantTitleLabel = UILabel(frame: CGRect(x: (10), y: (10+cell.bounds.height/2-10), width: cell.bounds.width-10, height: (cell.bounds.height/2-10)))
+        cellRestaurantTitleLabel.text = filteredData[indexPath.row].restaurantName
+        cellRestaurantTitleLabel.textColor = UIColor.darkGray
+        cellRestaurantTitleLabel.font = UIFont(name: "Helvetica", size: 12)
+        cellRestaurantTitleLabel.textAlignment = .left
+        cell.addSubview(cellRestaurantTitleLabel)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredData.count
+    }
+
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+       
+        let curItem = data[indexPath[1]]
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemViewController
+        
+        vc?.title = curItem.name
+        vc?.item = curItem
+        
+        self.navigationController?.pushViewController(vc!, animated: false)
+    }
+    
+    
     
 
     /*
