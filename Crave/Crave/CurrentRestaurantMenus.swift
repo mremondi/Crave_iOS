@@ -34,4 +34,14 @@ public class CurrentRestaurantMenus{
         
         return nil
     }
+    
+    func getMenu(name: String)->Menu?{
+        for thing in currentRestaurantMenus{
+            if (thing.getName() == name){
+                return thing
+            }
+        }
+        
+        return nil
+    }
 }

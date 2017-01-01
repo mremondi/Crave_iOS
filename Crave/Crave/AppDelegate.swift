@@ -18,6 +18,7 @@ var profile = Profile(id: "", email: "", gender: "", website: "", name: "", loca
 let nearbyRestaurants = NearbyRestaurants()
 let currentRestaurantMenus = CurrentRestaurantMenus()
 let VCUtils = ViewControllerUtils()
+var curAllItemList: [MenuItem] = []
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

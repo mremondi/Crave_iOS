@@ -17,5 +17,8 @@ struct CraveApi {
     let REGISTER_ENDPOINT = "/register"
     let UPDATE_USER_ENDPOINT = "/updateUser"
     let UPDATE_PASSWORD = "/updatePassword"
+    let RESTAURANTS_SEARCH_ENDPOINT = "/restaurants/search/"
+    let MENU_ITEMS_ENDPONT = "/menus_items/"
+    let GET_RATINGS_ENDPOINT = "/ratings/"
     
 }

@@ -34,11 +34,15 @@ class RestaurantView: UIView {
     var attributedString2 = NSMutableAttributedString(string:"")
     var attributedString3 = NSMutableAttributedString(string:"")
 
+    var menuButtonList = [UIButton]()
+    
+    weak var delegate: RestaurantTransitionDelegate?
+    
     func create(id: String)->UIScrollView{
         
         //General Initializers
         let width = UIScreen.main.bounds.width
-        let height = UIScreen.main.bounds.height
+        //let height = UIScreen.main.bounds.height
         view.backgroundColor = UIColor.white
         let restaurant = nearbyRestaurants.getRestaurant(id: id)!
         
@@ -58,9 +62,8 @@ class RestaurantView: UIView {
         
         var counter = 0
         //The menu buttons
-        for thing in restaurant.getMenus(){
+        for _ in restaurant.getMenus(){
             let menuButton = UIButton(frame: CGRect(x: 10, y: 180 + 55*counter, width: Int(width-20), height: 50))
-            menuButton.setTitle(currentRestaurantMenus.getCurrentRestaurantMenus()[counter].getName(), for: [])
             menuButton.setTitleColor(UIColor.black, for: .normal)
             menuButton.backgroundColor = UIColor.white
             menuButton.layer.cornerRadius = 5
@@ -71,7 +74,10 @@ class RestaurantView: UIView {
             menuButton.layer.masksToBounds = false
             menuButton.layer.shadowRadius = 1.0
             menuButton.layer.shadowOpacity = 0.5
+            menuButton.addTarget(self, action: #selector(RestaurantView.menuButtonSelected), for: .touchDown)
             view.addSubview(menuButton)
+            
+            menuButtonList.append(menuButton)
             
             counter += 1
         }
@@ -216,6 +222,14 @@ class RestaurantView: UIView {
         UIApplication.shared.openURL(NSURL(string: url)! as URL)
     }
     
+    func getMenuButtons()->[UIButton]{
+        return (menuButtonList)
+    }
+    
+    func menuButtonSelected(sender: UIButton){
+        let menu = currentRestaurantMenus.getMenu(name: (sender.titleLabel?.text!)!)
+        delegate?.TransitionToMenu(menu: menu!)
+    }
 
 }
 

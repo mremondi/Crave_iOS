@@ -34,4 +34,14 @@ public class NearbyRestaurants{
         
         return nil
     }
+    
+    func getRestaurantIDByName(name: String)->Restaurant?{
+        for thing in nearbyRestaurants{
+            if (thing.getName() == name){
+                return thing
+            }
+        }
+        
+        return nil
+    }
 }

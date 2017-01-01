@@ -13,12 +13,12 @@ public class Menu{
     //Fields
     var menuName: String
     var restaurantID: String
-    var sections: [String]
+    var sections: [MenuSection]
     var items: [String]
     var create_date: String
     var id: String
     
-    init(id: String, menuName: String, restaurantID: String, sections: [String], items: [String], create_date: String) {
+    init(id: String, menuName: String, restaurantID: String, sections: [MenuSection], items: [String], create_date: String) {
         self.id = id
         self.menuName = menuName
         self.restaurantID = restaurantID
@@ -35,7 +35,7 @@ public class Menu{
         return menuName
     }
     
-    func getSections()->[String]{
+    func getSections()->[MenuSection]{
         return sections
     }
     

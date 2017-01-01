@@ -27,3 +27,15 @@ protocol MoreTransitionDelegate: class{
     func ProfileButtonClicked()
     func AboutUSButtonClicked()
 }
+
+protocol RestaurantTransitionDelegate: class{
+    func TransitionToMenu(menu: Menu)
+}
+
+protocol MenuTransitionDelegate: class{
+    func TransitionToItem(menuItemID: String, menuItemSection: String)
+}
+
+protocol ItemTransitionDelegate: class{
+    func TransitionToPopup()
+}

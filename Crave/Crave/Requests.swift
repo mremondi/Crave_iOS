@@ -26,7 +26,7 @@ public class Requests{
         url = url + "/" + String(locationManagerClass.getLocationLatitude()) + "/" + String(locationManagerClass.getLocationLongitude())
         
         Alamofire.request(url).responseJSON { response in
-            debugPrint(response)
+            //debugPrint(response)
             
             if let value = response.result.value {
                 let todo = JSON(value)
@@ -73,10 +73,70 @@ public class Requests{
         }
     }
     
-    func requestMenu(menuID: String){
+    func requestMenu(menuIDs: [String], vc: RestaurantViewController){
         
-        url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
-        url = url + "/" + menuID
+        for menuID in menuIDs{
+            url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
+            url = url + "/" + menuID
+            Alamofire.request(url).responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                    
+                    let id = String(describing: todo["_id"])
+                    let menuName = String(describing: todo["menuName"])
+                    let restaurantID = String(describing: todo["restaurantId"])
+                    let sections = todo["sections"]
+                    let items = todo["items"]
+                    let create_date = String(describing: todo["create_date"])
+
+                    var sectionList = [MenuSection]()
+                    var itemList = [String]()
+                    
+                    for section in sections{
+                        let menuSection = MenuSection(sectionName: String(describing: section.1), sectionItems: [])
+                        sectionList.append(menuSection)
+                    }
+                    
+                    sectionList.append(MenuSection(sectionName: "etc", sectionItems: []))
+                    
+                    for item in items{
+                        itemList.append(String(describing: item))
+                    }
+                    
+                    let menu = Menu(id: id, menuName: menuName, restaurantID: restaurantID, sections: sectionList, items: itemList, create_date: create_date)
+                    
+                    currentRestaurantMenus.add(menu: menu)
+                    
+                    self.getSectionItems(sections: sectionList, menuID: id)
+                    
+                    
+                    if (currentRestaurantMenus.getCurrentRestaurantMenus().count == menuIDs.count){
+                        vc.updateMenuButtonTitles()
+                    }
+                }
+            }
+ 
+        }
+        
+    }
+    
+    func getSectionItems(sections: [MenuSection], menuID: String){
+        
+        var listOfItems = [MenuItem]()
+        var listOfSectionNames = [String]()
+        
+        for section in sections{
+            listOfSectionNames.append(section.sectionName)
+        }
+        
+        url = ca.API_ENDPOINT + ca.MENU_ITEMS_ENDPONT+menuID
         Alamofire.request(url).responseJSON { response in
             guard response.result.error == nil else {
                 // got an error in getting the data, need to handle it
@@ -87,18 +147,40 @@ public class Requests{
             
             if let value = response.result.value {
                 let todo = JSON(value)
+                for thing in todo{
+                    let item = thing.1
+                    
+                    
+                    let menuID = String(describing: item["menuID"])
+                    let name = String(describing: item["name"])
+                    let numberOfRatings = String(describing: item["numberOfRatings"])
+                    //let dietaryInfo = String(describing: item["diestaryInfo"])
+                    let description = String(describing: item["description"])
+                    let restaurantID = String(describing: item["restaurant_id"])
+                    let rating = String(describing: item["rating"])
+                    //let tags = String(item["tags"])
+                    let price = String(describing: item["price"])
+                    let menuSection = String(describing: item["menuSection"])
+                    let id = String(describing: item["_id"])
+                    //let createDate = String(item["create_date"])
+                    //let menuSubSection = String(item["menuSubSection"])
+                    let restaurantName = String(describing: item["restaurant_name"])
+                    
+                    let menuItem = MenuItem(id: id, menuID: menuID, restaurantID: restaurantID, name: name, numberOfRatings: numberOfRatings, rating: rating, description: description, menuSection: menuSection, price: price, restaurantName: restaurantName)
+                    
+                    listOfItems.append(menuItem)
+                }
                 
-                let id = String(describing: todo["_id"])
-                let menuName = String(describing: todo["menuName"])
-                let restaurantID = String(describing: todo["restaurantId"])
-                let sections = todo["sections"]
-                let items = todo["items"]
-                let create_date = String(describing: todo["create_date"])
+                for item in listOfItems{
+                    sections[(listOfSectionNames.index(of: item.menuSection))!].addItem(item: item)
+                }
                 
-                let menu = Menu(id: id, menuName: menuName, restaurantID: restaurantID, sections: [], items: [], create_date: create_date)
-                
-                currentRestaurantMenus.add(menu: menu)
+                //for section in sections{
+                    //print(section.getItems().count)
+                //}
             }
+
+            
         }
     }
     
@@ -127,20 +209,19 @@ public class Requests{
                     
                     let id = todo["_id"] //string
                     let email = todo["email"] //string
-                    let ratings = todo["ratings"] //array
+                    //let ratings = todo["ratings"] //array
                     let profileJson = todo["profile"] //dictionary
                     let gender = profileJson["gender"] //string
-                    let restaurants = profileJson["restaurants"] //array
-                    let picture = profileJson["picture"] //unknown
+                    //let restaurants = profileJson["restaurants"] //array
+                    //let picture = profileJson["picture"] //unknown
                     let website = profileJson["website"] //string
                     let name = profileJson["name"] //name
                     let location = profileJson["location"] //string
                     
                     
-
                     profile = Profile(id: String(describing: id), email: String(describing: email), gender: String(describing: gender), website: String(describing: website), name: String(describing: name), location: String(describing: location))
                     
-                    print(todo)
+                    //print(todo)
                      NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LoginIdentifier"), object: nil, userInfo: ["Result" : "Success"])
                 }
         }
@@ -166,7 +247,7 @@ public class Requests{
                 }
                 
                 if let value = response.result.value {
-                    let todo = JSON(value)
+                    //let todo = JSON(value)
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
                 }
         }
@@ -192,7 +273,7 @@ public class Requests{
                 }
                 
                 if let value = response.result.value {
-                    let todo = JSON(value)
+                    //let todo = JSON(value)
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
                 }
         }
@@ -214,10 +295,193 @@ public class Requests{
                 }
                 
                 if let value = response.result.value {
-                    let todo = JSON(value)
+                    //let todo = JSON(value)
                 }
         }
         
     }
+    
+    func requestAllRestaurants(){
+        url = ca.API_ENDPOINT + ca.RESTAURANTS_ENPOINT
+        
+        //Sending the request
+        Alamofire.request(url, method: .get)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                    print(todo)
+                }
+        }
+
+    }
+    
+    func getAllItems(){
+        url = ca.API_ENDPOINT + ca.ITEMS_ENDPOINT
+        //Sending the request
+        Alamofire.request(url, method: .get)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    
+                    //Reset the global list of all items
+                    curAllItemList = []
+                    
+                    let todo = JSON(value)
+                    for thing in todo{
+                        let item = thing.1
+                        
+                        
+                        let menuID = String(describing: item["menuID"])
+                        let name = String(describing: item["name"])
+                        let numberOfRatings = String(describing: item["numberOfRatings"])
+                        //let dietaryInfo = String(describing: item["diestaryInfo"])
+                        let description = String(describing: item["description"])
+                        let restaurantID = String(describing: item["restaurant_id"])
+                        let rating = String(describing: item["rating"])
+                        //let tags = String(item["tags"])
+                        let price = String(describing: item["price"])
+                        let menuSection = String(describing: item["menuSection"])
+                        let id = String(describing: item["_id"])
+                        //let createDate = String(item["create_date"])
+                        //let menuSubSection = String(item["menuSubSection"])
+                        let restaurantName = String(describing: item["restaurant_name"])
+                        
+                        let menuItem = MenuItem(id: id, menuID: menuID, restaurantID: restaurantID, name: name, numberOfRatings: numberOfRatings, rating: rating, description: description, menuSection: menuSection, price: price, restaurantName: restaurantName)
+                        
+                        curAllItemList.append(menuItem)
+                    }
+                }
+        }
+        
+    }
+    
+    
+    func requestUserRatings(id:String, vc: CravingsViewController){
+        url = ca.API_ENDPOINT + ca.GET_RATINGS_ENDPOINT+id
+        //Sending the request
+        Alamofire.request(url, method: .get)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                    
+                    var ratingsList: [Rating] = []
+                    
+                    for thing in todo{
+                        let itemID = thing.1["itemID"]
+                        let ratingID = thing.1["_id"]
+                        let rating = thing.1["rating"]
+                        
+                        let ratingObj = Rating(itemID: String(describing: itemID), id: String(id), rating: String(describing: rating))
+                        
+                        ratingsList.append(ratingObj)
+                    }
+                    
+                    if (ratingsList.count == todo.count){
+                        self.getItemForCravings(vc: vc, ratingList: ratingsList)
+                    }
+                }
+        }
+
+    }
+    
+    func getItemForCravings(vc: CravingsViewController, ratingList: [Rating]){
+        
+        var itemList: [MenuItem] = []
+        
+        for rating in ratingList{
+            url = ca.API_ENDPOINT + ca.ITEMS_ENDPOINT + "/" + rating.itemID
+            //Sending the request
+            Alamofire.request(url, method: .get)
+                .responseJSON { response in
+                    guard response.result.error == nil else {
+                        // got an error in getting the data, need to handle it
+                        print("error calling POST on /todos/1")
+                        print(response.result.error!)
+                        return
+                    }
+                    
+                    if let value = response.result.value {
+                        let todo = JSON(value)
+                        
+                        print(todo)
+                        
+                        let item = todo
+                        
+                        let menuID = String(describing: item["menuID"])
+                        let name = String(describing: item["name"])
+                        let numberOfRatings = String(describing: item["numberOfRatings"])
+                        //let dietaryInfo = String(describing: item["diestaryInfo"])
+                        let description = String(describing: item["description"])
+                        let restaurantID = String(describing: item["restaurant_id"])
+                        let ratingTotal = String(describing: item["rating"])
+                        //let tags = String(item["tags"])
+                        let price = String(describing: item["price"])
+                        let menuSection = String(describing: item["menuSection"])
+                        let id = String(describing: item["_id"])
+                        //let createDate = String(item["create_date"])
+                        //let menuSubSection = String(item["menuSubSection"])
+                        let restaurantName = String(describing: item["restaurant_name"])
+                        
+                        let menuItem = MenuItem(id: id, menuID: menuID, restaurantID: restaurantID, name: name, numberOfRatings: numberOfRatings, rating: ratingTotal, description: description, menuSection: menuSection, price: price, restaurantName: restaurantName)
+                        
+                        itemList.append(menuItem)
+                        
+                        if (ratingList.count == itemList.count){
+                            vc.ratingData = ratingList
+                            vc.data = itemList
+                            vc.filteredData = vc.data
+                            vc.tableView.reloadData()
+                        }
+
+
+                        
+                    }
+            }
+
+        }
+    }
+    
+    func sendUserRating(itemID: String, rating: String, userID: String){
+        url = ca.API_ENDPOINT + ca.ITEMS_ENDPOINT + "/" + itemID + "/" + rating + "/" + userID
+        //Sending the request
+        Alamofire.request(url, method: .put)
+            .responseJSON { response in
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling POST on /todos/1")
+                    print(response.result.error!)
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let todo = JSON(value)
+                    
+                    
+                }
+        }
+    }
+    
+    
+
 
 }
