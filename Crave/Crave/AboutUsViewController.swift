@@ -27,7 +27,7 @@ class AboutUsViewController: UIViewController {
         button.setImage(UIImage(named: "Map"), for: UIControlState())
         //set frame
         button.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
-        button.addTarget(self, action: #selector(RestaurantViewController.goToNearMe), for: .touchDown)
+        button.addTarget(self, action: #selector(AboutUsViewController.goToNearMe), for: .touchDown)
         let barButton = UIBarButtonItem(customView: button)
         
         let button2 = UIButton()
@@ -35,14 +35,14 @@ class AboutUsViewController: UIViewController {
         button2.setImage(UIImage(named: "Search"), for: UIControlState())
         //set frame
         button2.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
-        button2.addTarget(self, action: #selector(RestaurantViewController.goToSearch), for: .touchDown)
+        button2.addTarget(self, action: #selector(AboutUsViewController.goToSearch), for: .touchDown)
         let barButton2 = UIBarButtonItem(customView: button2)
         
         let button3 = UIButton()
         //set image for button
         button3.setImage(UIImage(named: "Favorites"), for: UIControlState())
         //set frame
-        button3.addTarget(self, action: #selector(RestaurantViewController.goToFavorites), for: .touchDown)
+        button3.addTarget(self, action: #selector(AboutUsViewController.goToFavorites), for: .touchDown)
         button3.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
         let barButton3 = UIBarButtonItem(customView: button3)
         
@@ -51,7 +51,7 @@ class AboutUsViewController: UIViewController {
         //set image for button
         button4.setImage(UIImage(named: "More"), for: UIControlState())
         //set frame
-        button4.addTarget(self, action: #selector(RestaurantViewController.goToMore), for: .touchDown)
+        button4.addTarget(self, action: #selector(AboutUsViewController.goToMore), for: .touchDown)
         button4.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
         
         let barButton4 = UIBarButtonItem(customView: button4)

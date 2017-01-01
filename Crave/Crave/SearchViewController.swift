@@ -182,8 +182,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
     
     func searchBarSearchButtonClicked( _ searchBar: UISearchBar)
     {
-        print(searchbar.text!)
-
+        //print(searchbar.text!)
+        searchbar.resignFirstResponder()
         
     }
 

@@ -32,9 +32,9 @@ class AboutUs: UIView {
         view.backgroundColor = UIColor.white
         
         //Crave Title Label
-        craveTitleLabel.frame = CGRect(x: 0, y: height/2, width: width, height: 50)
+        craveTitleLabel.frame = CGRect(x: 0, y: height/2-100, width: width, height: 100)
         craveTitleLabel.text = "Crave"
-        craveTitleLabel.font = craveTitleLabel.font.withSize(49)
+        craveTitleLabel.font = UIFont(name: "Milkshake", size: 75)
         craveTitleLabel.textColor = UIColor.red
         craveTitleLabel.textAlignment = .center
         view.addSubview(craveTitleLabel)
@@ -47,14 +47,14 @@ class AboutUs: UIView {
         view.addSubview(contactLabel)
         
         //Contact Label
-        authorLabel.frame = CGRect(x: 0, y: height/2 + 100, width: width*2/5, height: 25)
+        authorLabel.frame = CGRect(x: 0, y: height/2 + 100, width: width*2/5-30, height: 25)
         authorLabel.text = "Contact Us: "
         authorLabel.font = contactLabel.font.withSize(15)
         authorLabel.textAlignment = .right
         view.addSubview(authorLabel)
         
         //Email Button
-        emailButton.frame = CGRect(x: width*2/5, y:  height/2 + 100, width: width*3/5, height: 25)
+        emailButton.frame = CGRect(x: width*2/5-30, y:  height/2 + 100, width: width*3/5, height: 25)
         let buttonTitleStr = NSMutableAttributedString(string:"mikeremondi@gmail.com", attributes:attrs)
         attributedString.append(buttonTitleStr)
         emailButton.setAttributedTitle(attributedString, for: .normal)

@@ -29,8 +29,8 @@ public class LoginView{
         loginButton = UIButton(frame: CGRect(x: width/2-100, y: height/5+120, width: 200, height: 50))
         
         //Email text field properties
-        //emailTextField.placeholder = "email"
-        emailTextField.text = "rsdurst@colby.edu"
+        emailTextField.placeholder = "email"
+        //emailTextField.text = "rsdurst@colby.edu"
         emailTextField.layer.cornerRadius = 5.0
         emailTextField.layer.borderWidth = 1.5
         emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
@@ -38,9 +38,9 @@ public class LoginView{
         
         //Password text field properties
         
-        passwordTextField.text = "password";
+        //passwordTextField.text = "password";
         
-        //passwordTextField.placeholder = "password"
+        passwordTextField.placeholder = "password"
         passwordTextField.layer.cornerRadius = 5.0;
         passwordTextField.layer.borderWidth = 1.5
         passwordTextField.isSecureTextEntry = true

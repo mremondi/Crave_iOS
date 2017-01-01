@@ -19,7 +19,6 @@ class ProfileViewController: UIViewController, ProfileDelegate {
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.red
         navigationController?.isNavigationBarHidden = false
-        navigationItem.hidesBackButton = true
         
         //Listener for the profile
         NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.refresh), name:NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
@@ -34,7 +33,7 @@ class ProfileViewController: UIViewController, ProfileDelegate {
         button.setImage(UIImage(named: "Map"), for: UIControlState())
         //set frame
         button.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
-        button.addTarget(self, action: #selector(RestaurantViewController.goToNearMe), for: .touchDown)
+        button.addTarget(self, action: #selector(ProfileViewController.goToNearMe), for: .touchDown)
         let barButton = UIBarButtonItem(customView: button)
         
         let button2 = UIButton()
@@ -42,14 +41,14 @@ class ProfileViewController: UIViewController, ProfileDelegate {
         button2.setImage(UIImage(named: "Search"), for: UIControlState())
         //set frame
         button2.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
-        button2.addTarget(self, action: #selector(RestaurantViewController.goToSearch), for: .touchDown)
+        button2.addTarget(self, action: #selector(ProfileViewController.goToSearch), for: .touchDown)
         let barButton2 = UIBarButtonItem(customView: button2)
         
         let button3 = UIButton()
         //set image for button
         button3.setImage(UIImage(named: "Favorites"), for: UIControlState())
         //set frame
-        button3.addTarget(self, action: #selector(RestaurantViewController.goToFavorites), for: .touchDown)
+        button3.addTarget(self, action: #selector(ProfileViewController.goToFavorites), for: .touchDown)
         button3.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
         let barButton3 = UIBarButtonItem(customView: button3)
         
@@ -58,7 +57,7 @@ class ProfileViewController: UIViewController, ProfileDelegate {
         //set image for button
         button4.setImage(UIImage(named: "More"), for: UIControlState())
         //set frame
-        button4.addTarget(self, action: #selector(RestaurantViewController.goToMore), for: .touchDown)
+        button4.addTarget(self, action: #selector(ProfileViewController.goToMore), for: .touchDown)
         button4.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
         
         let barButton4 = UIBarButtonItem(customView: button4)

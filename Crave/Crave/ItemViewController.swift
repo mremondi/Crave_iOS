@@ -52,7 +52,7 @@ class ItemViewController: UIViewController, ItemTransitionDelegate {
         // Create second button
         let buttonTwo = DefaultButton(title: "RATE", height: 60) {
             //Send in rating
-            requests.sendUserRating(itemID: self.item.id, rating: String(ratingVC.cosmosStarRating.rating * 2), userID: profile.getID())
+            requests.sendUserRating(itemID: self.item.id, rating: String(ratingVC.cosmosStarRating.rating), userID: profile.getID())
             
             //Send back to view of that restaurant
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
