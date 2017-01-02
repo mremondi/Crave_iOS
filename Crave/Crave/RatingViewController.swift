@@ -10,14 +10,18 @@ import UIKit
 
 class RatingViewController: UIViewController {
 
+    //The stars where the user interacts to rate the dish
     @IBOutlet weak var cosmosStarRating: CosmosView!
-
+    
+    //The text field where the user interacts to leave a comment
     @IBOutlet weak var commentTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         commentTextField.delegate = self
+        
+        //Gesture recognizer for the star selection
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEditing)))
     }
 

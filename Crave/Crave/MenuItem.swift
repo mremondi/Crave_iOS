@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 12/31/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// Menu item object class.
 
 import Foundation
 

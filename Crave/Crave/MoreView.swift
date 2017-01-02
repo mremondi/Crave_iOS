@@ -12,7 +12,7 @@ import MapKit
 
 class MoreView: UIView {
     
-    
+    //Initialize the element fields of the more view
     let view = UIView()
     let myProfileButton = UIButton()
     let aboutUsButton = UIButton()
@@ -72,17 +72,14 @@ class MoreView: UIView {
         let horLine2 = UIImageView(frame: CGRect(x: 10, y: 150, width: Int(width-20), height: 1))
         horLine2.backgroundColor = UIColor.lightGray
         view.addSubview(horLine2)
-        
 
-        
-        
         return view
     }
     
+    //Functions that calls the corresponding function in the more view controller
     func myProfileButtonSelected(){
         delegate?.ProfileButtonClicked()
     }
-    
     func aboutUsButtonSelected(){
         delegate?.AboutUSButtonClicked()
     }

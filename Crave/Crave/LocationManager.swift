@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 10/16/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// Central class for referencing the location of the device/user.
 
 import CoreLocation
 
@@ -21,8 +22,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        //locationManager.startUpdatingHeading()
-        //locationManager.allowsBackgroundLocationUpdates = true
     }
     
     func enableLocation(){
