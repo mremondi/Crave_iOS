@@ -10,10 +10,12 @@ import UIKit
 
 class MenuView: UIView {
     
+    //Initializes the element fields of the view
     let view = UIScrollView()
     
     weak var delegate: MenuTransitionDelegate?
 
+    //This data is overridden and not actually used
     var sections = ["Section 1", "Section 2", "Section 3", "Section 4", "Section 5"]
     
     func create(sections: [MenuSection])->UIScrollView{

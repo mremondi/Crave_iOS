@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 10/15/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// All the endpoints for the API
 
 struct CraveApi {
     let API_ENDPOINT = "https://guarded-caverns-87227.herokuapp.com/api"

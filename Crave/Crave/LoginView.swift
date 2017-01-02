@@ -9,7 +9,8 @@
 import UIKit
 
 public class LoginView{
-
+    
+    //Initialize the element fields of the view
     let view = UIView()
     var emailTextField = UITextField()
     var passwordTextField = UITextField()
@@ -30,16 +31,12 @@ public class LoginView{
         
         //Email text field properties
         emailTextField.placeholder = "email"
-        //emailTextField.text = "rsdurst@colby.edu"
         emailTextField.layer.cornerRadius = 5.0
         emailTextField.layer.borderWidth = 1.5
         emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         emailTextField.adjustsFontSizeToFitWidth = true
         
         //Password text field properties
-        
-        //passwordTextField.text = "password";
-        
         passwordTextField.placeholder = "password"
         passwordTextField.layer.cornerRadius = 5.0;
         passwordTextField.layer.borderWidth = 1.5
@@ -64,6 +61,7 @@ public class LoginView{
         return view
     }
     
+    //Calls the view's function corresponding to the login button function
     @objc func loginButtonPressed(){
         delegate?.Login(username: emailTextField.text!, password: passwordTextField.text!)
     }

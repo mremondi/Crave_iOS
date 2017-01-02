@@ -5,13 +5,16 @@
 //  Created by Robert Durst on 10/16/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// The view that displays the previous ratings, or cravings, of the user. The user may click on these ratings and see the overall rating of the menu items and may also see other various details of the menu item objects.
 
 import UIKit
 
 class CravingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    //The tableview is the main view of this view controller
     let tableView = UITableView()
     
+    //These are data fields that will be filled once the API call finishes. I create them as global variables within this class so that it is easiest to reference these variables from functions outside this class.
     var ratingData:[Rating] = []
     var data: [MenuItem] = []
     var filteredData: [MenuItem]!
@@ -19,6 +22,7 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //These initialize properties of the view, setting the title, the title format, the color of the navigation bar, hiding the nav bar back button, and making sure the nav bar is not hidden
         self.navigationItem.title = "Your Cravings"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.red
@@ -39,7 +43,8 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
         filteredData = data
         self.view.addSubview(tableView)
         
-        
+        //This section creates the four buttons used for navigation at the bottom of the view and then sets these buttons to the bottom nav bar
+        //______________________________________________________________________________________________________________________
         let button = UIView()
         button.frame = CGRect(x: 0, y: 0, width: 36, height: 40)
         
@@ -92,11 +97,14 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.isToolbarHidden = false
         self.setToolbarItems(navigationBarButtonItemsArray, animated: true)
         self.navigationController?.toolbar.barTintColor = UIColor.red
+        //______________________________________________________________________________________________________________________
 
         
         // Do any additional setup after loading the view.
     }
 
+    //This section has the button actions for the nav bar buttons on the bottom of the page
+    //______________________________________________________________________________________________________________________
     func goToSearch(){
         requests.getAllItems()
         
@@ -116,12 +124,14 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.pushViewController(vc!, animated: false)
         
     }
+    //______________________________________________________________________________________________________________________
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //This function creates the cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         
@@ -156,22 +166,26 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    //This function returns the number of rows in each section (we only have one section)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData.count
     }
 
-    
-    
+    //This function deaals with user interaction with the table. It transitions from the selected tabel row to the corresponding item view controller
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
        
+        //Get the selected menu item object
         let curItem = data[indexPath[1]]
         
+        //Initialize the view controller for menu items
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemViewController
         
+        //Initialize a few of the variables of the view controller
         vc?.title = curItem.name
         vc?.item = curItem
         
+        //Navigate to the menu item view controller
         self.navigationController?.pushViewController(vc!, animated: false)
     }
     

@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 1/1/17.
 //  Copyright © 2017 Crave. All rights reserved.
 //
+// Rating object class.
 
 import Foundation
 

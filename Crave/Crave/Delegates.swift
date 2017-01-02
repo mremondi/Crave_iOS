@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 10/16/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// The delegates for communication between the view controller classes and their corresponding view class
 
 import UIKit
 

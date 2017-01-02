@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 12/31/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// This is the view for individual food items
 
 import UIKit
 import PopupDialog
@@ -17,11 +18,11 @@ class ItemViewController: UIViewController, ItemTransitionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                
+        //Connect this to the delegate in the ItemView class
         self.itemView.delegate = self
         
+        //Set the view controller's view as the view created from the ItemView class
         let view = itemView.create(item: item)
-        
         self.view = view
         
         // Do any additional setup after loading the view.
@@ -36,6 +37,7 @@ class ItemViewController: UIViewController, ItemTransitionDelegate {
         showCustomDialog()
     }
    
+    //Function that shows the rate a dish popup
     func showCustomDialog() {
         
         // Create a custom view controller
@@ -44,12 +46,12 @@ class ItemViewController: UIViewController, ItemTransitionDelegate {
         // Create the dialog
         let popup = PopupDialog(viewController: ratingVC, buttonAlignment: .horizontal, transitionStyle: .bounceDown, gestureDismissal: true)
         
-        // Create first button
+        // Create first button (Cancel button) does nothing but close the popup
         let buttonOne = CancelButton(title: "CANCEL", height: 60) {
             
         }
         
-        // Create second button
+        // Create second button (Rate button) sends in a rating and brings the user back to the "main" nearMe view
         let buttonTwo = DefaultButton(title: "RATE", height: 60) {
             //Send in rating
             requests.sendUserRating(itemID: self.item.id, rating: String(ratingVC.cosmosStarRating.rating), userID: profile.getID())
@@ -70,16 +72,5 @@ class ItemViewController: UIViewController, ItemTransitionDelegate {
         // Present dialog
         present(popup, animated: true, completion: nil)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -132,14 +132,17 @@ public class ProfileView{
         return view
     }
     
+    //Function that calls the view controller function for when the logout button is pressed
     @objc func logoutButtonPressed(){
         delegate?.Logout()
     }
     
+    //Function that calls the view controller function for when the update button is pressed
     @objc func updateButtonPressed(){
         delegate?.Update(email: emailLabel.text!, name: nameLabel.text!)
     }
     
+    //Function thats calls the view controller function for when the change password button is pressed. However, this function will call a different function depending on whether or not the passwords are matching/blank
     @objc func changePasswordButtonPressed(){
         if ((confirmPassword.text == newPassword.text)&&(newPassword.text != "")){
             delegate?.ChangePassword(password: confirmPassword.text!)

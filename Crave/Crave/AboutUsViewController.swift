@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 11/27/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// This is the view with the contact information for Crave
 
 import UIKit
 
@@ -14,14 +15,17 @@ class AboutUsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        //These initialize properties of the view, setting the title, the title format, the color of the navigation bar, hiding the nav bar back button, and making sure the nav bar is not hidden
         self.navigationItem.title = "About Us"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.red
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
         
+        
+        //This section creates the four buttons used for navigation at the bottom of the view and then sets these buttons to the bottom nav bar
+        //______________________________________________________________________________________________________________________
         let button = UIButton()
         //set image for button
         button.setImage(UIImage(named: "Map"), for: UIControlState())
@@ -46,7 +50,6 @@ class AboutUsViewController: UIViewController {
         button3.frame = CGRect(x: 6, y: -5, width: 36-12, height: 22)
         let barButton3 = UIBarButtonItem(customView: button3)
         
-        
         let button4 = UIButton()
         //set image for button
         button4.setImage(UIImage(named: "More"), for: UIControlState())
@@ -64,6 +67,9 @@ class AboutUsViewController: UIViewController {
         self.setToolbarItems(navigationBarButtonItemsArray, animated: true)
         self.navigationController?.toolbar.barTintColor = UIColor.red
         
+        //______________________________________________________________________________________________________________________
+        
+        //Set the AboutUsView to the AboutUsViewController's view
         self.view = aboutUs.create()
         
         // Do any additional setup after loading the view.
@@ -74,6 +80,8 @@ class AboutUsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //This section has the button actions for the nav bar buttons on the bottom of the page
+    //______________________________________________________________________________________________________________________
     func goToSearch(){
         requests.getAllItems()
         
@@ -103,15 +111,6 @@ class AboutUsViewController: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: false)
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //______________________________________________________________________________________________________________________
 
 }

@@ -10,17 +10,18 @@ import UIKit
 
 class AboutUs: UIView {
 
+    //Initialize all the element fields for the view
     let view = UIView()
     let craveTitleLabel = UILabel()
     let authorLabel = UILabel()
     let contactLabel = UILabel()
     let emailButton = UIButton()
     
+    //This creates the underlined string format for the email in the (contact us label/button)
     var attrs = [
     NSFontAttributeName : UIFont.systemFont(ofSize: 15.0),
     NSForegroundColorAttributeName : UIColor.red,
     NSUnderlineStyleAttributeName : 1] as [String : Any]
-    
     var attributedString = NSMutableAttributedString(string:"")
 
     

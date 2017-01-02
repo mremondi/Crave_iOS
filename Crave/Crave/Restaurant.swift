@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 10/16/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// Restaurant object class.
 
 public class Restaurant{
     

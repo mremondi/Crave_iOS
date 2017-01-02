@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 10/17/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// Profile object class, storing the information of the current logged in user
 
 public class Profile{
     private var id: String
