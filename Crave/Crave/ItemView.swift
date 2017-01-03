@@ -150,6 +150,7 @@ class ItemView: UIView {
         return view
     }
     
+    //What happens when the rate button is selected, it sends a call to the viewControllerClass so that the view controller can call the popup
     func rateButtonSelected(){
         delegate?.TransitionToPopup()
     }

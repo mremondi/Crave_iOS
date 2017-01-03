@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 11/25/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// The view for the restaurants
 
 import UIKit
 import CoreLocation
@@ -12,6 +13,7 @@ import MapKit
 
 class RestaurantView: UIView {
     
+    //Initialize the element fields for this view
     var restaurantLogoImage = UIImageView()
     let view = UIScrollView()
     var menuLabel = UILabel()
@@ -25,17 +27,20 @@ class RestaurantView: UIView {
     var longitude = ""
     var locationName = ""
     var url = ""
+    
+    //Create the underlined format for the call button, direction button, and website button strings
     var attrs = [
         NSFontAttributeName : UIFont.systemFont(ofSize: 20.0),
         NSForegroundColorAttributeName : UIColor.blue,
         NSUnderlineStyleAttributeName : 1] as [String : Any]
-    
     var attributedString = NSMutableAttributedString(string:"")
     var attributedString2 = NSMutableAttributedString(string:"")
     var attributedString3 = NSMutableAttributedString(string:"")
 
+    //Create a list of buttons for the menus so that each button may be accessibleby referencing this array
     var menuButtonList = [UIButton]()
     
+    //Create the delagate for communication between this view and its view controller
     weak var delegate: RestaurantTransitionDelegate?
     
     func create(id: String)->UIScrollView{
@@ -59,7 +64,7 @@ class RestaurantView: UIView {
         menuLabel.textColor = UIColor.black
         view.addSubview(menuLabel)
         
-        
+        //Create a counter the hard coded spacing between view elements
         var counter = 0
         //The menu buttons
         for _ in restaurant.getMenus(){
@@ -77,11 +82,11 @@ class RestaurantView: UIView {
             menuButton.addTarget(self, action: #selector(RestaurantView.menuButtonSelected), for: .touchDown)
             view.addSubview(menuButton)
             
+            //Adds the menu buttons to the menu button array
             menuButtonList.append(menuButton)
             
             counter += 1
         }
-        
         
         //Cuisine Tags label
         cuisineTagsLabel.frame = CGRect(x: 10, y: 180 + 55*counter, width: Int(width-20), height: 25)
@@ -199,12 +204,14 @@ class RestaurantView: UIView {
         return view
     }
     
+    //Function for when the call button is elected. It calls the restaurant phone number when the button is clicked.
     func callButtonSelected(){
         if let url = NSURL(string: "tel://\(phoneNumber)") {
             UIApplication.shared.openURL(url as URL)
         }
     }
     
+    //Function for when the direction button is selected. It redirects the user to the directions app with the address from the restaurant.
     func directionButtonSelected(){
         let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(longitude
             )!, CLLocationDegrees(latitude)!)
@@ -218,14 +225,17 @@ class RestaurantView: UIView {
         mapItem.openInMaps(launchOptions: options)
     }
     
+    //Function for when the website button is selected. It redirects the user to the restaurant's website
     func websiteButtonSelected(){
         UIApplication.shared.openURL(NSURL(string: url)! as URL)
     }
     
+    //Get function for the menu buttons array
     func getMenuButtons()->[UIButton]{
         return (menuButtonList)
     }
     
+    //Function that sets the title for the menu buttons. This function is used after the menu data is called from the API. The resaon for this function is because the data loads slower than the view, so the buttons are initially blank, but then their titles are loaded soon after the view is initialized.
     func menuButtonSelected(sender: UIButton){
         let menu = currentRestaurantMenus.getMenu(name: (sender.titleLabel?.text!)!)
         delegate?.TransitionToMenu(menu: menu!)

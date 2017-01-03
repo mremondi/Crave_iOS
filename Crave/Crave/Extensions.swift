@@ -5,9 +5,11 @@
 //  Created by Robert Durst on 10/16/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// The extensions that allowed for certain extra functionality for a specific element
 
 import UIKit
 
+//The hide/dismiss functions for the keyboard in UIViewControllers
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -19,6 +21,7 @@ extension UIViewController {
     }
 }
 
+//The download function for UIImageViews
 extension UIImageView {
     func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode
@@ -40,6 +43,7 @@ extension UIImageView {
     }
 }
 
+//The replace character function for strings
 extension String
 {
     func replace(target: String, withString: String) -> String

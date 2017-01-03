@@ -1,3 +1,5 @@
+//This class defines the custom activity indicator I found online. I forgor where I got this from, but I believe its source may be found in the podfile.
+
 import Foundation
 import UIKit
 

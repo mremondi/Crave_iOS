@@ -12,6 +12,7 @@ import CoreData
 
 public class MapView: UIView, GMSMapViewDelegate{
     
+    //Initializers for the element fields of the mapView class
     var viewMap = UIView()
     var mapView = GMSMapView()
     weak var delegate: MapTransitionDelegate?
@@ -36,20 +37,17 @@ public class MapView: UIView, GMSMapViewDelegate{
         return viewMap
     }
     
-    
+    //Function that updates the mao
     func UpdateMap(restaurants: NearbyRestaurants) {
         NotificationCenter.default.removeObserver(self)
 
+        //For each restaurant in the neabry restaurant object, it places a marker at the restaurant's location
         for thing in restaurants.getNearbyRestaurants(){
             
             let markerOrigin = GMSMarker()
             markerOrigin.position = CLLocationCoordinate2D(latitude: thing.getLat(), longitude: thing.getLon())
-            //markerOrigin.icon = UIImage(named: "ColbySeal")
             markerOrigin.userData = thing.getId()
             markerOrigin.title = thing.getName()
-            //markerOrigin.snippet = "Colby College"
-           
-            //markerOrigin.userData = NSURL.init(fileURLWithPath: "https://www.colby.edu/")
             markerOrigin.map = mapView
            
         }
@@ -59,17 +57,10 @@ public class MapView: UIView, GMSMapViewDelegate{
         return false
     }
     
+    //Shows the clickable label when a location marker is tapped and when this clickable label is tapped, the transition to restaurant (or here called InfoWindowClicked) function is called
     func mapView(_ mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) -> Bool {
         delegate?.InfoWindowClicked(id: marker.userData as! String)
         return false
     }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

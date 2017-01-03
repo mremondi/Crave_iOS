@@ -5,6 +5,7 @@
 //  Created by Robert Durst on 10/16/16.
 //  Copyright © 2016 Crave. All rights reserved.
 //
+// All the API calls. I use Alamofire for the call and SwiftJSON to decode the JSON. The function/purpose of the call is fairly obvious from the function name. Note that most of the calls create object from the data. This app has a strong OOP focus. Also notice that this has a pretty hard coded solution to the mystery "?" that results from unrecognized characters. This will lilely be changed later as it is not a very scalable solution.
 
 import UIKit
 import Alamofire
