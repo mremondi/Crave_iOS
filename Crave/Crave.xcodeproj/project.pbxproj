@@ -43,7 +43,6 @@
 		C3EC44691E192F5500711602 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44681E192F5500711602 /* CosmosDistrib.swift */; };
 		C3EC446B1E192F9600711602 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EC446A1E192F9600711602 /* RatingViewController.xib */; };
 		C3FB1E091DEB4594008EA1F8 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB1E081DEB4594008EA1F8 /* Menu.swift */; };
-		C3FB1E0B1DEB464B008EA1F8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB1E0A1DEB464B008EA1F8 /* Item.swift */; };
 		C3FB1E0D1DEBAF3C008EA1F8 /* CurrentRestaurantMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB1E0C1DEBAF3C008EA1F8 /* CurrentRestaurantMenus.swift */; };
 		C3FB1E0F1DEBB5C2008EA1F8 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB1E0E1DEBB5C2008EA1F8 /* MoreView.swift */; };
 		C3FB1E121DEBBAF8008EA1F8 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB1E111DEBBAF8008EA1F8 /* AboutUs.swift */; };
@@ -91,7 +90,6 @@
 		C3EC446A1E192F9600711602 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		C3EC446E1E19804D00711602 /* Milkshake.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Milkshake.ttf; sourceTree = "<group>"; };
 		C3FB1E081DEB4594008EA1F8 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		C3FB1E0A1DEB464B008EA1F8 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C3FB1E0C1DEBAF3C008EA1F8 /* CurrentRestaurantMenus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRestaurantMenus.swift; sourceTree = "<group>"; };
 		C3FB1E0E1DEBB5C2008EA1F8 /* MoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		C3FB1E111DEBBAF8008EA1F8 /* AboutUs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				C3FB1E081DEB4594008EA1F8 /* Menu.swift */,
 				C3EC44421E18524200711602 /* MenuItem.swift */,
 				C3EC44401E18473400711602 /* MenuSection.swift */,
-				C3FB1E0A1DEB464B008EA1F8 /* Item.swift */,
 				C3FB1E151DEBC406008EA1F8 /* ViewControllerUtils.swift */,
 				C3EC44551E19014B00711602 /* Rating.swift */,
 			);
@@ -438,7 +435,6 @@
 				C339D73E1DB310A400BC4D66 /* MapView.swift in Sources */,
 				C339D76C1DB40F1B00BC4D66 /* Delegates.swift in Sources */,
 				C339D75C1DB3F8FC00BC4D66 /* CravingsViewController.swift in Sources */,
-				C3FB1E0B1DEB464B008EA1F8 /* Item.swift in Sources */,
 				C3FB1E0F1DEBB5C2008EA1F8 /* MoreView.swift in Sources */,
 				C3EC44411E18473400711602 /* MenuSection.swift in Sources */,
 				C339D7701DB4191700BC4D66 /* LocationManager.swift in Sources */,
