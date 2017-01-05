@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, ProfileDelegate {
+class ProfileViewController: UIViewController, ProfileDelegate, NavViewInterface  {
 
      //The initialized ProfileView field, created here since it will be used on multiple functions below
      let profileView = ProfileView()
@@ -33,7 +33,8 @@ class ProfileViewController: UIViewController, ProfileDelegate {
         self.view = profileView.create()
         
         self.navigationController?.toolbar.barTintColor = UIColor.red
-        
+		
+		let _ = BottomBarAdapter(viewController: self)        
         // Do any additional setup after loading the view.
     }
 
@@ -81,4 +82,29 @@ class ProfileViewController: UIViewController, ProfileDelegate {
         self.present(alert, animated: true, completion: nil)
     }
 
+	func goToSearch(){
+		requests.getAllItems()
+		
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToFavorites(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
+		requests.requestUserRatings(id: profile.getID(), vc: vc!)
+		self.navigationController?.pushViewController(vc!, animated: false)
+	}
+	
+	func goToMore(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToNearMe(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
 }

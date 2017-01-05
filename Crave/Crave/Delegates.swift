@@ -25,8 +25,8 @@ protocol MapTransitionDelegate: class{
 }
 
 protocol MoreTransitionDelegate: class{
-    func ProfileButtonClicked()
-    func AboutUSButtonClicked()
+    func btnAboutClick()
+    func btnProfileClick()
 }
 
 protocol RestaurantTransitionDelegate: class{

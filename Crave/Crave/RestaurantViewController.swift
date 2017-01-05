@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantViewController: UIViewController, RestaurantTransitionDelegate {
+class RestaurantViewController: UIViewController, RestaurantTransitionDelegate, NavViewInterface  {
     
     //Initialization of some of the view controller's element fields
     var restID = ""
@@ -39,6 +39,8 @@ class RestaurantViewController: UIViewController, RestaurantTransitionDelegate {
         //Set the view to the RestaurantView's view
         self.view = view
         
+		let _ = BottomBarAdapter(viewController: self)
+		
         // Do any additional setup after loading the view.
     }
 
@@ -47,13 +49,6 @@ class RestaurantViewController: UIViewController, RestaurantTransitionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    //The function that navigates from this view controller to the "main" view controller (the nearMe view)
-    func goToNearMe(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
-        self.navigationController?.pushViewController(vc!, animated: false)
-        
-    }
-
     //Function that is called to update the menu button titles after the menu data is receieved from teh API calls
     func updateMenuButtonTitles(){
         (menuButtonList) = restaurantView.getMenuButtons()
@@ -98,4 +93,30 @@ class RestaurantViewController: UIViewController, RestaurantTransitionDelegate {
         self.navigationController?.pushViewController(vc!, animated: false)
     }
 
+	
+	func goToSearch(){
+		requests.getAllItems()
+		
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToFavorites(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
+		requests.requestUserRatings(id: profile.getID(), vc: vc!)
+		self.navigationController?.pushViewController(vc!, animated: false)
+	}
+	
+	func goToMore(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToNearMe(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
 }

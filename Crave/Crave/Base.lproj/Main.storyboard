@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,24 +28,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
-        </scene>
-        <!--profile-->
-        <scene sceneID="VuS-Kv-Jzl">
-            <objects>
-                <viewController storyboardIdentifier="more" title="profile" id="F5B-3R-Wf7" customClass="MoreViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oXU-Ur-fsH"/>
-                        <viewControllerLayoutGuide type="bottom" id="VrC-If-1WV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6mb-Nt-nGq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ITC-9g-jtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1936" y="-493"/>
         </scene>
         <!--popup-->
         <scene sceneID="eGq-5o-etl">
@@ -217,6 +200,76 @@
             </objects>
             <point key="canvasLocation" x="2024" y="876"/>
         </scene>
+        <!--More-->
+        <scene sceneID="kci-f2-djZ">
+            <objects>
+                <viewController storyboardIdentifier="more" title="More" id="xrg-id-BfK" customClass="MoreController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ZM-rv-eNh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cob-7J-XHk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qIK-gR-1ul">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvz-fr-8Um">
+                                <rect key="frame" x="-4" y="30" width="383" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="My Profile" image="profile">
+                                    <color key="titleColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnProfileClick" destination="xrg-id-BfK" eventType="touchUpInside" id="4Ip-Ty-2NY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-DC-l9t">
+                                <rect key="frame" x="0.0" y="84" width="375" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="About Us" image="aboutUs">
+                                    <color key="titleColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAboutClick" destination="xrg-id-BfK" eventType="touchUpInside" id="ytc-lw-9gk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ctP-DC-l9t" firstAttribute="top" secondItem="jvz-fr-8Um" secondAttribute="bottom" constant="2" id="VB7-9o-3gu"/>
+                            <constraint firstItem="jvz-fr-8Um" firstAttribute="centerX" secondItem="qIK-gR-1ul" secondAttribute="centerX" id="Yga-tm-AWX"/>
+                            <constraint firstItem="ctP-DC-l9t" firstAttribute="width" secondItem="jvz-fr-8Um" secondAttribute="width" id="kNO-DP-hdR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jvz-fr-8Um" secondAttribute="leading" constant="20" id="oje-GR-DW8"/>
+                            <constraint firstItem="jvz-fr-8Um" firstAttribute="top" secondItem="6ZM-rv-eNh" secondAttribute="bottom" constant="10" id="qqD-cf-MWy"/>
+                            <constraint firstItem="ctP-DC-l9t" firstAttribute="centerX" secondItem="qIK-gR-1ul" secondAttribute="centerX" id="rwN-nO-kXq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAboutUs" destination="ctP-DC-l9t" id="yf5-tg-d2N"/>
+                        <outlet property="btnProfile" destination="jvz-fr-8Um" id="o6h-u2-bXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iW2-7Y-NkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-1628.6356821589206"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="giI-ev-HXx">
+            <objects>
+                <viewController id="N34-gM-FPh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9n8-iI-pZt"/>
+                        <viewControllerLayoutGuide type="bottom" id="vBu-tj-Prl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hfi-JZ-m27">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="He2-UN-e3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="-1641"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="axZ-Vg-Zyn">
             <objects>
@@ -236,4 +289,8 @@
             <point key="canvasLocation" x="68" y="-543.77811094452773"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="aboutUs" width="36" height="36"/>
+        <image name="profile" width="36" height="36"/>
+    </resources>
 </document>

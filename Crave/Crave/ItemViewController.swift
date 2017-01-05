@@ -10,7 +10,7 @@
 import UIKit
 import PopupDialog
 
-class ItemViewController: UIViewController, ItemTransitionDelegate {
+class ItemViewController: UIViewController, ItemTransitionDelegate, NavViewInterface  {
 
     let itemView = ItemView()
     var item = MenuItem(id: "", menuID: "", restaurantID: "", name: "", numberOfRatings: "", rating: "", description: "", menuSection: "", price: "", restaurantName: "")
@@ -24,6 +24,8 @@ class ItemViewController: UIViewController, ItemTransitionDelegate {
         //Set the view controller's view as the view created from the ItemView class
         let view = itemView.create(item: item)
         self.view = view
+		
+		let _ = BottomBarAdapter(viewController: self)
         
         // Do any additional setup after loading the view.
     }
@@ -72,5 +74,31 @@ class ItemViewController: UIViewController, ItemTransitionDelegate {
         // Present dialog
         present(popup, animated: true, completion: nil)
     }
+
+	func goToSearch(){
+		requests.getAllItems()
+		
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToFavorites(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
+		requests.requestUserRatings(id: profile.getID(), vc: vc!)
+		self.navigationController?.pushViewController(vc!, animated: false)
+	}
+	
+	func goToMore(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToNearMe(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
 
 }

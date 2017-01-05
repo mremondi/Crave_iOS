@@ -9,7 +9,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, MenuTransitionDelegate {
+class MenuViewController: UIViewController, MenuTransitionDelegate, NavViewInterface  {
 
     let menuView = MenuView()
     
@@ -26,6 +26,8 @@ class MenuViewController: UIViewController, MenuTransitionDelegate {
         
         //Connect the delegate in the menuView to the menuViewController
         menuView.delegate = self
+		
+		let _ = BottomBarAdapter(viewController: self)
         
         
         // Do any additional setup after loading the view.
@@ -60,6 +62,31 @@ class MenuViewController: UIViewController, MenuTransitionDelegate {
         //Navigate to the item view controller
         self.navigationController?.pushViewController(vc!, animated: false)
     }
+	func goToSearch(){
+		requests.getAllItems()
+		
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToFavorites(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
+		requests.requestUserRatings(id: profile.getID(), vc: vc!)
+		self.navigationController?.pushViewController(vc!, animated: false)
+	}
+	
+	func goToMore(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
+	
+	func goToNearMe(){
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+		self.navigationController?.pushViewController(vc!, animated: false)
+		
+	}
 
 
 }
