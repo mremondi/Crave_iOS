@@ -29,6 +29,14 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 		btnLogIn.addTarget(self, action: #selector(self.loginButtonPressed), for: .touchDown)
 		btnRegister.addTarget(self, action: #selector(self.btnRegisterClick), for: .touchDown)
 		
+		let defaults = UserDefaults.standard
+		if(defaults.string(forKey: "email") != Optional.none){
+			etEmail.text = defaults.string(forKey: "email")!
+		}
+		if (defaults.string(forKey: "password") != Optional.none){
+			etPassword.text = defaults.string(forKey: "password")!
+		}
+		
 		NotificationCenter.default.addObserver(self, selector: #selector(LogInController.finishLogin), name:NSNotification.Name(rawValue: "LoginIdentifier"), object: nil)
 		
 		self.hideKeyboardWhenTappedAround()
@@ -74,6 +82,10 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 			
 		//If the login is a success
 		else{
+			
+			let defaults = UserDefaults.standard
+			defaults.set(etEmail.text!, forKey: "email")
+			defaults.set(etPassword.text!, forKey: "password")
 			NotificationCenter.default.removeObserver(self)
 			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
 			self.navigationController?.pushViewController(vc!, animated: true)

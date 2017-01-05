@@ -71,6 +71,10 @@ class RegisterController: UIViewController {
 			
 			//If the login is a success
 		else{
+			let defaults = UserDefaults.standard
+			defaults.set(etEmail.text!, forKey: "email")
+			defaults.set(etPassword1.text!, forKey: "password")
+			
 			NotificationCenter.default.removeObserver(self)
 			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
 			self.navigationController?.pushViewController(vc!, animated: true)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreController: UIViewController, MoreTransitionDelegate{
+class MoreController: UIViewController, MoreTransitionDelegate, NavViewInterface{
 
 	@IBOutlet weak var btnProfile: UIButton!
 	@IBOutlet weak var btnAboutUs: UIButton!
@@ -33,7 +33,7 @@ class MoreController: UIViewController, MoreTransitionDelegate{
     }
 	
 	@IBAction func btnProfileClick() {
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "profile") as? ProfileViewController
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "profile") as? ProfileController
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
     
@@ -66,7 +66,5 @@ class MoreController: UIViewController, MoreTransitionDelegate{
 	func goToNearMe(){
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
 		self.navigationController?.pushViewController(vc!, animated: false)
-		
 	}
-
 }
