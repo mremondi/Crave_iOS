@@ -20,11 +20,7 @@ class LogInController: UIViewController, LoginInitializationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.navigationItem.title = "Crave"
-		self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Milkshake", size: 40)!,  NSForegroundColorAttributeName: UIColor.white]
-		navigationController?.navigationBar.barTintColor = UIColor(red: 0.737, green: 0.086, blue: 0.212, alpha: 1.0)
-		navigationController?.isNavigationBarHidden = false
-		navigationItem.hidesBackButton = true
+		let _ = TopBarAdapter(viewController: self, title: "Crave")
 		
 		btnLogIn.addTarget(self, action: #selector(self.loginButtonPressed), for: .touchDown)
 		btnRegister.addTarget(self, action: #selector(self.btnRegisterClick), for: .touchDown)

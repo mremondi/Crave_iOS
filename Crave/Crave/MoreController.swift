@@ -17,13 +17,14 @@ class MoreController: UIViewController, MoreTransitionDelegate, NavViewInterface
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-				
+		
 		btnProfile.titleEdgeInsets = UIEdgeInsetsMake(0, -btnProfile.imageView!.frame.size.width + margin, 0, btnProfile.imageView!.frame.size.width);
 		btnProfile.imageEdgeInsets = UIEdgeInsetsMake(0, btnProfile.frame.size.width - btnProfile.imageView!.frame.size.width - margin, 0, -btnProfile.titleLabel!.frame.size.width);
 		
 		btnAboutUs.titleEdgeInsets = UIEdgeInsetsMake(0, -btnAboutUs.imageView!.frame.size.width + margin, 0, btnAboutUs.imageView!.frame.size.width);
 		btnAboutUs.imageEdgeInsets = UIEdgeInsetsMake(0, btnAboutUs.frame.size.width - btnAboutUs.imageView!.frame.size.width - margin, 0, -btnAboutUs.titleLabel!.frame.size.width);
 		
+		let _ = TopBarAdapter(viewController: self, title: "Crave")
 		let _ = BottomBarAdapter(viewController: self)
     }
 
@@ -40,7 +41,6 @@ class MoreController: UIViewController, MoreTransitionDelegate, NavViewInterface
 	@IBAction func btnAboutClick() {
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "aboutUs") as? AboutUsController
 		self.navigationController?.pushViewController(vc!, animated: false)
-		
 	}
 	
 	func goToSearch(){

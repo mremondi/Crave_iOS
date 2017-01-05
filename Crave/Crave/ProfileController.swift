@@ -21,30 +21,22 @@ class ProfileController: UIViewController, NavViewInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
-		navigationController?.navigationBar.barTintColor = UIColor(red: 0.737, green: 0.086, blue: 0.212, alpha: 1.0)
-		navigationController?.isNavigationBarHidden = false
-		navigationItem.hidesBackButton = true
-		
 		//Listener for the profile
-		NotificationCenter.default.addObserver(self, selector: #selector(ProfileController.refresh), name:NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(self.refresh), name:NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
 		
 		etEmail.text = profile.getEmail()
 		etName.text = profile.getName()
 		
-		btnUpdate.addTarget(self, action: #selector(ProfileView.updateButtonPressed), for: .touchDown)
+		btnUpdate.addTarget(self, action: #selector(self.updateButtonPressed), for: .touchDown)
 		
-		btnChangePassword.addTarget(self, action: #selector(ProfileView.changePasswordButtonPressed), for: .touchDown)
+		btnChangePassword.addTarget(self, action: #selector(self.changePasswordButtonPressed), for: .touchDown)
 		
-		btnLogout.addTarget(self, action: #selector(ProfileView.logoutButtonPressed), for: .touchDown)
+		btnLogout.addTarget(self, action: #selector(self.logoutButtonPressed), for: .touchDown)
 		
+		let _ = TopBarAdapter(viewController: self, title: "Profile")
 		let _ = BottomBarAdapter(viewController: self)        
 
-		self.hideKeyboardWhenTappedAround()
-		self.dismissKeyboard()
-
-
-        // Do any additional setup after loading the view.
+		// Do any additional setup after loading the view.
     }
 
 	//Function that calls the view controller function for when the logout button is pressed

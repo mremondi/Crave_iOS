@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4253625A1E1C56E600459116 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425362591E1C56E600459116 /* MoreController.swift */; };
 		427BD0631E1D665C00F3E276 /* BottomBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */; };
+		429DD9DC1E1F0C600006CDEC /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429DD9DB1E1F0C600006CDEC /* ItemController.swift */; };
+		429DD9DE1E1F0E9B0006CDEC /* TopBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429DD9DD1E1F0E9B0006CDEC /* TopBarAdapter.swift */; };
 		42F69E451E1EAB23005031AB /* NavViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E441E1EAB23005031AB /* NavViewInterface.swift */; };
 		42F69E471E1EB47B005031AB /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E461E1EB47B005031AB /* AboutUsController.swift */; };
 		42F69E491E1ECC0F005031AB /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E481E1ECC0F005031AB /* LogInController.swift */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		425362591E1C56E600459116 /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarAdapter.swift; sourceTree = "<group>"; };
+		429DD9DB1E1F0C600006CDEC /* ItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		429DD9DD1E1F0E9B0006CDEC /* TopBarAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarAdapter.swift; sourceTree = "<group>"; };
 		42F69E441E1EAB23005031AB /* NavViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewInterface.swift; sourceTree = "<group>"; };
 		42F69E461E1EB47B005031AB /* AboutUsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
 		42F69E481E1ECC0F005031AB /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				42F69E481E1ECC0F005031AB /* LogInController.swift */,
 				42F69E4A1E1ED762005031AB /* RegisterController.swift */,
 				42F69E4C1E1EE5B1005031AB /* ProfileController.swift */,
+				429DD9DB1E1F0C600006CDEC /* ItemController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				C3319D4C1DB2B1460024E577 /* Info.plist */,
 				427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */,
 				42F69E441E1EAB23005031AB /* NavViewInterface.swift */,
+				429DD9DD1E1F0E9B0006CDEC /* TopBarAdapter.swift */,
 			);
 			path = Crave;
 			sourceTree = "<group>";
@@ -433,8 +439,10 @@
 				C339D74E1DB3431700BC4D66 /* Requests.swift in Sources */,
 				42F69E471E1EB47B005031AB /* AboutUsController.swift in Sources */,
 				C339D76A1DB40D9C00BC4D66 /* Extensions.swift in Sources */,
+				429DD9DC1E1F0C600006CDEC /* ItemController.swift in Sources */,
 				C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */,
 				427BD0631E1D665C00F3E276 /* BottomBarAdapter.swift in Sources */,
+				429DD9DE1E1F0E9B0006CDEC /* TopBarAdapter.swift in Sources */,
 				C3EC44431E18524200711602 /* MenuItem.swift in Sources */,
 				42F69E451E1EAB23005031AB /* NavViewInterface.swift in Sources */,
 				C339D7501DB34BCE00BC4D66 /* nearbyRestaurants.swift in Sources */,

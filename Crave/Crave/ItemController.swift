@@ -1,5 +1,5 @@
 //
-//  AboutUsController.swift
+//  ItemController.swift
 //  Crave
 //
 //  Created by Michael Remondi on 1/5/17.
@@ -8,26 +8,17 @@
 
 import UIKit
 
-class AboutUsController: UIViewController, NavViewInterface {
+class ItemController: UIViewController, NavViewInterface {
 
-	@IBOutlet weak var tvEmail: UITextView!
-	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tvEmail.isEditable = false
 		
 		let _ = TopBarAdapter(viewController: self, title: "Crave")
-		let _ = BottomBarAdapter(viewController: self)
+		let _ = BottomBarAdapter(viewController: self)       
 
-
+        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+	
 	func goToSearch(){
 		requests.getAllItems()
 		
@@ -54,6 +45,20 @@ class AboutUsController: UIViewController, NavViewInterface {
 		
 	}
 
-	
-	
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
