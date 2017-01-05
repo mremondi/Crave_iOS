@@ -10,7 +10,7 @@
 import UIKit
 
 protocol LoginInitializationDelegate: class {
-    func Login(username: String, password: String)
+    func login(email: String, password: String)
 }
 
 protocol ProfileDelegate: class{

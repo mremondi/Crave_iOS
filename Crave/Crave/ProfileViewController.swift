@@ -49,7 +49,7 @@ class ProfileViewController: UIViewController, ProfileDelegate, NavViewInterface
     func Logout() {
         profile.clear()
         requests.requestLogout()
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LogInController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
