@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Milkshake.ttf">
+            <string>Milkshake</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--login-->
         <scene sceneID="tne-QT-ifu">
@@ -167,7 +172,7 @@
         <!--aboutUs-->
         <scene sceneID="rf7-k8-t3C">
             <objects>
-                <viewController storyboardIdentifier="aboutUs" title="aboutUs" id="qa2-AK-s1G" customClass="AboutUsViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutUs1" title="aboutUs" id="qa2-AK-s1G" customClass="AboutUsViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6oN-Ip-FSp"/>
                         <viewControllerLayoutGuide type="bottom" id="HA9-lm-xO8"/>
@@ -252,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="868" y="-1628.6356821589206"/>
         </scene>
-        <!--View Controller-->
+        <!--About Us Controller-->
         <scene sceneID="giI-ev-HXx">
             <objects>
-                <viewController id="N34-gM-FPh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutUs" id="N34-gM-FPh" customClass="AboutUsController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9n8-iI-pZt"/>
                         <viewControllerLayoutGuide type="bottom" id="vBu-tj-Prl"/>
@@ -263,12 +268,51 @@
                     <view key="view" contentMode="scaleToFill" id="hfi-JZ-m27">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-db-oVI">
+                                <rect key="frame" x="96" y="275" width="184" height="118.5"/>
+                                <fontDescription key="fontDescription" name="Milkshake" family="Milkshake" pointSize="80"/>
+                                <color key="textColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Remondi 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDZ-BY-G9d">
+                                <rect key="frame" x="102" y="403.5" width="172.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="mikeremondi@gmail.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-ja-2fW">
+                                <rect key="frame" x="68" y="420" width="240" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EDZ-BY-G9d" firstAttribute="top" secondItem="Uhr-db-oVI" secondAttribute="bottom" constant="10" id="KAD-Bv-wdp"/>
+                            <constraint firstItem="EDZ-BY-G9d" firstAttribute="centerX" secondItem="hfi-JZ-m27" secondAttribute="centerX" id="Kem-YX-J5L"/>
+                            <constraint firstItem="Uhr-db-oVI" firstAttribute="centerY" secondItem="hfi-JZ-m27" secondAttribute="centerY" id="XMZ-jc-mrC"/>
+                            <constraint firstItem="Dvh-ja-2fW" firstAttribute="height" secondItem="EDZ-BY-G9d" secondAttribute="height" id="Ydo-Ta-kvg"/>
+                            <constraint firstItem="Uhr-db-oVI" firstAttribute="centerX" secondItem="hfi-JZ-m27" secondAttribute="centerX" id="anz-ph-LSE"/>
+                            <constraint firstItem="Dvh-ja-2fW" firstAttribute="top" secondItem="EDZ-BY-G9d" secondAttribute="bottom" constant="5" id="g45-L6-ALC"/>
+                            <constraint firstItem="Dvh-ja-2fW" firstAttribute="centerX" secondItem="hfi-JZ-m27" secondAttribute="centerX" id="lHB-pb-eLE"/>
+                            <constraint firstAttribute="width" secondItem="Dvh-ja-2fW" secondAttribute="width" id="o9f-lE-ppi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tvEmail" destination="Dvh-ja-2fW" id="6gn-3c-9QS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He2-UN-e3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798" y="-1641"/>
+            <point key="canvasLocation" x="1797.5999999999999" y="-1641.2293853073465"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="axZ-Vg-Zyn">

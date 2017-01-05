@@ -38,7 +38,7 @@ class MoreController: UIViewController, MoreTransitionDelegate{
 	}
     
 	@IBAction func btnAboutClick() {
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "aboutUs") as? AboutUsViewController
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "aboutUs") as? AboutUsController
 		self.navigationController?.pushViewController(vc!, animated: false)
 		
 	}

@@ -10,10 +10,22 @@ import UIKit
 
 class AboutUsController: UIViewController, NavViewInterface {
 
+	@IBOutlet weak var tvEmail: UITextView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tvEmail.isEditable = false
+		
+		self.navigationItem.title = "About Us"
+		self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
+		navigationController?.navigationBar.barTintColor = UIColor.red
+		navigationController?.isNavigationBarHidden = false
+		navigationItem.hidesBackButton = true
+		
+		let _ = BottomBarAdapter(viewController: self)
+
+
     }
 
     override func didReceiveMemoryWarning() {
