@@ -12,6 +12,7 @@
 		429DD9DC1E1F0C600006CDEC /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429DD9DB1E1F0C600006CDEC /* ItemController.swift */; };
 		429DD9DE1E1F0E9B0006CDEC /* TopBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429DD9DD1E1F0E9B0006CDEC /* TopBarAdapter.swift */; };
 		429DD9E11E217E140006CDEC /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429DD9E01E217E140006CDEC /* RestaurantController.swift */; };
+		42BE13CE1E2552C1008D04BD /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE13CD1E2552C1008D04BD /* MenuController.swift */; };
 		42F69E451E1EAB23005031AB /* NavViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E441E1EAB23005031AB /* NavViewInterface.swift */; };
 		42F69E471E1EB47B005031AB /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E461E1EB47B005031AB /* AboutUsController.swift */; };
 		42F69E491E1ECC0F005031AB /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E481E1ECC0F005031AB /* LogInController.swift */; };
@@ -37,8 +38,6 @@
 		C3418B221E1827A9005364F0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3418B211E1827A9005364F0 /* MenuView.swift */; };
 		C395F0B21DB5A20C00A61651 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395F0B11DB5A20C00A61651 /* Profile.swift */; };
 		C39AC5111E1982AD00261557 /* Milkshake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3EC446E1E19804D00711602 /* Milkshake.ttf */; };
-		C3C413EA1DE8F42200DF5563 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413E91DE8F42200DF5563 /* RestaurantView.swift */; };
-		C3C413EC1DE8F42F00DF5563 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C413EB1DE8F42F00DF5563 /* RestaurantViewController.swift */; };
 		C3EC44411E18473400711602 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44401E18473400711602 /* MenuSection.swift */; };
 		C3EC44431E18524200711602 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44421E18524200711602 /* MenuItem.swift */; };
 		C3EC44561E19014B00711602 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC44551E19014B00711602 /* Rating.swift */; };
@@ -56,6 +55,7 @@
 		429DD9DB1E1F0C600006CDEC /* ItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 		429DD9DD1E1F0E9B0006CDEC /* TopBarAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarAdapter.swift; sourceTree = "<group>"; };
 		429DD9E01E217E140006CDEC /* RestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		42BE13CD1E2552C1008D04BD /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		42F69E441E1EAB23005031AB /* NavViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewInterface.swift; sourceTree = "<group>"; };
 		42F69E461E1EB47B005031AB /* AboutUsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
 		42F69E481E1ECC0F005031AB /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -83,8 +83,6 @@
 		C3418B1F1E17946F005364F0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C3418B211E1827A9005364F0 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C395F0B11DB5A20C00A61651 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		C3C413E91DE8F42200DF5563 /* RestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
-		C3C413EB1DE8F42F00DF5563 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		C3EC44401E18473400711602 /* MenuSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		C3EC44421E18524200711602 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		C3EC44551E19014B00711602 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
@@ -137,6 +135,7 @@
 				42F69E4C1E1EE5B1005031AB /* ProfileController.swift */,
 				429DD9DB1E1F0C600006CDEC /* ItemController.swift */,
 				429DD9E01E217E140006CDEC /* RestaurantController.swift */,
+				42BE13CD1E2552C1008D04BD /* MenuController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -195,7 +194,6 @@
 				C3EC44701E19805600711602 /* fonts */,
 				C3EC44441E18B74000711602 /* Item */,
 				C3418B1E1E17945C005364F0 /* Menu */,
-				C3C413E81DE8F40200DF5563 /* RestaurantView */,
 				C31CB96F1DB30B8600918582 /* Network */,
 				C339D7631DB3FE2A00BC4D66 /* Models */,
 				C339D7641DB3FE3A00BC4D66 /* NearMe */,
@@ -263,15 +261,6 @@
 				C3418B211E1827A9005364F0 /* MenuView.swift */,
 			);
 			name = Menu;
-			sourceTree = "<group>";
-		};
-		C3C413E81DE8F40200DF5563 /* RestaurantView */ = {
-			isa = PBXGroup;
-			children = (
-				C3C413E91DE8F42200DF5563 /* RestaurantView.swift */,
-				C3C413EB1DE8F42F00DF5563 /* RestaurantViewController.swift */,
-			);
-			name = RestaurantView;
 			sourceTree = "<group>";
 		};
 		C3EC44441E18B74000711602 /* Item */ = {
@@ -418,7 +407,6 @@
 			files = (
 				C395F0B21DB5A20C00A61651 /* Profile.swift in Sources */,
 				C3EC44561E19014B00711602 /* Rating.swift in Sources */,
-				C3C413EC1DE8F42F00DF5563 /* RestaurantViewController.swift in Sources */,
 				C3418B201E179470005364F0 /* MenuViewController.swift in Sources */,
 				C3EC44671E192F4D00711602 /* RatingViewController.swift in Sources */,
 				C339D75E1DB3F90400BC4D66 /* SearchViewController.swift in Sources */,
@@ -433,9 +421,9 @@
 				C339D7521DB34C2C00BC4D66 /* Restaurant.swift in Sources */,
 				C3FB1E091DEB4594008EA1F8 /* Menu.swift in Sources */,
 				C339D7571DB3E94000BC4D66 /* NearMeViewController.swift in Sources */,
-				C3C413EA1DE8F42200DF5563 /* RestaurantView.swift in Sources */,
 				C3418B221E1827A9005364F0 /* MenuView.swift in Sources */,
 				4253625A1E1C56E600459116 /* MoreController.swift in Sources */,
+				42BE13CE1E2552C1008D04BD /* MenuController.swift in Sources */,
 				C3EC44691E192F5500711602 /* CosmosDistrib.swift in Sources */,
 				42F69E4D1E1EE5B1005031AB /* ProfileController.swift in Sources */,
 				C3FB1E0D1DEBAF3C008EA1F8 /* CurrentRestaurantMenus.swift in Sources */,

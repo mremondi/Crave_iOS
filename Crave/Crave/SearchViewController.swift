@@ -156,13 +156,13 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
             
             let id = pickedRestaurant.id
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "restaurant") as? RestaurantViewController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "restaurant") as? RestaurantController
             
-            vc?.restID = id
+            vc?.restaurantID = id
             
             let restaurant = nearbyRestaurants.getRestaurant(id: id)
             
-            requests.requestMenu(menuIDs: (restaurant?.getMenus())!, vc: vc!)
+            requests.requestMenusByID(menuIDs: (restaurant?.getMenus())!, vc: vc!)
 
             self.navigationController?.pushViewController(vc!, animated: false)
         }

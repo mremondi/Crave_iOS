@@ -189,77 +189,110 @@ public class Requests{
 		}
 	}
 	
+	func requestMenuItems(menuID: String, menuSection: MenuSection, vc: MenuController){
+		
+		url = ca.API_ENDPOINT + ca.MENU_ITEMS_ENDPONT
+		url = url + menuID + "/" + menuSection.getSectionName()
+		if url.contains(" "){
+			url = url.replace(target: " ", withString: "%20")
+		}
+		Alamofire.request(url).responseJSON{ response in
+			if let value = response.result.value {
+				let items = JSON(value)
+				for thing in items{
+					let item = thing.1
+					
+					let menuID = String(describing: item["menuID"])
+					let name = String(describing: item["name"])
+					let numberOfRatings = String(describing: item["numberOfRatings"])
+					let description = String(describing: item["description"])
+					let restaurantID = String(describing: item["restaurant_id"])
+					let rating = String(describing: item["rating"])
+					let price = String(describing: item["price"])
+					let section = String(describing: item["menuSection"])
+					let id = String(describing: item["_id"])
+					let restaurantName = String(describing: item["restaurant_name"])
+
+					let menuItem = MenuItem(id: id, menuID: menuID, restaurantID: restaurantID, name: name, numberOfRatings: numberOfRatings, rating: rating, description: description, menuSection: section, price: price, restaurantName: restaurantName)
+						
+					menuSection.addItem(item: menuItem)
+					vc.menuItemTable.reloadData()
+				}
+			}
+		}
+	}
 	
-    func requestMenu(menuIDs: [String], vc: RestaurantViewController){
-        
-        for menuID in menuIDs{
-            url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
-            url = url + "/" + menuID
-            Alamofire.request(url).responseJSON { response in
-                guard response.result.error == nil else {
-                    // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
-                    print(response.result.error!)
-                    return
-                }
-                
-                if let value = response.result.value {
-                    let todo = JSON(value)
-                    
-                    let id = String(describing: todo["_id"])
-                    let menuName = String(describing: todo["menuName"])
-                    let restaurantID = String(describing: todo["restaurantId"])
-                    let sections = todo["sections"]
-                    let items = todo["items"]
-                    let create_date = String(describing: todo["create_date"])
-
-                    var sectionList = [MenuSection]()
-                    var itemList = [String]()
-                    
-                    for section in sections{
-                        var sectionText = String(describing: section.1)
-                        if (sectionText.contains("�")){
-                            if(sectionText.contains("Entr")){
-                                sectionText = sectionText.replace(target: "�", withString:"é")
-                            }
-                            else if((sectionText.contains("Entrees"))){
-                                sectionText = sectionText.replace(target: "Entrees", withString:"Entrées")
-                            }
-                            
-
-                            
-                        }
-                        else if(sectionText.contains("&")){
-                            sectionText = sectionText.replace(target: "&", withString:"and")
-                        }
-
-                        
-                        let menuSection = MenuSection(sectionName: String(describing: sectionText), sectionItems: [])
-                        sectionList.append(menuSection)
-                    }
-                    
-                    sectionList.append(MenuSection(sectionName: "etc", sectionItems: []))
-                    
-                    for item in items{
-                        itemList.append(String(describing: item))
-                    }
-                    
-                    let menu = Menu(id: id, menuName: menuName, restaurantID: restaurantID, sections: sectionList, items: itemList, create_date: create_date)
-                    
-                    currentRestaurantMenus.add(menu: menu)
-                    
-                    self.getSectionItems(sections: sectionList, menuID: id)
-                    
-                    
-                    if (currentRestaurantMenus.getCurrentRestaurantMenus().count == menuIDs.count){
-                        vc.updateMenuButtonTitles()
-                    }
-                }
-            }
- 
-        }
-        
-    }
+	
+//    func requestMenu(menuIDs: [String], vc: RestaurantController){
+//        
+//        for menuID in menuIDs{
+//            url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
+//            url = url + "/" + menuID
+//            Alamofire.request(url).responseJSON { response in
+//                guard response.result.error == nil else {
+//                    // got an error in getting the data, need to handle it
+//                    print("error calling POST on /todos/1")
+//                    print(response.result.error!)
+//                    return
+//                }
+//                
+//                if let value = response.result.value {
+//                    let todo = JSON(value)
+//                    
+//                    let id = String(describing: todo["_id"])
+//                    let menuName = String(describing: todo["menuName"])
+//                    let restaurantID = String(describing: todo["restaurantId"])
+//                    let sections = todo["sections"]
+//                    let items = todo["items"]
+//                    let create_date = String(describing: todo["create_date"])
+//
+//                    var sectionList = [MenuSection]()
+//                    var itemList = [String]()
+//                    
+//                    for section in sections{
+//                        var sectionText = String(describing: section.1)
+//                        if (sectionText.contains("�")){
+//                            if(sectionText.contains("Entr")){
+//                                sectionText = sectionText.replace(target: "�", withString:"é")
+//                            }
+//                            else if((sectionText.contains("Entrees"))){
+//                                sectionText = sectionText.replace(target: "Entrees", withString:"Entrées")
+//                            }
+//                            
+//
+//                            
+//                        }
+//                        else if(sectionText.contains("&")){
+//                            sectionText = sectionText.replace(target: "&", withString:"and")
+//                        }
+//
+//                        
+//                        let menuSection = MenuSection(sectionName: String(describing: sectionText), sectionItems: [])
+//                        sectionList.append(menuSection)
+//                    }
+//                    
+//                    sectionList.append(MenuSection(sectionName: "etc", sectionItems: []))
+//                    
+//                    for item in items{
+//                        itemList.append(String(describing: item))
+//                    }
+//                    
+//                    let menu = Menu(id: id, menuName: menuName, restaurantID: restaurantID, sections: sectionList, items: itemList, create_date: create_date)
+//                    
+//                    currentRestaurantMenus.add(menu: menu)
+//                    
+//                    self.getSectionItems(sections: sectionList, menuID: id)
+//                    
+//                    
+//                    if (currentRestaurantMenus.getCurrentRestaurantMenus().count == menuIDs.count){
+//                        vc.updateMenuButtonTitles()
+//                    }
+//                }
+//            }
+// 
+//        }
+//        
+//    }
     
     func getSectionItems(sections: [MenuSection], menuID: String){
         

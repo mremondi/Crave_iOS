@@ -17,8 +17,8 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	var menus: [Menu] = []
 
 	
-	@IBOutlet weak var ivRestaurantLogo: UIImageView!
-	@IBOutlet weak var menuTable: UITableView!
+	@IBOutlet var ivRestaurantLogo: UIImageView!
+	@IBOutlet var menuTable: UITableView!
 	@IBOutlet weak var btnDirections: UIButton!
 	@IBOutlet weak var btnPhone: UIButton!
 	@IBOutlet weak var btnWebsite: UIButton!
@@ -46,7 +46,7 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 		
 
 	}
-
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -55,6 +55,7 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 		let cell:UITableViewCell = self.menuTable.dequeueReusableCell(withIdentifier: "menuCell")! as UITableViewCell
 		cell.textLabel?.text = self.menus[indexPath.row].getName()
 		cell.textLabel?.textAlignment = .center
+		cell.isUserInteractionEnabled = true
 		return cell
 	}
 	
@@ -63,7 +64,10 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-
+		let menu = self.menus[indexPath.row]
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as? MenuController
+		vc?.menu = menu
+		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 
 	func goToSearch(){
