@@ -171,7 +171,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
         else if ((pickerData[pickerView.selectedRow(inComponent: 0)]) == "Item"){
             let pickedItem = (curAllItemList[index])
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemViewController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemController
             
             vc?.title = pickedItem.name
             vc?.item = pickedItem
@@ -237,20 +237,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UISearchBar
     @available(iOS 2.0, *)
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
-    }
-
-    
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	}
 
 }

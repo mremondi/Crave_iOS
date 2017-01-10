@@ -19,6 +19,7 @@ class RatingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		commentTextField.isHidden = true
         commentTextField.delegate = self
         
         //Gesture recognizer for the star selection

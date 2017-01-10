@@ -60,7 +60,7 @@ public class BottomBarAdapter {
 		
 		self.viewController.navigationController?.isToolbarHidden = false
 		self.viewController.setToolbarItems(navigationBarButtonItemsArray, animated: true)
-		self.viewController.navigationController?.toolbar.barTintColor = UIColor.red
+		self.viewController.navigationController?.toolbar.barTintColor = UIColor(red: 0.737, green: 0.086, blue: 0.212, alpha: 1.0)
 	}
 	
 	

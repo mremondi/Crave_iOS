@@ -29,14 +29,8 @@ class NearMeViewController: UIViewController, MapTransitionDelegate, NavViewInte
         
         //Listener for updater
         NotificationCenter.default.addObserver(self, selector: #selector(NearMeViewController.drawMap), name:NSNotification.Name(rawValue: "NotificationIdentifier"), object: nil)
-        
-        //These initialize properties of the view, setting the title, the title format, the color of the navigation bar, hiding the nav bar back button, and making sure the nav bar is not hidden
-        self.navigationItem.title = "Near Me"
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica", size: 34)!,  NSForegroundColorAttributeName: UIColor.white]
-        navigationController?.navigationBar.barTintColor = UIColor.red
-        navigationController?.isNavigationBarHidden = false
-        navigationItem.hidesBackButton = true
-
+		
+		let _ = TopBarAdapter(viewController: self, title: "Near Me")
 		let _ = BottomBarAdapter(viewController: self)
         
         //Connect the mapView to the biew in the nearMe view controller view

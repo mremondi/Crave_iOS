@@ -127,7 +127,7 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
         let curItem = data[indexPath[1]]
         
         //Initialize the view controller for menu items
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemController
         
         //Initialize a few of the variables of the view controller
         vc?.title = curItem.name

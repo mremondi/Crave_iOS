@@ -53,7 +53,7 @@ class MenuViewController: UIViewController, MenuTransitionDelegate, NavViewInter
         let curItem = curSection.getItem(id: menuItemID)
         
         //Create a variable for the item view controller
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemController
         
         //Initialize some values in the item view controller
         vc?.title = curItem.name

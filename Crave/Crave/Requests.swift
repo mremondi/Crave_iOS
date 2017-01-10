@@ -18,6 +18,56 @@ public class Requests{
     var headers: [String:Any] = [:]
     
     let ca = CraveApi()
+	
+	func requestRestaurantByID(id: String, vc: RestaurantController) {
+				
+		var resultRestaurant: Restaurant?
+		
+		url = ca.API_ENDPOINT + ca.RESTAURANTS_ENPOINT
+		url = url + "/" + id
+		Alamofire.request(url).responseJSON { response in
+			if let value = response.result.value {
+				let restaurant = JSON(value)
+					
+				
+				let name = restaurant["restaurant"]
+				let address = restaurant["address"]
+				let createDate = restaurant["create_date"]
+				let locations = restaurant["loc"]["coordinates"]
+				let menuList = restaurant["menus"]
+				let url = restaurant["restaurant_URL"]
+				let tagList = restaurant["tags"]
+				let zipcode = restaurant["zipcode"]
+				let id = restaurant["_id"]
+				let photoURL = restaurant["restaurant_logo_URL"]
+				let phoneNumber = restaurant["phone_number"]
+				
+				var loc:[Double] = []
+				for location in locations{
+					loc.append(Double(String(describing: location.1))!)
+				}
+				let temp = loc[1]
+				loc[1] = loc[0]
+				loc[0] = temp
+				
+				var menus: [String] = []
+				for menu in menuList{
+					menus.append(String(describing: menu.1))
+				}
+				
+				var tags: [String] = []
+				for tag in tagList{
+					tags.append(String(describing: tag.1))
+				}
+				resultRestaurant = Restaurant(id: String(describing: id), name: String(describing: name), address: String(describing: address), loc: loc, zipcode: String(describing: zipcode), tags: tags, menus: menus, url: String(describing: url), createDate: String(describing: createDate), photoURL: String(describing: photoURL), phoneNumber: String(describing: phoneNumber))
+				
+				vc.restaurant = resultRestaurant
+				vc.ivRestaurantLogo!.downloadedFrom(link: (resultRestaurant?.getPhotoURL())!)
+				menus = (resultRestaurant?.getMenus())!
+				self.requestMenusByID(menuIDs: menus, vc: vc)
+			}
+		}
+	}
     
     func requestNearbyRestaurants(nearbyRestaurants: NearbyRestaurants){
         
@@ -74,6 +124,72 @@ public class Requests{
         }
     }
     
+	func requestMenusByID(menuIDs: [String], vc: RestaurantController) {
+		for menuID in menuIDs{
+			url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
+			url = url + "/" + menuID
+			Alamofire.request(url).responseJSON { response in
+				guard response.result.error == nil else {
+					// got an error in getting the data, need to handle it
+					print("error calling POST on /todos/1")
+					print(response.result.error!)
+					return
+				}
+				
+				if let value = response.result.value {
+					let todo = JSON(value)
+					
+					let id = String(describing: todo["_id"])
+					let menuName = String(describing: todo["menuName"])
+					let restaurantID = String(describing: todo["restaurantId"])
+					let sections = todo["sections"]
+					let items = todo["items"]
+					let create_date = String(describing: todo["create_date"])
+					
+					var sectionList = [MenuSection]()
+					var itemList = [String]()
+					
+					for section in sections{
+						var sectionText = String(describing: section.1)
+						if (sectionText.contains("�")){
+							if(sectionText.contains("Entr")){
+								sectionText = sectionText.replace(target: "�", withString:"é")
+							}
+							else if((sectionText.contains("Entrees"))){
+								sectionText = sectionText.replace(target: "Entrees", withString:"Entrées")
+							}
+							
+							
+							
+						}
+						else if(sectionText.contains("&")){
+							sectionText = sectionText.replace(target: "&", withString:"and")
+						}
+						
+						
+						let menuSection = MenuSection(sectionName: String(describing: sectionText), sectionItems: [])
+						sectionList.append(menuSection)
+					}
+					
+					sectionList.append(MenuSection(sectionName: "etc", sectionItems: []))
+					
+					for item in items{
+						itemList.append(String(describing: item))
+					}
+					
+					let menu = Menu(id: id, menuName: menuName, restaurantID: restaurantID, sections: sectionList, items: itemList, create_date: create_date)
+					
+					
+					//self.getSectionItems(sections: sectionList, menuID: id)
+					vc.menus.append(menu)
+					vc.menuTable.reloadData()
+				}
+			}
+			
+		}
+	}
+	
+	
     func requestMenu(menuIDs: [String], vc: RestaurantViewController){
         
         for menuID in menuIDs{
@@ -688,8 +804,4 @@ public class Requests{
                 }
         }
     }
-    
-    
-
-
 }
