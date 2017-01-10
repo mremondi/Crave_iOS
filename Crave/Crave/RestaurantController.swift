@@ -19,11 +19,12 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	
 	@IBOutlet weak var ivRestaurantLogo: UIImageView!
 	@IBOutlet weak var menuTable: UITableView!
-	
+	@IBOutlet weak var btnDirections: UIButton!
+	@IBOutlet weak var btnPhone: UIButton!
+	@IBOutlet weak var btnWebsite: UIButton!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		//restaurantImageView = UIImageView()
 		let _ = TopBarAdapter(viewController: self, title: "Crave")
 		let _ = BottomBarAdapter(viewController: self)  
 		
@@ -34,8 +35,17 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 		
 		requests.requestRestaurantByID(id: restaurantID!, vc: self)
 		
-	}
+		btnDirections.titleEdgeInsets = UIEdgeInsetsMake(0, -btnDirections.imageView!.frame.size.width, 0, btnDirections.imageView!.frame.size.width);
+		btnDirections.imageEdgeInsets = UIEdgeInsetsMake(0, btnDirections.frame.size.width - btnDirections.imageView!.frame.size.width, 0, -btnDirections.titleLabel!.frame.size.width);
+		
+		btnPhone.titleEdgeInsets = UIEdgeInsetsMake(0, -btnPhone.imageView!.frame.size.width, 0, btnPhone.imageView!.frame.size.width);
+		btnPhone.imageEdgeInsets = UIEdgeInsetsMake(0, btnPhone.frame.size.width - btnPhone.imageView!.frame.size.width, 0, -btnPhone.titleLabel!.frame.size.width);
+		
+		btnWebsite.titleEdgeInsets = UIEdgeInsetsMake(0, -btnWebsite.imageView!.frame.size.width, 0, btnWebsite.imageView!.frame.size.width);
+		btnWebsite.imageEdgeInsets = UIEdgeInsetsMake(0, btnWebsite.frame.size.width - btnWebsite.imageView!.frame.size.width, 0, -btnWebsite.titleLabel!.frame.size.width);
+		
 
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,6 +54,7 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:UITableViewCell = self.menuTable.dequeueReusableCell(withIdentifier: "menuCell")! as UITableViewCell
 		cell.textLabel?.text = self.menus[indexPath.row].getName()
+		cell.textLabel?.textAlignment = .center
 		return cell
 	}
 	
@@ -52,7 +63,7 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-		print("in click")
+
 	}
 
 	func goToSearch(){
