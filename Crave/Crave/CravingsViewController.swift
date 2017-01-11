@@ -58,7 +58,7 @@ class CravingsViewController: UIViewController, UITableViewDataSource, UITableVi
 	
 	func goToFavorites(){
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
-		requests.requestUserRatings(id: profile.getID(), vc: vc!)
+		//requests.requestUserRatings(id: profile.getID(), vc: vc!)
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 	

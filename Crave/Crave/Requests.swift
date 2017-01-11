@@ -394,8 +394,6 @@ public class Requests{
                 }
                 
                 for item in listOfItems{
-                    print(item.menuSection)
-                    print(listOfSectionNames)
                     sections[(listOfSectionNames.index(of: item.menuSection))!].addItem(item: item)
                 }
                 
@@ -685,7 +683,7 @@ public class Requests{
     }
     
     
-    func requestUserRatings(id:String, vc: CravingsViewController){
+    func requestUserRatings(id:String, vc: FavoritesController){
         url = ca.API_ENDPOINT + ca.GET_RATINGS_ENDPOINT+id
         //Sending the request
         Alamofire.request(url, method: .get)
@@ -720,7 +718,7 @@ public class Requests{
 
     }
     
-    func getItemForCravings(vc: CravingsViewController, ratingList: [Rating]){
+    func getItemForCravings(vc: FavoritesController, ratingList: [Rating]){
         
         var itemList: [MenuItem] = []
         
@@ -745,80 +743,77 @@ public class Requests{
                         
                         let menuID = String(describing: item["menuID"])
                         var name = String(describing: item["name"])
-                        if (name.contains("�")){
-                            if (name.contains("with�")){
-                                name = name.replace(target: "�", withString:" ...")
-                            }
-                            else if((name.contains("saut�"))||(name.contains("b�arnaise"))){
-                                name = name.replace(target: "�", withString:"é")
-                            }
-                            else if((name.contains("�s"))||(name.contains("we�ll"))){
-                                name = name.replace(target: "�", withString:"\'")
-                            }
-                            else{
-                                name = name.replace(target: "�", withString:"")
-                            }
-                            
-                        }
+//                        if (name.contains("�")){
+//                            if (name.contains("with�")){
+//                                name = name.replace(target: "�", withString:" ...")
+//                            }
+//                            else if((name.contains("saut�"))||(name.contains("b�arnaise"))){
+//                                name = name.replace(target: "�", withString:"é")
+//                            }
+//                            else if((name.contains("�s"))||(name.contains("we�ll"))){
+//                                name = name.replace(target: "�", withString:"\'")
+//                            }
+//                            else{
+//                                name = name.replace(target: "�", withString:"")
+//                            }
+//                            
+//                        }
                         let numberOfRatings = String(describing: item["numberOfRatings"])
                         //let dietaryInfo = String(describing: item["diestaryInfo"])
                         var description = String(describing: item["description"])
-                        if (description.contains("�")){
-                            if((description.contains("saut�"))||(description.contains("b�arnaise"))||(description.contains("Cr�me"))){
-                                description = description.replace(target: "�", withString:"é")
-                            }
-                            else if((description.contains("�s"))||(description.contains("we�ll"))){
-                                description = description.replace(target: "�", withString:"\'")
-                            }
-                            else{
-                                description = description.replace(target: "�", withString:"")
-                            }
-                            
-                        }
+//                        if (description.contains("�")){
+//                            if((description.contains("saut�"))||(description.contains("b�arnaise"))||(description.contains("Cr�me"))){
+//                                description = description.replace(target: "�", withString:"é")
+//                            }
+//                            else if((description.contains("�s"))||(description.contains("we�ll"))){
+//                                description = description.replace(target: "�", withString:"\'")
+//                            }
+//                            else{
+//                                description = description.replace(target: "�", withString:"")
+//                            }
+//                            
+//                        }
                         let restaurantID = String(describing: item["restaurant_id"])
                         let ratingTotal = String(describing: item["rating"])
                         //let tags = String(item["tags"])
                         let price = String(describing: item["price"])
                         var menuSection = String(describing: item["menuSection"])
-                        if (menuSection.contains("�")){
-                            if(menuSection.contains("Entr")){
-                                menuSection = menuSection.replace(target: "�", withString:"é")
-                            }
-                        }
-                        if(menuSection.contains("&")){
-                            menuSection = menuSection.replace(target: "&", withString:"and")
-                        }
+//                        if (menuSection.contains("�")){
+//                            if(menuSection.contains("Entr")){
+//                                menuSection = menuSection.replace(target: "�", withString:"é")
+//                            }
+//                        }
+//                        if(menuSection.contains("&")){
+//                            menuSection = menuSection.replace(target: "&", withString:"and")
+//                        }
 
                         let id = String(describing: item["_id"])
                         //let createDate = String(item["create_date"])
                         //let menuSubSection = String(item["menuSubSection"])
                         var restaurantName = String(describing: item["restaurant_name"])
-                        if (restaurantName.contains("�")){
-                            if((restaurantName.contains("Entr�"))||(restaurantName.contains("Caf�"))){
-                                restaurantName = restaurantName.replace(target: "�", withString:"é")
-                            }
-                            else if (restaurantName.contains("�s")){
-                                restaurantName = restaurantName.replace(target: "�", withString:"\'")
-                            }
-                            else{
-                                restaurantName = restaurantName.replace(target: "�", withString:"")
-                            }
-                            
-                        }
+//                        if (restaurantName.contains("�")){
+//                            if((restaurantName.contains("Entr�"))||(restaurantName.contains("Caf�"))){
+//                                restaurantName = restaurantName.replace(target: "�", withString:"é")
+//                            }
+//                            else if (restaurantName.contains("�s")){
+//                                restaurantName = restaurantName.replace(target: "�", withString:"\'")
+//                            }
+//                            else{
+//                                restaurantName = restaurantName.replace(target: "�", withString:"")
+//                            }
+//                            
+//                        }
                         
                         let menuItem = MenuItem(id: id, menuID: menuID, restaurantID: restaurantID, name: name, numberOfRatings: numberOfRatings, rating: ratingTotal, description: description, menuSection: menuSection, price: price, restaurantName: restaurantName)
                         
                         itemList.append(menuItem)
                         
                         if (ratingList.count == itemList.count){
-                            vc.ratingData = ratingList
-                            vc.data = itemList
-                            vc.filteredData = vc.data
-                            vc.tableView.reloadData()
+                            vc.ratings = ratingList
+                            vc.favorites = itemList
+                            //vc.filteredData = vc.data
+                            vc.favoritesTable.reloadData()
                         }
-
-
-                        
                     }
             }
 

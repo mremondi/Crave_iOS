@@ -96,7 +96,7 @@ class ItemController: UIViewController, NavViewInterface {
 	}
 	
 	func goToFavorites(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "favorites") as? FavoritesController
 		requests.requestUserRatings(id: profile.getID(), vc: vc!)
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}

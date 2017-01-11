@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTg-Q6-c03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5350" y="-1429"/>
+            <point key="canvasLocation" x="6455" y="-1322"/>
         </scene>
         <!--nearMe-->
         <scene sceneID="Gr6-P8-MJi">
@@ -68,24 +68,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0g-6X-r9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2764" y="197"/>
-        </scene>
-        <!--menu-->
-        <scene sceneID="8YB-qP-fdR">
-            <objects>
-                <viewController storyboardIdentifier="menu1" title="menu" id="Fwk-S9-x9f" customClass="MenuViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y2R-e4-DYh"/>
-                        <viewControllerLayoutGuide type="bottom" id="EyM-8Q-QKU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="i8g-oq-Cjf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mev-gs-EOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3831" y="-540"/>
         </scene>
         <!--aboutUs-->
         <scene sceneID="rf7-k8-t3C">
@@ -383,7 +365,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="uHE-PK-ljV">
-                                <rect key="frame" x="179" y="69.5" width="16" height="240"/>
+                                <rect key="frame" x="179" y="70" width="16" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="8qL-yf-SlO"/>
                                 </constraints>
@@ -395,7 +377,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmW-DY-qgZ">
-                                <rect key="frame" x="33" y="352" width="63" height="27"/>
+                                <rect key="frame" x="33" y="353" width="63" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -606,6 +588,49 @@
             </objects>
             <point key="canvasLocation" x="4479.1999999999998" y="-1321.8890554722639"/>
         </scene>
+        <!--Favorites Controller-->
+        <scene sceneID="Qfo-qh-div">
+            <objects>
+                <viewController storyboardIdentifier="favorites" id="G7O-DM-BOe" customClass="FavoritesController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ep-ud-dtO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ygR-7P-Ng6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CLf-Tr-U6r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="479-Rv-0lF">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritesCell" id="yif-JF-d5B">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yif-JF-d5B" id="8eX-48-5r9">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="479-Rv-0lF" secondAttribute="trailing" id="Dif-TO-pYT"/>
+                            <constraint firstItem="ygR-7P-Ng6" firstAttribute="top" secondItem="479-Rv-0lF" secondAttribute="bottom" id="Peb-pS-2oF"/>
+                            <constraint firstItem="479-Rv-0lF" firstAttribute="top" secondItem="6ep-ud-dtO" secondAttribute="bottom" id="i6C-rC-Mfm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="479-Rv-0lF" secondAttribute="leading" id="w7B-PH-PWo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favoritesTable" destination="479-Rv-0lF" id="w4Y-Xb-4x9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sz9-qd-dYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5272.8000000000002" y="-1316.4917541229386"/>
+        </scene>
         <!--Profile Controller-->
         <scene sceneID="3jm-Lg-gkU">
             <objects>
@@ -740,7 +765,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRb-Pc-ePJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EHU-1A-djO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EHU-1A-djO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

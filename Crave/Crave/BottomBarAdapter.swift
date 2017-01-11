@@ -73,13 +73,9 @@ public class BottomBarAdapter {
 	}
 	
 	@objc func goToFavorites(){
-		
-		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "cravings") as? CravingsViewController
-		
+		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "favorites") as? FavoritesController
 		requests.requestUserRatings(id: profile.getID(), vc: vc!)
-		
 		viewController.navigationController?.pushViewController(vc!, animated: false)
-		
 	}
 	
 	@objc func goToMore(){
