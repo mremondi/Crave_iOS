@@ -63,6 +63,13 @@ public class Requests{
 				
 				vc.restaurant = resultRestaurant
 				vc.ivRestaurantLogo!.downloadedFrom(link: (resultRestaurant?.getPhotoURL())!)
+				
+				vc.btnPhone.addTarget(vc, action: #selector(RestaurantController.callNumber), for: .touchUpInside)
+			
+				vc.btnDirections.addTarget(vc, action: #selector(RestaurantController.getDirections), for: .touchUpInside)
+				
+				vc.btnWebsite.addTarget(vc, action: #selector(RestaurantController.getWebsite), for: .touchUpInside)
+				
 				menus = (resultRestaurant?.getMenus())!
 				self.requestMenusByID(menuIDs: menus, vc: vc)
 			}

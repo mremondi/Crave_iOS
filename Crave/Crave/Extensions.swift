@@ -9,6 +9,15 @@
 
 import UIKit
 
+extension UINavigationController {
+	
+	override open func viewDidLoad() {
+		super.viewDidLoad()
+		interactivePopGestureRecognizer?.delegate = nil
+	}
+	
+}
+
 //The hide/dismiss functions for the keyboard in UIViewControllers
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

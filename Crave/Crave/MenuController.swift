@@ -13,12 +13,16 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	var menu: Menu?
 	var menuItems: MenuItem?
 	var menuSections: [MenuSection] = []
+	var buttonItemMap = [UIButton: MenuItem]()
 	
 	@IBOutlet weak var labelMenuName: UILabel!
 	@IBOutlet var menuItemTable: UITableView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		
+		
 		let _ = TopBarAdapter(viewController: self, title: (menu?.getName())!)
 		let _ = BottomBarAdapter(viewController: self)  
 		
@@ -53,12 +57,11 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		cell.textLabel?.text = self.menuSections[indexPath.section].getItems()[indexPath.row].name
 		cell.textLabel?.textAlignment = .center
 		
-		let button = UIButton(type: UIButtonType.System)
-		button.frame = CGRectMake(100, 100, 120, 50)
-		button.backgroundColor = UIColor.greenColor()
-		button.setTitle("Test Button", forState: UIControlState.Normal)
-		button.addTarget(self, action: #selector(self.), for: <#T##UIControlEvents#>)
-		
+		let button = UIButton()
+		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
+		button.addTarget(self, action: #selector(self.itemClick), for: .touchUpInside)
+		buttonItemMap[button] = self.menuSections[indexPath.section].getItems()[indexPath.row]
+
 		cell.contentView.addSubview(button)
 		return cell
 	}
@@ -70,8 +73,11 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 	
-	func itemClick(){
-		
+	func itemClick(sender: UIButton){
+		let item = buttonItemMap[sender]
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemController
+		vc?.item = item!
+		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 
 	

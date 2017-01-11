@@ -15,6 +15,8 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	var restaurantID: String?
 	var restaurant: Restaurant?
 	var menus: [Menu] = []
+	
+	var buttonMenuMap = [UIButton: Menu]()
 
 	
 	@IBOutlet var ivRestaurantLogo: UIImageView!
@@ -47,6 +49,35 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 
 	}
 	
+	@objc func callNumber() {
+		let phoneNumber = restaurant?.getPhoneNumber()
+		if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber!)") {
+			print("here")
+			let application:UIApplication = UIApplication.shared
+			if (application.canOpenURL(phoneCallURL as URL)) {
+				print("here2")
+				application.open(phoneCallURL as URL, options: [:], completionHandler: nil)
+			}
+		}
+	}
+	
+	@objc func getDirections(){
+		let restaurantName = restaurant?.getName().replace(target: " ", withString: "+")
+		let qURL = "http://maps.apple.com/?q=" + restaurantName! 
+		let llURL = "&ll=" + String(describing: restaurant!.getLat()) + "," + String(describing: restaurant!.getLon())
+		let directionsURL = qURL + llURL
+		if let url = NSURL(string: directionsURL) {
+			UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+		}
+	}
+	
+	@objc func getWebsite(){
+		let site = restaurant?.getUrl()
+		if let url = NSURL(string: site!) {
+			UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+		}
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -56,7 +87,21 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 		cell.textLabel?.text = self.menus[indexPath.row].getName()
 		cell.textLabel?.textAlignment = .center
 		cell.isUserInteractionEnabled = true
+		
+		let button = UIButton()
+		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
+		button.addTarget(self, action: #selector(self.menuClick), for: .touchUpInside)
+		buttonMenuMap[button] = self.menus[indexPath.row]	
+		cell.contentView.addSubview(button)
+		
 		return cell
+	}
+	
+	func menuClick(sender: UIButton){
+		let menu = buttonMenuMap[sender]
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "menu") as? MenuController
+		vc?.menu = menu
+		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

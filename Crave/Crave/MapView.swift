@@ -26,7 +26,7 @@ public class MapView: UIView, GMSMapViewDelegate{
 
         //Google Maps
         let camera = GMSCameraPosition.camera(withLatitude: locationManagerClass.getLocationLatitude(),longitude: locationManagerClass.getLocationLongitude(), zoom: 12)
-        mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 63, width: width, height: height*9/10-45), camera: camera)
+        mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 63, width: width, height: height), camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         mapView.settings.compassButton = true
