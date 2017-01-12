@@ -7,75 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03D29DB0BA21AD6D726CA2026CD6A0C2 /* PopupDialog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 492A4C22A183FE43EB08B12FF08B3BAF /* PopupDialog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		086A5E980B3D468FD1CAF3CD496577F2 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC29C170E60AFA38192351E67BECFC9 /* UIViewController+Visibility.swift */; };
-		09C196FE094F6BD2D269B423EB112961 /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FD5A8B7D2334F283CE5BE3EB1F1659 /* PopupDialog+Keyboard.swift */; };
-		0E59C1DAAFC50CE8EF587784D0B65ECC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4377D431AC44C78758F27B6255217F7 /* SwiftyJSON.swift */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436F2ED2976E4A0740E1DE19741AF949 /* Timeline.swift */; };
-		14BED9604FE0797D9DBBA2FDCBF71128 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E06B85579D59E698E87032F42A0F0 /* UIView+Animations.swift */; };
-		1883D04266AC45DEB0A5F6B2CD643145 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDEE09E68C855ADDB3E35DD21D83F20 /* PopupDialog.swift */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D034B3F775AC64E296825FCB52AA73DC /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		204C20C1364FF234FB7FA579A460C1A8 /* TZStackViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B6447C94EA8D3A2C7C3093A428445 /* TZStackViewAlignment.swift */; };
-		27DB19135DEE607990C6B5F01C07AE81 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB60A4AC909E5ADFA6D796FCD8026CC3 /* FXBlurView.m */; };
-		317F10C5DFB10D5A608005FC7933B786 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE32052E1AE49244AE918A0D60A31E /* CosmosLocalizedRating.swift */; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642A1F1C0836F341B886DA387108142 /* TaskDelegate.swift */; };
-		3A24A356DAF7CA974FDC87C30945D587 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45640D8955F26291F97B5B8B6547CEC1 /* StarFillMode.swift */; };
-		3B3F252A721E576D4F9507D984D1A121 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BB238733C5095EC8A3CB210125084 /* UIImageView+Calculations.swift */; };
-		3E003916E369C129E41F965B0F0297C7 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E50034DFEF57E92660E9BD31B040FBD /* PopupDialogDefaultButtons.swift */; };
-		3FD66B7FACE397F274C2838CB685F021 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F302FF160EF985C0061756C95A06951 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42CC7CA7E8E0395A8B9024BAEF8EFF70 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B3B24DABF52BC4483791A14094947A6 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43FBBAF51381FD3A43CF5BE8A1D5A987 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165FCE4D38CDE99BE1E041BB1CD0F33 /* CosmosDefaultSettings.swift */; };
-		45B3F3B07CA700F626B91C54D806CD6A /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F7FC1C398F6F818A6DC34557CDD35 /* CosmosAccessibility.swift */; };
-		4D96CA2263958B2BA241BBBC27429A51 /* PopupDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350B6F8B857EE6C8D48D0271D63A71C /* PopupDialog-dummy.m */; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993124F080299AB3F42EBE4A2D810AD2 /* Request.swift */; };
-		5666985B18AAC2D2FCB8457874E6FEC6 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04A83B0FBBD4F2BD7FDEEA0C8F48B1 /* CosmosSize.swift */; };
-		609A2B9C3A862679F4A42F4492B0AE33 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0057435CD89EDF31C1009C0F00A37 /* CosmosSettings.swift */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF9F83319B90477918E9AC109EB9F0 /* DispatchQueue+Alamofire.swift */; };
-		620B0F47D5F3ACA4FD284B251FD8CFA3 /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC20AEDD3CDC3A7E40C430EC6BA5B99 /* PopupDialogDefaultView.swift */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF13F630A6B10E5DCCC8DF6FF571127 /* ServerTrustPolicy.swift */; };
-		698ACEFFD3C3465780D173B9640168D6 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D9DB7FD7F31AEA75DA52577FC48D2 /* CosmosTouchTarget.swift */; };
+		03D29DB0BA21AD6D726CA2026CD6A0C2 /* PopupDialog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3F3FC8A042D93802E129027ACDE4E33 /* PopupDialog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		086A5E980B3D468FD1CAF3CD496577F2 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DC1B4CC17E769A322728F681A7A521 /* UIViewController+Visibility.swift */; };
+		09C196FE094F6BD2D269B423EB112961 /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F2E91641570127A6FA660E8495AC7 /* PopupDialog+Keyboard.swift */; };
+		0E59C1DAAFC50CE8EF587784D0B65ECC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7648977517454405A663A8FA0B3D064 /* SwiftyJSON.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79FC5D302349FF3B0125777577B3E1 /* Timeline.swift */; };
+		14BED9604FE0797D9DBBA2FDCBF71128 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C7FE1B28D2E1250C92859652B0DD8C /* UIView+Animations.swift */; };
+		1883D04266AC45DEB0A5F6B2CD643145 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AC1E6F9D3F6974AB807CF17B4C8460 /* PopupDialog.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 838FC4C2D222E06F11A05A74DCA8E42C /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		204C20C1364FF234FB7FA579A460C1A8 /* TZStackViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A847914FDD5D13F5FA2E470585365 /* TZStackViewAlignment.swift */; };
+		27DB19135DEE607990C6B5F01C07AE81 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFEF7D9A3E451F10228B7A3A8AB39B5 /* FXBlurView.m */; };
+		317F10C5DFB10D5A608005FC7933B786 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442A42E8FFB5DBAA95F5C9301DBF25D /* CosmosLocalizedRating.swift */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3678B46625EBD16C46B49EA2C399AF6E /* TaskDelegate.swift */; };
+		3A24A356DAF7CA974FDC87C30945D587 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286AF920C0C4684911D43C638900A791 /* StarFillMode.swift */; };
+		3B3F252A721E576D4F9507D984D1A121 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8866AAF84E461D84A09D9F6728936C47 /* UIImageView+Calculations.swift */; };
+		3E003916E369C129E41F965B0F0297C7 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C095BE592E71F36248ABD46F04D7E7E /* PopupDialogDefaultButtons.swift */; };
+		3FD66B7FACE397F274C2838CB685F021 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA872343A74E1AC64A4FBAC45D107E47 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42CC7CA7E8E0395A8B9024BAEF8EFF70 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2887D68728B53ECA3423E59C431FC271 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43FBBAF51381FD3A43CF5BE8A1D5A987 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6E5B3131D921ABC78D06A534E8EE6 /* CosmosDefaultSettings.swift */; };
+		45B3F3B07CA700F626B91C54D806CD6A /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FD117FBA7EDE345AB7647F1522B7F /* CosmosAccessibility.swift */; };
+		4D96CA2263958B2BA241BBBC27429A51 /* PopupDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFDA1BA6EBE87702278555EB9F698CE /* PopupDialog-dummy.m */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A750C5383995CCE300D62BEE41CAE0 /* Request.swift */; };
+		5666985B18AAC2D2FCB8457874E6FEC6 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E30B2D8761810E001597AB333237F /* CosmosSize.swift */; };
+		609A2B9C3A862679F4A42F4492B0AE33 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46419160FC4A12DFED650565A8AE01FB /* CosmosSettings.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A290BD9E6AAB6693AF9317B1D010F /* DispatchQueue+Alamofire.swift */; };
+		620B0F47D5F3ACA4FD284B251FD8CFA3 /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824383FAD90B329BA24B4BD52EDB629 /* PopupDialogDefaultView.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656AC437660656B01DB3F290A16F2FB /* ServerTrustPolicy.swift */; };
+		698ACEFFD3C3465780D173B9640168D6 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896CF807242C453D55EB30AF2342CEF /* CosmosTouchTarget.swift */; };
 		6BABAE169EE16B6BF6E7850423B91087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		6D6125745D2472D29B6130DEB874B3BD /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18825E6C772FB9140D94582520C6D9FC /* CosmosText.swift */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEDF5021FE1DE17967467E8831DFA26 /* SessionDelegate.swift */; };
-		7C70AEE617FDAA5C6732291D93C7EC71 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98799BE8A1F5D1F0F057D46281F422 /* PopupDialogContainerView.swift */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10924DCC29DEBA4D2FE4B2F388285780 /* Result.swift */; };
-		82BD0F953F917ECBB587650DDEF14B8E /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD98B4C1615D62100951D933C020597 /* InteractiveTransition.swift */; };
-		85B145898B15D18C7B6F54C00449468E /* TZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E6794FC7014B0DE28BD719B367CD4 /* TZStackView.swift */; };
-		86C743EB1FCA2FF13C50EADCE263091E /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EA7E76A5F7ACE8DC5940A20EB9DE22 /* Cosmos-dummy.m */; };
-		8AE54699D0182BAF0D6E51024976477A /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9601E37A2EDF9553FBF9BA8CEA237A /* CosmosLayerHelper.swift */; };
-		8D09AAD92F3F0021887340E62C6F01B5 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F0F6EFF13E0440EA3FBF0912A5FE36 /* TransitionAnimations.swift */; };
-		8F42B7A165979963173FD14A27B5F5F6 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9AD0424D5F0E72ADD76FB3C4085A3 /* PresentationController.swift */; };
-		92F7F451337F93E4895A947409197A68 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E9C8B85C5B881A6BCB92C8B82F888 /* SwiftyJSON-dummy.m */; };
+		6D6125745D2472D29B6130DEB874B3BD /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF279FC2510CBD27EB5B65FA814E7E68 /* CosmosText.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC640A82A1710E62077AAB836E44449 /* SessionDelegate.swift */; };
+		7C70AEE617FDAA5C6732291D93C7EC71 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320445FFCECD3D547A8FDDC6EE8E11FC /* PopupDialogContainerView.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1670662135D7E6ADC9CC2FA211134 /* Result.swift */; };
+		82BD0F953F917ECBB587650DDEF14B8E /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789910F0A47034A85D0F1F4E5E8AA64E /* InteractiveTransition.swift */; };
+		85B145898B15D18C7B6F54C00449468E /* TZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DA3FFB36D1D11F9A867F6F6CE384C /* TZStackView.swift */; };
+		86C743EB1FCA2FF13C50EADCE263091E /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DC9E396728C8840F4058D8AFFCC44 /* Cosmos-dummy.m */; };
+		8AE54699D0182BAF0D6E51024976477A /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12DFDB616780B520635580AFB87A28 /* CosmosLayerHelper.swift */; };
+		8D09AAD92F3F0021887340E62C6F01B5 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC264FE6B3ED0B70A86DA9DF560394DA /* TransitionAnimations.swift */; };
+		8F42B7A165979963173FD14A27B5F5F6 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E35B09E33075E20FF5A7F1E3D1515 /* PresentationController.swift */; };
+		92F7F451337F93E4895A947409197A68 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F625102EB485DD837DBA013EF903EA6 /* SwiftyJSON-dummy.m */; };
 		943F14DAA6ECD2DAA8A32F2C543EF8EC /* Pods-Crave-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E5FED5C28BD6E245E411B80BDEDE4E /* Pods-Crave-dummy.m */; };
-		9688B9E8A18F50345E9C9086C13F789E /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E84E7582655F0AC4676F94DA337 /* PresentationManager.swift */; };
-		98AC08D249FC1E3D432FEA6623A1633B /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A82C84ECE6738A2A7A86F95253CE1 /* PopupDialogOverlayView.swift */; };
+		9688B9E8A18F50345E9C9086C13F789E /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A54D8417272A381668C41EE9CE9E4 /* PresentationManager.swift */; };
+		98AC08D249FC1E3D432FEA6623A1633B /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14229E2541C8979DFAF22065C90D3453 /* PopupDialogOverlayView.swift */; };
 		98D04089B7270F289A949B83CC8879A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		9C694271C9E8AFE2D940DF931661976C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		9D87C63AA789D2902AA8973B4AAC0CB7 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544AA9658DFAF947CDFCE131A76B41F /* StarLayer.swift */; };
-		9DA213E20108ED36E90D976BD38FE34F /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5816E28A0AED1F798A1867803939A1 /* CosmosView.swift */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D8E99B7D058B97A355AF6F3702AB6F /* AFError.swift */; };
+		9D87C63AA789D2902AA8973B4AAC0CB7 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A4A2675FCFE7AC4973A557FDE1E572 /* StarLayer.swift */; };
+		9DA213E20108ED36E90D976BD38FE34F /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F764DFE8C518112FDD8029EC032495F /* CosmosView.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4851D0CF64A370B4CF674223E4A1A /* AFError.swift */; };
 		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		A284F60C67FE9BD604B27160CEB77871 /* TZStackViewDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E762EDC1AA1B7A4B32CF95BB609883B /* TZStackViewDistribution.swift */; };
-		A2A2359BF0BE96A64570CBC09069C5FF /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038EE1B646A6B0026ACBE8A32A5124E4 /* CosmosLayers.swift */; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D5A1FF69E9E44ADFF7101C5143F77F /* NetworkReachabilityManager.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0DA9BC1EB9877D037EB5E10F60FEF6 /* Alamofire-dummy.m */; };
+		A284F60C67FE9BD604B27160CEB77871 /* TZStackViewDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4041F3119F42ED4396054E58ED1A6E4 /* TZStackViewDistribution.swift */; };
+		A2A2359BF0BE96A64570CBC09069C5FF /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5382A0BFEC3B4B39E490336A04A3774A /* CosmosLayers.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD090D3FBE529B69FD31F55B67A05868 /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AF597C6F0F35EC751C3DE235E49422 /* Alamofire-dummy.m */; };
 		AD8424D5DDA5925B88548992CC0C2A91 /* Pods-Crave-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1627BF46B5D3DB3323A2677C9B6C879D /* Pods-Crave-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B62B37458084DAB23F5FD52528E179 /* SessionManager.swift */; };
-		B2F6BB65D2CDA0534E274C00C86F060D /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534991261996D061936B7C84DA1F1887 /* TransitionAnimator.swift */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D08DA1D1754461AE920EC8771AFED6 /* MultipartFormData.swift */; };
-		B66DB5AA59800D672844FD99CDB081E9 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F1210D7DFE89814D3B0AE166F1AA78 /* CosmosTouch.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A454E12B739DE129AE3A7BCD50CEAF0 /* Validation.swift */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B36B8C69F6BCF8B917556746248A296 /* ParameterEncoding.swift */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7855585724842E3E06F6BCA56BCD66E /* SessionManager.swift */; };
+		B2F6BB65D2CDA0534E274C00C86F060D /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6747F3FA21F52297512D2A07379B3BE3 /* TransitionAnimator.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E108B1D82075F6E470092A151748692 /* MultipartFormData.swift */; };
+		B66DB5AA59800D672844FD99CDB081E9 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05585EEC9A4BD8A62145A646734889 /* CosmosTouch.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D8F3882C711645BA9F2D5B8357B66 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1689BBA1F1EA1771C34EAB87CC314 /* ParameterEncoding.swift */; };
 		BEF6F444CE92A513A430A2770A7D5A81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		C2013BDC16253140A597B09EEA80AA9D /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD527380053C7BE162AB532CDD6545C8 /* CosmosRating.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2538682A06E91166C7011B0EEFEBD7B /* Response.swift */; };
-		E0401978202C560A36143599A76FB1B6 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551C72BCB6AA60F60DCF4B63F49748D /* PopupDialogDefaultViewController.swift */; };
-		E5D06CE4813A18D79C9F5C6E7453C8D2 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A281F2928819C64FB510B0B1D64A0467 /* PopupDialogButton.swift */; };
-		E634F3889D0BF2F089E665D906425F91 /* TZSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17681E7521B02D1FCE30B40CF820B95 /* TZSpacerView.swift */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278DC30E0CBCE275B658D62C2A3470AF /* Notifications.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452370CBC50E2FDA448D594071B55FE3 /* ResponseSerialization.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135419C31291AF3785FC3ED616123C56 /* Alamofire.swift */; };
-		FBF697E2C66CA5F9F61D93E281D3FDAA /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 115CD300006F1E103BDFF375057EBDB5 /* FXBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2013BDC16253140A597B09EEA80AA9D /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542A7E9933AFB4869F2C130EB5BCFE01 /* CosmosRating.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E647182C9C79E5181016F980AFD1804B /* Response.swift */; };
+		E0401978202C560A36143599A76FB1B6 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C12B24372EDA4864774E6AC5670873 /* PopupDialogDefaultViewController.swift */; };
+		E5D06CE4813A18D79C9F5C6E7453C8D2 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A3AA1C48A5B789065D25506350AA /* PopupDialogButton.swift */; };
+		E634F3889D0BF2F089E665D906425F91 /* TZSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F487F4B78E5A4397F2FF1CD10FDA2 /* TZSpacerView.swift */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760C19B2725D6EF3B1AFAABC1D528AAF /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E6A709849E4FF34443F639D5C7B87 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905ADD44D417EDE821BCC21027CF47E /* Alamofire.swift */; };
+		FBF697E2C66CA5F9F61D93E281D3FDAA /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 334EC040A10C844CB988A49676F07A06 /* FXBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,105 +110,107 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0165FCE4D38CDE99BE1E041BB1CD0F33 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
-		02FD5A8B7D2334F283CE5BE3EB1F1659 /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopupDialog+Keyboard.swift"; path = "PopupDialog/Classes/PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
-		038EE1B646A6B0026ACBE8A32A5124E4 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 		044B062B7FC9A70E2AD6B02A67456260 /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopupDialog.framework; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0551C72BCB6AA60F60DCF4B63F49748D /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultViewController.swift; path = PopupDialog/Classes/PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
-		09C9AD0424D5F0E72ADD76FB3C4085A3 /* PresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationController.swift; path = PopupDialog/Classes/PresentationController.swift; sourceTree = "<group>"; };
-		10924DCC29DEBA4D2FE4B2F388285780 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		115CD300006F1E103BDFF375057EBDB5 /* FXBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = PopupDialog/Classes/FXBlurView.h; sourceTree = "<group>"; };
-		135419C31291AF3785FC3ED616123C56 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		05C7FE1B28D2E1250C92859652B0DD8C /* UIView+Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "PopupDialog/Classes/UIView+Animations.swift"; sourceTree = "<group>"; };
+		0896CF807242C453D55EB30AF2342CEF /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		0B8DA3FFB36D1D11F9A867F6F6CE384C /* TZStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackView.swift; path = PopupDialog/Classes/TZStackView/TZStackView.swift; sourceTree = "<group>"; };
+		11F4DF88ACD3839F383EF7C22C0511E5 /* PopupDialog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-prefix.pch"; sourceTree = "<group>"; };
+		14229E2541C8979DFAF22065C90D3453 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogOverlayView.swift; path = PopupDialog/Classes/PopupDialogOverlayView.swift; sourceTree = "<group>"; };
 		1627BF46B5D3DB3323A2677C9B6C879D /* Pods-Crave-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Crave-umbrella.h"; sourceTree = "<group>"; };
-		18825E6C772FB9140D94582520C6D9FC /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
-		196A6E4046D11511D773EF6BD1C50C78 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A5816E28A0AED1F798A1867803939A1 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
-		1EA41558CE1C380BCE63036C58ECA816 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		1F05585EEC9A4BD8A62145A646734889 /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
 		232351E8D7790B65BC9B3F64638E53AA /* Pods-Crave-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Crave-resources.sh"; sourceTree = "<group>"; };
-		2350B6F8B857EE6C8D48D0271D63A71C /* PopupDialog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PopupDialog-dummy.m"; sourceTree = "<group>"; };
-		2642A1F1C0836F341B886DA387108142 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		278DC30E0CBCE275B658D62C2A3470AF /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		2AD98B4C1615D62100951D933C020597 /* InteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransition.swift; path = PopupDialog/Classes/InteractiveTransition.swift; sourceTree = "<group>"; };
-		2D6E9C8B85C5B881A6BCB92C8B82F888 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		2E3F1E8B4A87BE67175990E7E8F6EF89 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		3544AA9658DFAF947CDFCE131A76B41F /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
-		35DF9F83319B90477918E9AC109EB9F0 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		3BF13F630A6B10E5DCCC8DF6FF571127 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		42380E1ECFFC7DB6D13EDBC70E63940F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		436F2ED2976E4A0740E1DE19741AF949 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		452370CBC50E2FDA448D594071B55FE3 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		45640D8955F26291F97B5B8B6547CEC1 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
-		492A4C22A183FE43EB08B12FF08B3BAF /* PopupDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-umbrella.h"; sourceTree = "<group>"; };
-		49DCAF9084F6045EB6A11DCE734DC876 /* PopupDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PopupDialog.modulemap; sourceTree = "<group>"; };
-		4C651C4A9C5F5717E5ED534ED932A9F3 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cosmos.modulemap; sourceTree = "<group>"; };
-		4C98799BE8A1F5D1F0F057D46281F422 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogContainerView.swift; path = PopupDialog/Classes/PopupDialogContainerView.swift; sourceTree = "<group>"; };
-		4E50034DFEF57E92660E9BD31B040FBD /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultButtons.swift; path = PopupDialog/Classes/PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
-		534991261996D061936B7C84DA1F1887 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = PopupDialog/Classes/TransitionAnimator.swift; sourceTree = "<group>"; };
+		27D6E5B3131D921ABC78D06A534E8EE6 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		28660901F224BCB1E105AC3083133E65 /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
+		286AF920C0C4684911D43C638900A791 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
+		2887D68728B53ECA3423E59C431FC271 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		312D8F3882C711645BA9F2D5B8357B66 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		320445FFCECD3D547A8FDDC6EE8E11FC /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogContainerView.swift; path = PopupDialog/Classes/PopupDialogContainerView.swift; sourceTree = "<group>"; };
+		330EBDB368742A0BD96868707C4E685D /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		334EC040A10C844CB988A49676F07A06 /* FXBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = PopupDialog/Classes/FXBlurView.h; sourceTree = "<group>"; };
+		3678B46625EBD16C46B49EA2C399AF6E /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		373795D9C3B37066C84D63635697F2BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381E35B09E33075E20FF5A7F1E3D1515 /* PresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationController.swift; path = PopupDialog/Classes/PresentationController.swift; sourceTree = "<group>"; };
+		46419160FC4A12DFED650565A8AE01FB /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
+		4F5757F683E9387EAD76D5748CDF98FE /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		4F6A54D8417272A381668C41EE9CE9E4 /* PresentationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationManager.swift; path = PopupDialog/Classes/PresentationManager.swift; sourceTree = "<group>"; };
+		4FC640A82A1710E62077AAB836E44449 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		5060821D1A608AF54AE1171921BDF03F /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		5382A0BFEC3B4B39E490336A04A3774A /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 		54222A001B8FD995FA5E798288254396 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		552B6447C94EA8D3A2C7C3093A428445 /* TZStackViewAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackViewAlignment.swift; path = PopupDialog/Classes/TZStackView/TZStackViewAlignment.swift; sourceTree = "<group>"; };
-		57D08DA1D1754461AE920EC8771AFED6 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		5960DCD58F3F9CBE607FA3353C1C6169 /* PopupDialog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PopupDialog.xcconfig; sourceTree = "<group>"; };
+		542A7E9933AFB4869F2C130EB5BCFE01 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
 		5A71EFD3E914316D6DCAD60EEB7B1970 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD8A3AA1C48A5B789065D25506350AA /* PopupDialogButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogButton.swift; path = PopupDialog/Classes/PopupDialogButton.swift; sourceTree = "<group>"; };
 		5D4CFEBA07F80085020089A0637F1AAA /* Pods-Crave-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Crave-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5E762EDC1AA1B7A4B32CF95BB609883B /* TZStackViewDistribution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackViewDistribution.swift; path = PopupDialog/Classes/TZStackView/TZStackViewDistribution.swift; sourceTree = "<group>"; };
-		5F302FF160EF985C0061756C95A06951 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		5FD0057435CD89EDF31C1009C0F00A37 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
-		626323643B6D9D5B2A5DAC968ECB614C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		627A82C84ECE6738A2A7A86F95253CE1 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogOverlayView.swift; path = PopupDialog/Classes/PopupDialogOverlayView.swift; sourceTree = "<group>"; };
+		5E108B1D82075F6E470092A151748692 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		5E79FC5D302349FF3B0125777577B3E1 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		60AC1E6F9D3F6974AB807CF17B4C8460 /* PopupDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialog.swift; path = PopupDialog/Classes/PopupDialog.swift; sourceTree = "<group>"; };
+		6747F3FA21F52297512D2A07379B3BE3 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = PopupDialog/Classes/TransitionAnimator.swift; sourceTree = "<group>"; };
 		67E0155B7D7E8199818ACFB62F72AEE7 /* Pods-Crave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Crave.debug.xcconfig"; sourceTree = "<group>"; };
 		67F6DC00C5AED321903095F050273EFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BC20AEDD3CDC3A7E40C430EC6BA5B99 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultView.swift; path = PopupDialog/Classes/PopupDialogDefaultView.swift; sourceTree = "<group>"; };
-		71B62B37458084DAB23F5FD52528E179 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		728A44A7082CB2E457A4C700812FE8A4 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		7889AECC7FCAF26676757F4E8DAC3E5A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79EA7E76A5F7ACE8DC5940A20EB9DE22 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
-		7A6D9DB7FD7F31AEA75DA52577FC48D2 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
-		7E7E6794FC7014B0DE28BD719B367CD4 /* TZStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackView.swift; path = PopupDialog/Classes/TZStackView/TZStackView.swift; sourceTree = "<group>"; };
-		7FDBA2E7533D9DA4AB71FD00B9751552 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		8399C053ED0A93943298F976F4D3F8BF /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
-		8E04A83B0FBBD4F2BD7FDEEA0C8F48B1 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
+		6D437B617EB9389F88227330524F8E92 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E4C4788BA79642B04D20B059D7482FD /* PopupDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PopupDialog.modulemap; sourceTree = "<group>"; };
+		6F625102EB485DD837DBA013EF903EA6 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		760C19B2725D6EF3B1AFAABC1D528AAF /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		789910F0A47034A85D0F1F4E5E8AA64E /* InteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransition.swift; path = PopupDialog/Classes/InteractiveTransition.swift; sourceTree = "<group>"; };
+		7C095BE592E71F36248ABD46F04D7E7E /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultButtons.swift; path = PopupDialog/Classes/PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
+		7C7F0AF8AF36BDC35448D28E03A7C6CD /* PopupDialog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PopupDialog.xcconfig; sourceTree = "<group>"; };
+		815DC9E396728C8840F4058D8AFFCC44 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
+		821E6A709849E4FF34443F639D5C7B87 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		838FC4C2D222E06F11A05A74DCA8E42C /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		840E842D4C1CA87EE47A256BB34D74FA /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Subspecs/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		8442A42E8FFB5DBAA95F5C9301DBF25D /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		8866AAF84E461D84A09D9F6728936C47 /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Calculations.swift"; path = "PopupDialog/Classes/UIImageView+Calculations.swift"; sourceTree = "<group>"; };
+		8910E83852A8ACBC66934045BFABB711 /* Appsee.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Appsee.h; path = Appsee/Appsee.framework/Headers/Appsee.h; sourceTree = "<group>"; };
+		8F764DFE8C518112FDD8029EC032495F /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		918120685B2EA5DBBC3D88506F75DBB8 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		952802511A6A8A4AD30EE3F701561389 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		98E5FED5C28BD6E245E411B80BDEDE4E /* Pods-Crave-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Crave-dummy.m"; sourceTree = "<group>"; };
-		993124F080299AB3F42EBE4A2D810AD2 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		9A454E12B739DE129AE3A7BCD50CEAF0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		9B36B8C69F6BCF8B917556746248A296 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		9B3B24DABF52BC4483791A14094947A6 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
-		9BEDF5021FE1DE17967467E8831DFA26 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		9E9601E37A2EDF9553FBF9BA8CEA237A /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		99DF8C1F2D9DB8D920C2414CCF351354 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		9DFF9C9571FE5B583BAC7F7A2827B157 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		9EB5E0514AD879E7D219D3BE9BE38D66 /* Pods-Crave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Crave.release.xcconfig"; sourceTree = "<group>"; };
-		A281F2928819C64FB510B0B1D64A0467 /* PopupDialogButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogButton.swift; path = PopupDialog/Classes/PopupDialogButton.swift; sourceTree = "<group>"; };
-		A3F1210D7DFE89814D3B0AE166F1AA78 /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
-		A7F0F6EFF13E0440EA3FBF0912A5FE36 /* TransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimations.swift; path = PopupDialog/Classes/TransitionAnimations.swift; sourceTree = "<group>"; };
+		A6AF597C6F0F35EC751C3DE235E49422 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		A97F487F4B78E5A4397F2FF1CD10FDA2 /* TZSpacerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZSpacerView.swift; path = PopupDialog/Classes/TZStackView/TZSpacerView.swift; sourceTree = "<group>"; };
 		AB1B3EFCD68FB243667AB416E4374A34 /* Pods-Crave.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Crave.modulemap"; sourceTree = "<group>"; };
-		B28F6FF4F68732368DA5D239BB988A7F /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		B4377D431AC44C78758F27B6255217F7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		BA0159B28AE606A2FC227B58C3F834A2 /* PopupDialog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-prefix.pch"; sourceTree = "<group>"; };
-		BC2562AFE1DCB5B1DDE75894423B0C00 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		BDDEE09E68C855ADDB3E35DD21D83F20 /* PopupDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialog.swift; path = PopupDialog/Classes/PopupDialog.swift; sourceTree = "<group>"; };
-		C76F7FC1C398F6F818A6DC34557CDD35 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
-		C78C9FFEC3D005D92F4E1A79F72B8AA8 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Subspecs/Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		CAC29C170E60AFA38192351E67BECFC9 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Visibility.swift"; path = "PopupDialog/Classes/UIViewController+Visibility.swift"; sourceTree = "<group>"; };
-		CB0DA9BC1EB9877D037EB5E10F60FEF6 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		ABB1670662135D7E6ADC9CC2FA211134 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		ABFDA1BA6EBE87702278555EB9F698CE /* PopupDialog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PopupDialog-dummy.m"; sourceTree = "<group>"; };
+		AD090D3FBE529B69FD31F55B67A05868 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		B5BE139877570EE65DC4EBBC3017E45D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B633C1C1D57B69F613CF77C06A5846CB /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		B7A4A2675FCFE7AC4973A557FDE1E572 /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		BC5E30B2D8761810E001597AB333237F /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
+		BD12DFDB616780B520635580AFB87A28 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		BDE1689BBA1F1EA1771C34EAB87CC314 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		BE6D7F82A7D33ECE5D2A8461ED4B5B82 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Subspecs/Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		BECA3D1A3E8F3790B7F5C73B4441D8B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF279FC2510CBD27EB5B65FA814E7E68 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		C1F4851D0CF64A370B4CF674223E4A1A /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		C3F3FC8A042D93802E129027ACDE4E33 /* PopupDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PopupDialog-umbrella.h"; sourceTree = "<group>"; };
+		C4C12B24372EDA4864774E6AC5670873 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultViewController.swift; path = PopupDialog/Classes/PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
+		C50FD117FBA7EDE345AB7647F1522B7F /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		C7648977517454405A663A8FA0B3D064 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		C7855585724842E3E06F6BCA56BCD66E /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		C905ADD44D417EDE821BCC21027CF47E /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CC264FE6B3ED0B70A86DA9DF560394DA /* TransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimations.swift; path = PopupDialog/Classes/TransitionAnimations.swift; sourceTree = "<group>"; };
 		CCDEA447CCAF138A7467E38D1CD06006 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD527380053C7BE162AB532CDD6545C8 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
-		D034B3F775AC64E296825FCB52AA73DC /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		CDCDF1A74D3F53AC13E7C85B8E974BBB /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Subspecs/Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		CE2F2E91641570127A6FA660E8495AC7 /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopupDialog+Keyboard.swift"; path = "PopupDialog/Classes/PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
 		D22C2598CFCCCF79241D658475021106 /* Pods-Crave-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Crave-acknowledgements.plist"; sourceTree = "<group>"; };
-		D2538682A06E91166C7011B0EEFEBD7B /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		D2D8E99B7D058B97A355AF6F3702AB6F /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		D2E446B765CA00538EA9918541222A17 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		D4041F3119F42ED4396054E58ED1A6E4 /* TZStackViewDistribution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackViewDistribution.swift; path = PopupDialog/Classes/TZStackView/TZStackViewDistribution.swift; sourceTree = "<group>"; };
+		D43A847914FDD5D13F5FA2E470585365 /* TZStackViewAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZStackViewAlignment.swift; path = PopupDialog/Classes/TZStackView/TZStackViewAlignment.swift; sourceTree = "<group>"; };
+		D656AC437660656B01DB3F290A16F2FB /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		D700E07C8BD0999C0E2E2ECD285B0C29 /* Pods_Crave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Crave.framework; path = "Pods-Crave.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA1BB238733C5095EC8A3CB210125084 /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Calculations.swift"; path = "PopupDialog/Classes/UIImageView+Calculations.swift"; sourceTree = "<group>"; };
-		DB60A4AC909E5ADFA6D796FCD8026CC3 /* FXBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = PopupDialog/Classes/FXBlurView.m; sourceTree = "<group>"; };
-		E0CB03053484921E4E276F41522C2960 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Subspecs/Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		E17681E7521B02D1FCE30B40CF820B95 /* TZSpacerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZSpacerView.swift; path = PopupDialog/Classes/TZStackView/TZSpacerView.swift; sourceTree = "<group>"; };
-		E7D5A1FF69E9E44ADFF7101C5143F77F /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		E9315E84E7582655F0AC4676F94DA337 /* PresentationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationManager.swift; path = PopupDialog/Classes/PresentationManager.swift; sourceTree = "<group>"; };
-		EAEE32052E1AE49244AE918A0D60A31E /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
-		F2A60084094329B95FD81070F7B261C7 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
-		FF2E06B85579D59E698E87032F42A0F0 /* UIView+Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "PopupDialog/Classes/UIView+Animations.swift"; sourceTree = "<group>"; };
+		DA872343A74E1AC64A4FBAC45D107E47 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		DDFEF7D9A3E451F10228B7A3A8AB39B5 /* FXBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = PopupDialog/Classes/FXBlurView.m; sourceTree = "<group>"; };
+		E0DC1B4CC17E769A322728F681A7A521 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Visibility.swift"; path = "PopupDialog/Classes/UIViewController+Visibility.swift"; sourceTree = "<group>"; };
+		E647182C9C79E5181016F980AFD1804B /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		EA8A290BD9E6AAB6693AF9317B1D010F /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		F3A750C5383995CCE300D62BEE41CAE0 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		F635CE6DF88CB18F1230F01FE18623E4 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cosmos.modulemap; sourceTree = "<group>"; };
+		F824383FAD90B329BA24B4BD52EDB629 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultView.swift; path = PopupDialog/Classes/PopupDialogDefaultView.swift; sourceTree = "<group>"; };
+		FD2C624D13B3D24C6C0EB464644948DD /* Appsee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Appsee.framework; path = Appsee/Appsee.framework; sourceTree = "<group>"; };
 		FF7253C5C9B54722CE1BDB0E0BC41307 /* Pods-Crave-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Crave-frameworks.sh"; sourceTree = "<group>"; };
-		FFC4F2248A3F759FB5262448286D33BE /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Subspecs/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,106 +269,91 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		24E857CD93FD3F3F5219DD278BCCCB73 /* Alamofire */ = {
+		1920847D7744A9AA4B35C83912D0F7B7 /* Cosmos */ = {
 			isa = PBXGroup;
 			children = (
-				D2D8E99B7D058B97A355AF6F3702AB6F /* AFError.swift */,
-				135419C31291AF3785FC3ED616123C56 /* Alamofire.swift */,
-				35DF9F83319B90477918E9AC109EB9F0 /* DispatchQueue+Alamofire.swift */,
-				57D08DA1D1754461AE920EC8771AFED6 /* MultipartFormData.swift */,
-				E7D5A1FF69E9E44ADFF7101C5143F77F /* NetworkReachabilityManager.swift */,
-				278DC30E0CBCE275B658D62C2A3470AF /* Notifications.swift */,
-				9B36B8C69F6BCF8B917556746248A296 /* ParameterEncoding.swift */,
-				993124F080299AB3F42EBE4A2D810AD2 /* Request.swift */,
-				D2538682A06E91166C7011B0EEFEBD7B /* Response.swift */,
-				452370CBC50E2FDA448D594071B55FE3 /* ResponseSerialization.swift */,
-				10924DCC29DEBA4D2FE4B2F388285780 /* Result.swift */,
-				3BF13F630A6B10E5DCCC8DF6FF571127 /* ServerTrustPolicy.swift */,
-				9BEDF5021FE1DE17967467E8831DFA26 /* SessionDelegate.swift */,
-				71B62B37458084DAB23F5FD52528E179 /* SessionManager.swift */,
-				2642A1F1C0836F341B886DA387108142 /* TaskDelegate.swift */,
-				436F2ED2976E4A0740E1DE19741AF949 /* Timeline.swift */,
-				9A454E12B739DE129AE3A7BCD50CEAF0 /* Validation.swift */,
-				6CAF205D99FE19212229295AE4C0043A /* Support Files */,
+				C50FD117FBA7EDE345AB7647F1522B7F /* CosmosAccessibility.swift */,
+				27D6E5B3131D921ABC78D06A534E8EE6 /* CosmosDefaultSettings.swift */,
+				BD12DFDB616780B520635580AFB87A28 /* CosmosLayerHelper.swift */,
+				5382A0BFEC3B4B39E490336A04A3774A /* CosmosLayers.swift */,
+				8442A42E8FFB5DBAA95F5C9301DBF25D /* CosmosLocalizedRating.swift */,
+				542A7E9933AFB4869F2C130EB5BCFE01 /* CosmosRating.swift */,
+				46419160FC4A12DFED650565A8AE01FB /* CosmosSettings.swift */,
+				BC5E30B2D8761810E001597AB333237F /* CosmosSize.swift */,
+				BF279FC2510CBD27EB5B65FA814E7E68 /* CosmosText.swift */,
+				1F05585EEC9A4BD8A62145A646734889 /* CosmosTouch.swift */,
+				0896CF807242C453D55EB30AF2342CEF /* CosmosTouchTarget.swift */,
+				8F764DFE8C518112FDD8029EC032495F /* CosmosView.swift */,
+				286AF920C0C4684911D43C638900A791 /* StarFillMode.swift */,
+				B7A4A2675FCFE7AC4973A557FDE1E572 /* StarLayer.swift */,
+				4D45A49C20946C288729C0E160B1222D /* Support Files */,
 			);
-			name = Alamofire;
-			path = Alamofire;
+			name = Cosmos;
+			path = Cosmos;
 			sourceTree = "<group>";
 		};
-		25AA323D256A2D3D2FF3170FAEC577FD /* Support Files */ = {
+		2CE005BBCA2B21680452B5D9C4F8C97A /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				4C651C4A9C5F5717E5ED534ED932A9F3 /* Cosmos.modulemap */,
-				8399C053ED0A93943298F976F4D3F8BF /* Cosmos.xcconfig */,
-				79EA7E76A5F7ACE8DC5940A20EB9DE22 /* Cosmos-dummy.m */,
-				F2A60084094329B95FD81070F7B261C7 /* Cosmos-prefix.pch */,
-				9B3B24DABF52BC4483791A14094947A6 /* Cosmos-umbrella.h */,
-				7889AECC7FCAF26676757F4E8DAC3E5A /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Cosmos";
-			sourceTree = "<group>";
-		};
-		26EDB2B711AB7403D560140E8B0CB86C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FFC4F2248A3F759FB5262448286D33BE /* GoogleMapsBase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		45AE6FFFCA0C619D45BC886C52F91DE4 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				26EDB2B711AB7403D560140E8B0CB86C /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		59EB9672F8D2C5A7FDEFA2A5D8E34CF2 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				B4377D431AC44C78758F27B6255217F7 /* SwiftyJSON.swift */,
-				8D063215ACF2DA71F596BDDD26EF701B /* Support Files */,
+				C7648977517454405A663A8FA0B3D064 /* SwiftyJSON.swift */,
+				85E76100AD3F5DFBC622A3D3D079BB49 /* Support Files */,
 			);
 			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		5BC0C96C9C6B5DF9EBA45DB6DADCE57F /* GoogleMaps */ = {
+		41BC594D4C7301F855870F394B1679A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				45AE6FFFCA0C619D45BC886C52F91DE4 /* Base */,
-				8DDBCE690403F1FB3DE9E173A597BB4F /* Maps */,
+				FD2C624D13B3D24C6C0EB464644948DD /* Appsee.framework */,
 			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6875ECD40D45E702217B561FBE96953A /* Pods */ = {
+		4300B124071BC009F02A80DB61FF4FBF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				24E857CD93FD3F3F5219DD278BCCCB73 /* Alamofire */,
-				BEB946306B584FCCC8CC69F3885D1F4C /* Cosmos */,
-				5BC0C96C9C6B5DF9EBA45DB6DADCE57F /* GoogleMaps */,
-				791013A0DBFA491A9D4448AE224C219A /* PopupDialog */,
-				59EB9672F8D2C5A7FDEFA2A5D8E34CF2 /* SwiftyJSON */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		6CAF205D99FE19212229295AE4C0043A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BC2562AFE1DCB5B1DDE75894423B0C00 /* Alamofire.modulemap */,
-				728A44A7082CB2E457A4C700812FE8A4 /* Alamofire.xcconfig */,
-				CB0DA9BC1EB9877D037EB5E10F60FEF6 /* Alamofire-dummy.m */,
-				B28F6FF4F68732368DA5D239BB988A7F /* Alamofire-prefix.pch */,
-				D034B3F775AC64E296825FCB52AA73DC /* Alamofire-umbrella.h */,
-				42380E1ECFFC7DB6D13EDBC70E63940F /* Info.plist */,
+				4F5757F683E9387EAD76D5748CDF98FE /* Alamofire.modulemap */,
+				B633C1C1D57B69F613CF77C06A5846CB /* Alamofire.xcconfig */,
+				A6AF597C6F0F35EC751C3DE235E49422 /* Alamofire-dummy.m */,
+				99DF8C1F2D9DB8D920C2414CCF351354 /* Alamofire-prefix.pch */,
+				838FC4C2D222E06F11A05A74DCA8E42C /* Alamofire-umbrella.h */,
+				373795D9C3B37066C84D63635697F2BB /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		4D45A49C20946C288729C0E160B1222D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F635CE6DF88CB18F1230F01FE18623E4 /* Cosmos.modulemap */,
+				28660901F224BCB1E105AC3083133E65 /* Cosmos.xcconfig */,
+				815DC9E396728C8840F4058D8AFFCC44 /* Cosmos-dummy.m */,
+				330EBDB368742A0BD96868707C4E685D /* Cosmos-prefix.pch */,
+				2887D68728B53ECA3423E59C431FC271 /* Cosmos-umbrella.h */,
+				B5BE139877570EE65DC4EBBC3017E45D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cosmos";
+			sourceTree = "<group>";
+		};
+		5C2065A7C07D0438951916E5FD4F11F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5060821D1A608AF54AE1171921BDF03F /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		64B9B9A1FCE820564993904EC24ED826 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				C3FC3FEA049931705ADBCDAA39A5D94D /* Base */,
+				FCFC148461B754091DC1B85D9E9BE946 /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -377,35 +364,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		791013A0DBFA491A9D4448AE224C219A /* PopupDialog */ = {
+		753482331B8D3EC8A1BB2203B2590D4C /* Appsee */ = {
 			isa = PBXGroup;
 			children = (
-				115CD300006F1E103BDFF375057EBDB5 /* FXBlurView.h */,
-				DB60A4AC909E5ADFA6D796FCD8026CC3 /* FXBlurView.m */,
-				2AD98B4C1615D62100951D933C020597 /* InteractiveTransition.swift */,
-				BDDEE09E68C855ADDB3E35DD21D83F20 /* PopupDialog.swift */,
-				02FD5A8B7D2334F283CE5BE3EB1F1659 /* PopupDialog+Keyboard.swift */,
-				A281F2928819C64FB510B0B1D64A0467 /* PopupDialogButton.swift */,
-				4C98799BE8A1F5D1F0F057D46281F422 /* PopupDialogContainerView.swift */,
-				4E50034DFEF57E92660E9BD31B040FBD /* PopupDialogDefaultButtons.swift */,
-				6BC20AEDD3CDC3A7E40C430EC6BA5B99 /* PopupDialogDefaultView.swift */,
-				0551C72BCB6AA60F60DCF4B63F49748D /* PopupDialogDefaultViewController.swift */,
-				627A82C84ECE6738A2A7A86F95253CE1 /* PopupDialogOverlayView.swift */,
-				09C9AD0424D5F0E72ADD76FB3C4085A3 /* PresentationController.swift */,
-				E9315E84E7582655F0AC4676F94DA337 /* PresentationManager.swift */,
-				A7F0F6EFF13E0440EA3FBF0912A5FE36 /* TransitionAnimations.swift */,
-				534991261996D061936B7C84DA1F1887 /* TransitionAnimator.swift */,
-				E17681E7521B02D1FCE30B40CF820B95 /* TZSpacerView.swift */,
-				7E7E6794FC7014B0DE28BD719B367CD4 /* TZStackView.swift */,
-				552B6447C94EA8D3A2C7C3093A428445 /* TZStackViewAlignment.swift */,
-				5E762EDC1AA1B7A4B32CF95BB609883B /* TZStackViewDistribution.swift */,
-				DA1BB238733C5095EC8A3CB210125084 /* UIImageView+Calculations.swift */,
-				FF2E06B85579D59E698E87032F42A0F0 /* UIView+Animations.swift */,
-				CAC29C170E60AFA38192351E67BECFC9 /* UIViewController+Visibility.swift */,
-				D3DF79145F380E3D8CE5D4B0AE449272 /* Support Files */,
+				8910E83852A8ACBC66934045BFABB711 /* Appsee.h */,
+				41BC594D4C7301F855870F394B1679A9 /* Frameworks */,
 			);
-			name = PopupDialog;
-			path = PopupDialog;
+			name = Appsee;
+			path = Appsee;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -413,41 +379,89 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6875ECD40D45E702217B561FBE96953A /* Pods */,
+				CD0F96F5A84789C7BF19F0BDFC23A108 /* Pods */,
 				03CBDA0EC10650CA8983456106B91572 /* Products */,
 				A561D430DC422BD99128E13CFE13F2AC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8D063215ACF2DA71F596BDDD26EF701B /* Support Files */ = {
+		8094174D6BCC3E1B758FB98342D959EE /* PopupDialog */ = {
 			isa = PBXGroup;
 			children = (
-				626323643B6D9D5B2A5DAC968ECB614C /* Info.plist */,
-				7FDBA2E7533D9DA4AB71FD00B9751552 /* SwiftyJSON.modulemap */,
-				2E3F1E8B4A87BE67175990E7E8F6EF89 /* SwiftyJSON.xcconfig */,
-				2D6E9C8B85C5B881A6BCB92C8B82F888 /* SwiftyJSON-dummy.m */,
-				D2E446B765CA00538EA9918541222A17 /* SwiftyJSON-prefix.pch */,
-				5F302FF160EF985C0061756C95A06951 /* SwiftyJSON-umbrella.h */,
+				334EC040A10C844CB988A49676F07A06 /* FXBlurView.h */,
+				DDFEF7D9A3E451F10228B7A3A8AB39B5 /* FXBlurView.m */,
+				789910F0A47034A85D0F1F4E5E8AA64E /* InteractiveTransition.swift */,
+				60AC1E6F9D3F6974AB807CF17B4C8460 /* PopupDialog.swift */,
+				CE2F2E91641570127A6FA660E8495AC7 /* PopupDialog+Keyboard.swift */,
+				5BD8A3AA1C48A5B789065D25506350AA /* PopupDialogButton.swift */,
+				320445FFCECD3D547A8FDDC6EE8E11FC /* PopupDialogContainerView.swift */,
+				7C095BE592E71F36248ABD46F04D7E7E /* PopupDialogDefaultButtons.swift */,
+				F824383FAD90B329BA24B4BD52EDB629 /* PopupDialogDefaultView.swift */,
+				C4C12B24372EDA4864774E6AC5670873 /* PopupDialogDefaultViewController.swift */,
+				14229E2541C8979DFAF22065C90D3453 /* PopupDialogOverlayView.swift */,
+				381E35B09E33075E20FF5A7F1E3D1515 /* PresentationController.swift */,
+				4F6A54D8417272A381668C41EE9CE9E4 /* PresentationManager.swift */,
+				CC264FE6B3ED0B70A86DA9DF560394DA /* TransitionAnimations.swift */,
+				6747F3FA21F52297512D2A07379B3BE3 /* TransitionAnimator.swift */,
+				A97F487F4B78E5A4397F2FF1CD10FDA2 /* TZSpacerView.swift */,
+				0B8DA3FFB36D1D11F9A867F6F6CE384C /* TZStackView.swift */,
+				D43A847914FDD5D13F5FA2E470585365 /* TZStackViewAlignment.swift */,
+				D4041F3119F42ED4396054E58ED1A6E4 /* TZStackViewDistribution.swift */,
+				8866AAF84E461D84A09D9F6728936C47 /* UIImageView+Calculations.swift */,
+				05C7FE1B28D2E1250C92859652B0DD8C /* UIView+Animations.swift */,
+				E0DC1B4CC17E769A322728F681A7A521 /* UIViewController+Visibility.swift */,
+				CCAD18988790526F54DCBB7085054400 /* Support Files */,
+			);
+			name = PopupDialog;
+			path = PopupDialog;
+			sourceTree = "<group>";
+		};
+		85E76100AD3F5DFBC622A3D3D079BB49 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D437B617EB9389F88227330524F8E92 /* Info.plist */,
+				9DFF9C9571FE5B583BAC7F7A2827B157 /* SwiftyJSON.modulemap */,
+				918120685B2EA5DBBC3D88506F75DBB8 /* SwiftyJSON.xcconfig */,
+				6F625102EB485DD837DBA013EF903EA6 /* SwiftyJSON-dummy.m */,
+				952802511A6A8A4AD30EE3F701561389 /* SwiftyJSON-prefix.pch */,
+				DA872343A74E1AC64A4FBAC45D107E47 /* SwiftyJSON-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		8DDBCE690403F1FB3DE9E173A597BB4F /* Maps */ = {
+		867AD4CF40D31DA9CC437BD284A226FF /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				F5F7FE0763F63A812A510482D27704D8 /* Frameworks */,
-				90389EC25FAF17148E78A2918C44B655 /* Resources */,
+				C1F4851D0CF64A370B4CF674223E4A1A /* AFError.swift */,
+				C905ADD44D417EDE821BCC21027CF47E /* Alamofire.swift */,
+				EA8A290BD9E6AAB6693AF9317B1D010F /* DispatchQueue+Alamofire.swift */,
+				5E108B1D82075F6E470092A151748692 /* MultipartFormData.swift */,
+				AD090D3FBE529B69FD31F55B67A05868 /* NetworkReachabilityManager.swift */,
+				760C19B2725D6EF3B1AFAABC1D528AAF /* Notifications.swift */,
+				BDE1689BBA1F1EA1771C34EAB87CC314 /* ParameterEncoding.swift */,
+				F3A750C5383995CCE300D62BEE41CAE0 /* Request.swift */,
+				E647182C9C79E5181016F980AFD1804B /* Response.swift */,
+				821E6A709849E4FF34443F639D5C7B87 /* ResponseSerialization.swift */,
+				ABB1670662135D7E6ADC9CC2FA211134 /* Result.swift */,
+				D656AC437660656B01DB3F290A16F2FB /* ServerTrustPolicy.swift */,
+				4FC640A82A1710E62077AAB836E44449 /* SessionDelegate.swift */,
+				C7855585724842E3E06F6BCA56BCD66E /* SessionManager.swift */,
+				3678B46625EBD16C46B49EA2C399AF6E /* TaskDelegate.swift */,
+				5E79FC5D302349FF3B0125777577B3E1 /* Timeline.swift */,
+				312D8F3882C711645BA9F2D5B8357B66 /* Validation.swift */,
+				4300B124071BC009F02A80DB61FF4FBF /* Support Files */,
 			);
-			name = Maps;
+			name = Alamofire;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		90389EC25FAF17148E78A2918C44B655 /* Resources */ = {
+		93AFAC9752D144A98FF8D4196F8CA73B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1EA41558CE1C380BCE63036C58ECA816 /* GoogleMaps.bundle */,
+				840E842D4C1CA87EE47A256BB34D74FA /* GoogleMapsBase.framework */,
 			);
-			name = Resources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A561D430DC422BD99128E13CFE13F2AC /* Targets Support Files */ = {
@@ -484,50 +498,57 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEB946306B584FCCC8CC69F3885D1F4C /* Cosmos */ = {
+		C3FC3FEA049931705ADBCDAA39A5D94D /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C76F7FC1C398F6F818A6DC34557CDD35 /* CosmosAccessibility.swift */,
-				0165FCE4D38CDE99BE1E041BB1CD0F33 /* CosmosDefaultSettings.swift */,
-				9E9601E37A2EDF9553FBF9BA8CEA237A /* CosmosLayerHelper.swift */,
-				038EE1B646A6B0026ACBE8A32A5124E4 /* CosmosLayers.swift */,
-				EAEE32052E1AE49244AE918A0D60A31E /* CosmosLocalizedRating.swift */,
-				CD527380053C7BE162AB532CDD6545C8 /* CosmosRating.swift */,
-				5FD0057435CD89EDF31C1009C0F00A37 /* CosmosSettings.swift */,
-				8E04A83B0FBBD4F2BD7FDEEA0C8F48B1 /* CosmosSize.swift */,
-				18825E6C772FB9140D94582520C6D9FC /* CosmosText.swift */,
-				A3F1210D7DFE89814D3B0AE166F1AA78 /* CosmosTouch.swift */,
-				7A6D9DB7FD7F31AEA75DA52577FC48D2 /* CosmosTouchTarget.swift */,
-				1A5816E28A0AED1F798A1867803939A1 /* CosmosView.swift */,
-				45640D8955F26291F97B5B8B6547CEC1 /* StarFillMode.swift */,
-				3544AA9658DFAF947CDFCE131A76B41F /* StarLayer.swift */,
-				25AA323D256A2D3D2FF3170FAEC577FD /* Support Files */,
+				93AFAC9752D144A98FF8D4196F8CA73B /* Frameworks */,
 			);
-			name = Cosmos;
-			path = Cosmos;
+			name = Base;
 			sourceTree = "<group>";
 		};
-		D3DF79145F380E3D8CE5D4B0AE449272 /* Support Files */ = {
+		CCAD18988790526F54DCBB7085054400 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				196A6E4046D11511D773EF6BD1C50C78 /* Info.plist */,
-				49DCAF9084F6045EB6A11DCE734DC876 /* PopupDialog.modulemap */,
-				5960DCD58F3F9CBE607FA3353C1C6169 /* PopupDialog.xcconfig */,
-				2350B6F8B857EE6C8D48D0271D63A71C /* PopupDialog-dummy.m */,
-				BA0159B28AE606A2FC227B58C3F834A2 /* PopupDialog-prefix.pch */,
-				492A4C22A183FE43EB08B12FF08B3BAF /* PopupDialog-umbrella.h */,
+				BECA3D1A3E8F3790B7F5C73B4441D8B4 /* Info.plist */,
+				6E4C4788BA79642B04D20B059D7482FD /* PopupDialog.modulemap */,
+				7C7F0AF8AF36BDC35448D28E03A7C6CD /* PopupDialog.xcconfig */,
+				ABFDA1BA6EBE87702278555EB9F698CE /* PopupDialog-dummy.m */,
+				11F4DF88ACD3839F383EF7C22C0511E5 /* PopupDialog-prefix.pch */,
+				C3F3FC8A042D93802E129027ACDE4E33 /* PopupDialog-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PopupDialog";
 			sourceTree = "<group>";
 		};
-		F5F7FE0763F63A812A510482D27704D8 /* Frameworks */ = {
+		CD0F96F5A84789C7BF19F0BDFC23A108 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C78C9FFEC3D005D92F4E1A79F72B8AA8 /* GoogleMaps.framework */,
-				E0CB03053484921E4E276F41522C2960 /* GoogleMapsCore.framework */,
+				867AD4CF40D31DA9CC437BD284A226FF /* Alamofire */,
+				753482331B8D3EC8A1BB2203B2590D4C /* Appsee */,
+				1920847D7744A9AA4B35C83912D0F7B7 /* Cosmos */,
+				64B9B9A1FCE820564993904EC24ED826 /* GoogleMaps */,
+				8094174D6BCC3E1B758FB98342D959EE /* PopupDialog */,
+				2CE005BBCA2B21680452B5D9C4F8C97A /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAB3026FFA79D707240D3B1F1D029BFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE6D7F82A7D33ECE5D2A8461ED4B5B82 /* GoogleMaps.framework */,
+				CDCDF1A74D3F53AC13E7C85B8E974BBB /* GoogleMapsCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCFC148461B754091DC1B85D9E9BE946 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3026FFA79D707240D3B1F1D029BFF /* Frameworks */,
+				5C2065A7C07D0438951916E5FD4F11F7 /* Resources */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -822,7 +843,7 @@
 /* Begin XCBuildConfiguration section */
 		02E06F84F21087792E385F9F93D39F89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5960DCD58F3F9CBE607FA3353C1C6169 /* PopupDialog.xcconfig */;
+			baseConfigurationReference = 7C7F0AF8AF36BDC35448D28E03A7C6CD /* PopupDialog.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -898,7 +919,7 @@
 		};
 		18E1809D8DD83263259DF14736A558B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E3F1E8B4A87BE67175990E7E8F6EF89 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 918120685B2EA5DBBC3D88506F75DBB8 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -931,7 +952,7 @@
 		};
 		621A10F5C0A994B466277661C1B2C19F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 728A44A7082CB2E457A4C700812FE8A4 /* Alamofire.xcconfig */;
+			baseConfigurationReference = B633C1C1D57B69F613CF77C06A5846CB /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -963,7 +984,7 @@
 		};
 		8C48CCCB862EC56A4174F6E1715688C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 728A44A7082CB2E457A4C700812FE8A4 /* Alamofire.xcconfig */;
+			baseConfigurationReference = B633C1C1D57B69F613CF77C06A5846CB /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -996,7 +1017,7 @@
 		};
 		A023E3EA0639B560CA105EA587C4D727 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5960DCD58F3F9CBE607FA3353C1C6169 /* PopupDialog.xcconfig */;
+			baseConfigurationReference = 7C7F0AF8AF36BDC35448D28E03A7C6CD /* PopupDialog.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1029,7 +1050,7 @@
 		};
 		A0DBE5A5EE6B2C72BEBE74ABB1787EDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8399C053ED0A93943298F976F4D3F8BF /* Cosmos.xcconfig */;
+			baseConfigurationReference = 28660901F224BCB1E105AC3083133E65 /* Cosmos.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1173,7 +1194,7 @@
 		};
 		EE6BF95CBFA5E49DA8F9F51C9FBAD519 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E3F1E8B4A87BE67175990E7E8F6EF89 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 918120685B2EA5DBBC3D88506F75DBB8 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1205,7 +1226,7 @@
 		};
 		F76CDAE469257C78C5C56435E65B7BBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8399C053ED0A93943298F976F4D3F8BF /* Cosmos.xcconfig */;
+			baseConfigurationReference = 28660901F224BCB1E105AC3083133E65 /* Cosmos.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

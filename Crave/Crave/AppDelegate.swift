@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
+import Appsee
 
 //Global Variables
 //let ColbyLat = 44.56362
@@ -30,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GMSServices.provideAPIKey("AIzaSyDYB7hpothkX4P8pvkuvoswkhhmciARvlY")
+		
+		Appsee.start("15780eee7d9a4bfb92bcdb6d6d22bba0")
         
         locationManagerClass.enableLocation()
         

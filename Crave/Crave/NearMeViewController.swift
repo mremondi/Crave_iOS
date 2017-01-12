@@ -61,10 +61,10 @@ class NearMeViewController: UIViewController, MapTransitionDelegate, NavViewInte
         vc?.restaurantID = id
         
         //Capture the restaurant object of the clicked on restaurant
-        let restaurant = nearbyRestaurants.getRestaurant(id: id)
+        _ = nearbyRestaurants.getRestaurant(id: id)
         
         //Call the request for the menus of the restaurant clicked
-        requests.requestMenusByID(menuIDs: (restaurant?.getMenus())!, vc: vc!)
+        //requests.requestMenusByID(menuIDs: (restaurant?.getMenus())!, vc: vc!)
 
         //Navigate to the restaurant view controller
         self.navigationController?.pushViewController(vc!, animated: false)

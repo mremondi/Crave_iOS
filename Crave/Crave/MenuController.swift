@@ -19,9 +19,7 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		
-		
+	
 		let _ = TopBarAdapter(viewController: self, title: (menu?.getName())!)
 		let _ = BottomBarAdapter(viewController: self)  
 		

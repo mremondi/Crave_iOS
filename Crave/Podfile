@@ -8,5 +8,6 @@ target ‘Crave’ do
 	pod 'SwiftyJSON'
 	pod 'Cosmos', '~> 7.0'
 	pod 'PopupDialog', '~> 0.5’
+	pod 'Appsee'
 
 end

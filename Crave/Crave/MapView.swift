@@ -53,12 +53,12 @@ public class MapView: UIView, GMSMapViewDelegate{
         }
     }
     
-    func mapView(_ mapView: GMSMapView!, didTap marker: GMSMarker!) -> Bool {
+    public func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         return false
     }
     
     //Shows the clickable label when a location marker is tapped and when this clickable label is tapped, the transition to restaurant (or here called InfoWindowClicked) function is called
-    func mapView(_ mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) -> Bool {
+    public func mapView(_ mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) -> Bool {
         delegate?.InfoWindowClicked(id: marker.userData as! String)
         return false
     }

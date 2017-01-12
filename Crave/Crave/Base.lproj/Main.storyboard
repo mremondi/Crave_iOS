@@ -553,7 +553,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="BpX-m1-psb">
-                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                                <rect key="frame" x="8" y="28" width="343" height="631"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="WED-E4-cQc">
@@ -569,15 +569,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="BpX-m1-psb" secondAttribute="trailing" id="0YA-2l-Arl"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="BpX-m1-psb" secondAttribute="leading" id="Ll3-KL-fk9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BpX-m1-psb" secondAttribute="trailing" constant="8" id="0YA-2l-Arl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="BpX-m1-psb" secondAttribute="leading" constant="8" id="Ll3-KL-fk9"/>
                             <constraint firstItem="xTu-HS-0Dc" firstAttribute="top" secondItem="BpX-m1-psb" secondAttribute="bottom" constant="8" id="Wws-fB-PuR"/>
                             <constraint firstItem="BpX-m1-psb" firstAttribute="top" secondItem="P4T-e0-HEr" secondAttribute="bottom" constant="8" id="dad-CG-yUe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="menuItemTable" destination="BpX-m1-psb" id="iHo-Vf-YYp"/>
-                        <outlet property="view" destination="BpX-m1-psb" id="ZHZ-BA-6Xq"/>
+                        <outlet property="view" destination="BpX-m1-psb" id="vkx-B3-QY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0i-Ss-ufP" userLabel="First Responder" sceneMemberID="firstResponder"/>

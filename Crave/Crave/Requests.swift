@@ -29,7 +29,6 @@ public class Requests{
 			if let value = response.result.value {
 				let restaurant = JSON(value)
 					
-				
 				let name = restaurant["restaurant"]
 				let address = restaurant["address"]
 				let createDate = restaurant["create_date"]
@@ -165,7 +164,6 @@ public class Requests{
     }
     
 	func requestMenusByID(menuIDs: [String], vc: RestaurantController) {
-		print(menuIDs)
 		for menuID in menuIDs{
 			url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
 			url = url + "/" + menuID
@@ -199,9 +197,6 @@ public class Requests{
 							else if((sectionText.contains("Entrees"))){
 								sectionText = sectionText.replace(target: "Entrees", withString:"Entrées")
 							}
-							
-							
-							
 						}
 						else if(sectionText.contains("&")){
 							sectionText = sectionText.replace(target: "&", withString:"and")
@@ -222,8 +217,8 @@ public class Requests{
 					
 					
 					//self.getSectionItems(sections: sectionList, menuID: id)
+				
 					vc.menus.append(menu)
-					print(vc.menus)
 					vc.menuTable.reloadData()
 				}
 			}
@@ -548,7 +543,7 @@ public class Requests{
                     return
                 }
                 
-                if let value = response.result.value {
+                if response.result.value != nil {
                     //let todo = JSON(value)
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
                 }
@@ -574,7 +569,7 @@ public class Requests{
                     return
                 }
                 
-                if let value = response.result.value {
+                if response.result.value != nil {
                     //let todo = JSON(value)
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ProfileIdentifier"), object: nil)
                 }
@@ -596,7 +591,7 @@ public class Requests{
                     return
                 }
                 
-                if let value = response.result.value {
+                if response.result.value != nil {
                     //let todo = JSON(value)
                 }
         }
@@ -737,7 +732,7 @@ public class Requests{
                     
                     for thing in todo{
                         let itemID = thing.1["itemID"]
-                        let ratingID = thing.1["_id"]
+                        _ = thing.1["_id"]
                         let rating = thing.1["rating"]
                         
                         let ratingObj = Rating(itemID: String(describing: itemID), id: String(id), rating: String(describing: rating))
@@ -777,7 +772,7 @@ public class Requests{
                         let item = todo
                         
                         let menuID = String(describing: item["menuID"])
-                        var name = String(describing: item["name"])
+                        let name = String(describing: item["name"])
 //                        if (name.contains("�")){
 //                            if (name.contains("with�")){
 //                                name = name.replace(target: "�", withString:" ...")
@@ -795,7 +790,7 @@ public class Requests{
 //                        }
                         let numberOfRatings = String(describing: item["numberOfRatings"])
                         //let dietaryInfo = String(describing: item["diestaryInfo"])
-                        var description = String(describing: item["description"])
+                        let description = String(describing: item["description"])
 //                        if (description.contains("�")){
 //                            if((description.contains("saut�"))||(description.contains("b�arnaise"))||(description.contains("Cr�me"))){
 //                                description = description.replace(target: "�", withString:"é")
@@ -812,7 +807,7 @@ public class Requests{
                         let ratingTotal = String(describing: item["rating"])
                         //let tags = String(item["tags"])
                         let price = String(describing: item["price"])
-                        var menuSection = String(describing: item["menuSection"])
+                        let menuSection = String(describing: item["menuSection"])
 //                        if (menuSection.contains("�")){
 //                            if(menuSection.contains("Entr")){
 //                                menuSection = menuSection.replace(target: "�", withString:"é")
@@ -825,7 +820,7 @@ public class Requests{
                         let id = String(describing: item["_id"])
                         //let createDate = String(item["create_date"])
                         //let menuSubSection = String(item["menuSubSection"])
-                        var restaurantName = String(describing: item["restaurant_name"])
+                        let restaurantName = String(describing: item["restaurant_name"])
 //                        if (restaurantName.contains("�")){
 //                            if((restaurantName.contains("Entr�"))||(restaurantName.contains("Caf�"))){
 //                                restaurantName = restaurantName.replace(target: "�", withString:"é")
@@ -868,7 +863,7 @@ public class Requests{
                 }
                 
                 if let value = response.result.value {
-                    let todo = JSON(value)
+                    _ = JSON(value)
                     
                     
                 }
