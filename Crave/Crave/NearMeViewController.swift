@@ -75,7 +75,7 @@ class NearMeViewController: UIViewController, MapTransitionDelegate, NavViewInte
 	func goToSearch(){
 		requests.getAllItems()
 		
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController
 		self.navigationController?.pushViewController(vc!, animated: false)
 		
 	}

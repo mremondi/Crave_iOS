@@ -21,9 +21,9 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	
 	@IBOutlet var ivRestaurantLogo: UIImageView!
 	@IBOutlet var menuTable: UITableView!
-	@IBOutlet weak var btnDirections: UIButton!
-	@IBOutlet weak var btnPhone: UIButton!
-	@IBOutlet weak var btnWebsite: UIButton!
+	@IBOutlet var btnDirections: UIButton!
+	@IBOutlet var btnPhone: UIButton!
+	@IBOutlet var btnWebsite: UIButton!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,9 +116,7 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	}
 
 	func goToSearch(){
-		requests.getAllItems()
-	
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 	

@@ -30,15 +30,19 @@ class ItemController: UIViewController, NavViewInterface {
 		restaurantNameLabel.text = item.restaurantName
 		tvDescription.text = item.description
 		itemNameLabel.text = item.name
-		let rating = Double(item.rating)!
-		let numberOfRatings = Double(item.numberOfRatings)!
-		var averageRating = 0.0
-		if (rating != 0 && numberOfRatings != 0){
-			averageRating = rating/numberOfRatings
+		if (item.rating != "null"){
+			let rating = Double(item.rating)!
+			let numberOfRatings = Double(item.numberOfRatings)!
+			var averageRating = 0.0
+			if (rating != 0 && numberOfRatings != 0){
+				averageRating = rating/numberOfRatings
+			}
+			ratingLabel.text = "\(averageRating)"
 		}
-		ratingLabel.text = "\(averageRating)"
+		else{
+			ratingLabel.text = "0.0"
+		}
 		priceLabel.text = "$" + String(format: "%.2f", Double(item.price)!)
-		
 		btnRate.addTarget(self, action: #selector(self.showPopUp), for: .touchDown)
 		
 		let tap = UITapGestureRecognizer(target: self, action: #selector(ItemController.restaurantLabelClick))
@@ -88,11 +92,8 @@ class ItemController: UIViewController, NavViewInterface {
 	}
 	
 	func goToSearch(){
-		requests.getAllItems()
-		
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController
 		self.navigationController?.pushViewController(vc!, animated: false)
-		
 	}
 	
 	func goToFavorites(){
