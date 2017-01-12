@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 import PopupDialog
 
 class ItemController: UIViewController, NavViewInterface {
@@ -37,9 +38,23 @@ class ItemController: UIViewController, NavViewInterface {
 			if (rating != 0 && numberOfRatings != 0){
 				averageRating = rating/numberOfRatings
 			}
+			if(rating < 1.5){
+				ratingLabel.layer.backgroundColor  =  UIColor.red.cgColor
+			}
+			else if (rating > 1.5 && rating < 3.5){
+				ratingLabel.layer.backgroundColor  = UIColor.yellow.cgColor
+			}
+			else{
+				ratingLabel.layer.backgroundColor  = UIColor.green.cgColor
+			}
+			ratingLabel.layer.masksToBounds = true
+			ratingLabel.layer.cornerRadius = 20
 			ratingLabel.text = "\(averageRating)"
 		}
 		else{
+			ratingLabel.layer.masksToBounds = true
+			ratingLabel.layer.cornerRadius = 8
+			ratingLabel.layer.backgroundColor  =  UIColor.red.cgColor
 			ratingLabel.text = "0.0"
 		}
 		priceLabel.text = "$" + String(format: "%.2f", Double(item.price)!)

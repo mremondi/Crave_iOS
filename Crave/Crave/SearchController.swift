@@ -22,6 +22,9 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 		let _ = TopBarAdapter(viewController: self, title: ("Cravings"))
 		let _ = BottomBarAdapter(viewController: self)  
 		
+		self.hideKeyboardWhenTappedAround()
+		self.dismissKeyboard()
+		
 		self.searchBar.delegate = self
 		
 		self.searchTable.dataSource = self
@@ -36,6 +39,7 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 		// PLH
 		// PHL
 		// RATING
+		searchItems.removeAll()
 		requests.requestSearch(query: searchBar.text!, filter: "RATING", vc: self)
 	}
 	
