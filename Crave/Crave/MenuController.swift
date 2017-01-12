@@ -15,7 +15,6 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	var menuSections: [MenuSection] = []
 	var buttonItemMap = [UIButton: MenuItem]()
 	
-	@IBOutlet weak var labelMenuName: UILabel!
 	@IBOutlet var menuItemTable: UITableView!
 	
     override func viewDidLoad() {
@@ -31,7 +30,6 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		self.menuItemTable.register(UITableViewCell.self, forCellReuseIdentifier: "itemCell")
 		self.menuItemTable.reloadData()
 	
-		labelMenuName.text = menu?.getName()
 		for section in (menu?.getSections())!{
 			let menuSection = MenuSection(sectionName: section.getSectionName(), sectionItems: [])
 			menuSections.append(menuSection)

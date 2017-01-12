@@ -47,17 +47,22 @@ class ItemController: UIViewController, NavViewInterface {
 			else{
 				ratingLabel.layer.backgroundColor  = UIColor.green.cgColor
 			}
-			ratingLabel.layer.masksToBounds = true
-			ratingLabel.layer.cornerRadius = 20
+			
 			ratingLabel.text = "\(averageRating)"
 		}
 		else{
-			ratingLabel.layer.masksToBounds = true
-			ratingLabel.layer.cornerRadius = 8
 			ratingLabel.layer.backgroundColor  =  UIColor.red.cgColor
 			ratingLabel.text = "0.0"
 		}
-		priceLabel.text = "$" + String(format: "%.2f", Double(item.price)!)
+		ratingLabel.layer.masksToBounds = true
+		ratingLabel.layer.cornerRadius = 4
+		
+		if (item.price != "null"){
+			priceLabel.text = "$" + String(format: "%.2f", Double(item.price)!)
+		}
+		else{
+			priceLabel.isHidden = true
+		}
 		btnRate.addTarget(self, action: #selector(self.showPopUp), for: .touchDown)
 		
 		let tap = UITapGestureRecognizer(target: self, action: #selector(ItemController.restaurantLabelClick))

@@ -165,6 +165,7 @@ public class Requests{
     }
     
 	func requestMenusByID(menuIDs: [String], vc: RestaurantController) {
+		print(menuIDs)
 		for menuID in menuIDs{
 			url = ca.API_ENDPOINT + ca.MENUS_ENDPOINT
 			url = url + "/" + menuID
@@ -222,6 +223,7 @@ public class Requests{
 					
 					//self.getSectionItems(sections: sectionList, menuID: id)
 					vc.menus.append(menu)
+					print(vc.menus)
 					vc.menuTable.reloadData()
 				}
 			}
