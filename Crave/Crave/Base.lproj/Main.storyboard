@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kRb-Pc-ePJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nfV-oI-Ld5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTg-Q6-c03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6455" y="-1322"/>
+            <point key="canvasLocation" x="6919" y="-1322"/>
         </scene>
         <!--nearMe-->
         <scene sceneID="Gr6-P8-MJi">
@@ -365,7 +365,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="uHE-PK-ljV">
-                                <rect key="frame" x="179" y="70" width="16" height="240"/>
+                                <rect key="frame" x="179" y="69.5" width="16" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="8qL-yf-SlO"/>
                                 </constraints>
@@ -377,7 +377,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmW-DY-qgZ">
-                                <rect key="frame" x="33" y="353" width="63" height="27"/>
+                                <rect key="frame" x="33" y="352" width="63" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -631,6 +631,57 @@
             </objects>
             <point key="canvasLocation" x="5272.8000000000002" y="-1316.4917541229386"/>
         </scene>
+        <!--Search Controller-->
+        <scene sceneID="gDb-qC-vyU">
+            <objects>
+                <viewController id="nfV-oI-Ld5" customClass="SearchController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2mQ-CL-6EA"/>
+                        <viewControllerLayoutGuide type="bottom" id="fUs-u9-NvW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jA7-tc-CSl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-G1-4fY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LGi-kb-VWY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="PWP-3T-IlO">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PWP-3T-IlO" id="3ub-sa-zlO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c4y-G1-4fY" firstAttribute="top" secondItem="2mQ-CL-6EA" secondAttribute="bottom" id="05H-Ub-m0J"/>
+                            <constraint firstItem="LGi-kb-VWY" firstAttribute="top" secondItem="c4y-G1-4fY" secondAttribute="bottom" id="TWy-K8-Cuc"/>
+                            <constraint firstItem="LGi-kb-VWY" firstAttribute="leading" secondItem="c4y-G1-4fY" secondAttribute="leading" id="YcW-Gc-0le"/>
+                            <constraint firstItem="fUs-u9-NvW" firstAttribute="top" secondItem="LGi-kb-VWY" secondAttribute="bottom" id="cNf-vg-qa5"/>
+                            <constraint firstItem="LGi-kb-VWY" firstAttribute="width" secondItem="jA7-tc-CSl" secondAttribute="width" id="cPZ-wC-ioz"/>
+                            <constraint firstItem="c4y-G1-4fY" firstAttribute="width" secondItem="jA7-tc-CSl" secondAttribute="width" id="gTP-Lg-Vm5"/>
+                            <constraint firstItem="LGi-kb-VWY" firstAttribute="leading" secondItem="jA7-tc-CSl" secondAttribute="leading" id="tLP-y6-BcT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="c4y-G1-4fY" id="4M7-rb-k2B"/>
+                        <outlet property="searchTable" destination="LGi-kb-VWY" id="PTe-c3-saj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chg-q5-IO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6053.6000000000004" y="-1321.8890554722639"/>
+        </scene>
         <!--Profile Controller-->
         <scene sceneID="3jm-Lg-gkU">
             <objects>
@@ -765,7 +816,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRb-Pc-ePJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EHU-1A-djO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EHU-1A-djO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

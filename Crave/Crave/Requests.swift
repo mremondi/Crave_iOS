@@ -75,6 +75,39 @@ public class Requests{
 			}
 		}
 	}
+	
+	func requestSearch(query: String, filter: String, vc: SearchController){
+		url = ca.API_ENDPOINT + ca.ITEM_SEARCH_ENDPOINT
+		let params = query + "/" + filter + "/" + String(locationManagerClass.getLocationLatitude()) + "/" + String(locationManagerClass.getLocationLongitude())
+		url = url + params
+		
+		Alamofire.request(url).responseJSON{ response in 
+			if let value = response.result.value {
+				let items = JSON(value)
+				for thing in items{
+					let item = thing.1
+					
+					let menuID = String(describing: item["menuID"])
+					let name = String(describing: item["name"])
+					let numberOfRatings = String(describing: item["numberOfRatings"])
+					let description = String(describing: item["description"])
+					let restaurantID = String(describing: item["restaurant_id"])
+					let rating = String(describing: item["rating"])
+					let price = String(describing: item["price"])
+					let section = String(describing: item["menuSection"])
+					let id = String(describing: item["_id"])
+					let restaurantName = String(describing: item["restaurant_name"])
+					
+					let searchItem = MenuItem(id: id, menuID: menuID, restaurantID: restaurantID, name: name, numberOfRatings: numberOfRatings, rating: rating, description: description, menuSection: section, price: price, restaurantName: restaurantName)
+					
+					vc.searchItems.append(searchItem)
+					vc.searchTable.reloadData()
+				}
+			}
+
+		}
+
+	}
     
     func requestNearbyRestaurants(nearbyRestaurants: NearbyRestaurants){
         

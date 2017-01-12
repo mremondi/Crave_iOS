@@ -13,6 +13,7 @@ struct CraveApi {
     let RESTAURANTS_ENPOINT = "/restaurants"
     let MENUS_ENDPOINT = "/menus"
     let ITEMS_ENDPOINT = "/items"
+	let ITEM_SEARCH_ENDPOINT = "/items/search/"
     let LOGIN_ENPOINT = "/login"
     let LOGOUT_ENDPOINT = "/logout"
     let REGISTER_ENDPOINT = "/register"

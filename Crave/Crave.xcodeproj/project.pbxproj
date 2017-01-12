@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423ACBEC1E27F40000AF3A6E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423ACBEB1E27F40000AF3A6E /* SearchController.swift */; };
 		4253625A1E1C56E600459116 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425362591E1C56E600459116 /* MoreController.swift */; };
 		427BD0631E1D665C00F3E276 /* BottomBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */; };
 		4281FEAD1E2687EA008DDB2E /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281FEAC1E2687EA008DDB2E /* FavoritesController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		423ACBEB1E27F40000AF3A6E /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		425362591E1C56E600459116 /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarAdapter.swift; sourceTree = "<group>"; };
 		4281FEAC1E2687EA008DDB2E /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				429DD9E01E217E140006CDEC /* RestaurantController.swift */,
 				42BE13CD1E2552C1008D04BD /* MenuController.swift */,
 				4281FEAC1E2687EA008DDB2E /* FavoritesController.swift */,
+				423ACBEB1E27F40000AF3A6E /* SearchController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */,
 				427BD0631E1D665C00F3E276 /* BottomBarAdapter.swift in Sources */,
 				429DD9E11E217E140006CDEC /* RestaurantController.swift in Sources */,
+				423ACBEC1E27F40000AF3A6E /* SearchController.swift in Sources */,
 				429DD9DE1E1F0E9B0006CDEC /* TopBarAdapter.swift in Sources */,
 				C3EC44431E18524200711602 /* MenuItem.swift in Sources */,
 				42F69E451E1EAB23005031AB /* NavViewInterface.swift in Sources */,
