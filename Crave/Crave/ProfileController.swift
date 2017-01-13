@@ -43,6 +43,8 @@ class ProfileController: UIViewController, NavViewInterface {
 	@objc func logoutButtonPressed(){
 		profile.clear()
 		requests.requestLogout()
+		let defaults = UserDefaults.standard
+		defaults.set(Optional.none, forKey: "isLoggedIn")
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LogInController
 		self.navigationController?.pushViewController(vc!, animated: true)
 	}

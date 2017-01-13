@@ -24,7 +24,9 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 		
 		self.favoritesTable.dataSource = self
 		self.favoritesTable.delegate = self
-		self.favoritesTable.register(UITableViewCell.self, forCellReuseIdentifier: "favoritesCell")
+		self.favoritesTable.register(UINib(nibName: "ItemCellView", bundle: nil), forCellReuseIdentifier: "itemCell")
+
+		//self.favoritesTable.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
 		self.favoritesTable.reloadData()
 
     }
@@ -34,14 +36,13 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell:UITableViewCell = self.favoritesTable.dequeueReusableCell(withIdentifier: "favoritesCell")! as UITableViewCell
-		cell.textLabel?.text = self.favorites[indexPath.row].name
-		cell.textLabel?.textAlignment = .center
+		let cell = self.favoritesTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
+		cell.formatCell(item: self.favorites[indexPath.row])
+//		cell.textLabel?.text = self.favorites[indexPath.row].name
+//		cell.textLabel?.textAlignment = .center
 		
 		// TODO: Make sure you are only getting ratings from the user...
-		// TODO: Get AutoLayout working here. Figure out a good way to do this... Maybe using NIB 
-		// for the prototype cell
-		
+
 		let button = UIButton()
 		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
 		button.addTarget(self, action: #selector(self.favoriteClick), for: .touchUpInside)

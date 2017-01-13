@@ -26,11 +26,20 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 		btnRegister.addTarget(self, action: #selector(self.btnRegisterClick), for: .touchDown)
 		
 		let defaults = UserDefaults.standard
-		if(defaults.string(forKey: "email") != Optional.none){
-			etEmail.text = defaults.string(forKey: "email")!
+		if (defaults.string(forKey: "isLoggedIn") == Optional.none){
+			if(defaults.string(forKey: "email") != Optional.none){
+				etEmail.text = defaults.string(forKey: "email")!
+			}
+			if (defaults.string(forKey: "password") != Optional.none){
+				etPassword.text = defaults.string(forKey: "password")!
+			}
 		}
-		if (defaults.string(forKey: "password") != Optional.none){
-			etPassword.text = defaults.string(forKey: "password")!
+		else{
+			if(defaults.string(forKey: "email") != Optional.none && defaults.string(forKey: "password") != Optional.none){
+				let email = defaults.string(forKey: "email")
+				let password = defaults.string(forKey: "password")
+				login(email: email!, password: password!)
+			}
 		}
 		
 		NotificationCenter.default.addObserver(self, selector: #selector(LogInController.finishLogin), name:NSNotification.Name(rawValue: "LoginIdentifier"), object: nil)
@@ -82,6 +91,7 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 			let defaults = UserDefaults.standard
 			defaults.set(etEmail.text!, forKey: "email")
 			defaults.set(etPassword.text!, forKey: "password")
+			defaults.set("loggedIn", forKey: "isLoggedIn")
 			NotificationCenter.default.removeObserver(self)
 			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
 			self.navigationController?.pushViewController(vc!, animated: true)

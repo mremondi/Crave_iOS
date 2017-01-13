@@ -31,7 +31,7 @@ class ItemController: UIViewController, NavViewInterface {
 		restaurantNameLabel.text = item.restaurantName
 		tvDescription.text = item.description
 		itemNameLabel.text = item.name
-		if (item.rating != "null"){
+		if (item.rating != "null" && item.numberOfRatings != "null"){
 			let rating = Double(item.rating)!
 			let numberOfRatings = Double(item.numberOfRatings)!
 			var averageRating = 0.0

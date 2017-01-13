@@ -25,7 +25,9 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		
 		self.menuItemTable.dataSource = self
 		self.menuItemTable.delegate = self
-		self.menuItemTable.register(UITableViewCell.self, forCellReuseIdentifier: "itemCell")
+		self.menuItemTable.register(UINib(nibName: "ItemCellView", bundle: nil), forCellReuseIdentifier: "itemCell")
+
+		//self.menuItemTable.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
 		self.menuItemTable.reloadData()
 	
 		for section in (menu?.getSections())!{
@@ -49,10 +51,12 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell:UITableViewCell = self.menuItemTable.dequeueReusableCell(withIdentifier: "itemCell")! as UITableViewCell
-		cell.textLabel?.text = self.menuSections[indexPath.section].getItems()[indexPath.row].name
-		cell.textLabel?.textAlignment = .center
-		
+		// the item at this location
+		let item = self.menuSections[indexPath.section].getItems()[indexPath.row]
+
+		let cell = self.menuItemTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
+		cell.formatCell(item: item)
+
 		let button = UIButton()
 		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
 		button.addTarget(self, action: #selector(self.itemClick), for: .touchUpInside)

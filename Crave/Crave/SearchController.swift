@@ -29,7 +29,8 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 		
 		self.searchTable.dataSource = self
 		self.searchTable.delegate = self
-		self.searchTable.register(UITableViewCell.self, forCellReuseIdentifier: "searchCell")
+		self.searchTable.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
+		self.searchTable.register(UINib(nibName: "ItemCellView", bundle: nil), forCellReuseIdentifier: "itemCell")
 		self.searchTable.reloadData()
     }
 	
@@ -40,6 +41,7 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 		// PHL
 		// RATING
 		searchItems.removeAll()
+		self.searchBar.endEditing(true)
 		requests.requestSearch(query: searchBar.text!, filter: "RATING", vc: self)
 	}
 	
@@ -48,9 +50,10 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell:UITableViewCell = self.searchTable.dequeueReusableCell(withIdentifier: "searchCell")! as UITableViewCell
-		cell.textLabel?.text = self.searchItems[indexPath.row].name
-		cell.textLabel?.textAlignment = .center
+		let cell = self.searchTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
+		cell.formatCell(item: self.searchItems[indexPath.row])
+//		cell.textLabel?.text = self.searchItems[indexPath.row].name
+//		cell.textLabel?.textAlignment = .center
 		
 		let button = UIButton()
 		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)

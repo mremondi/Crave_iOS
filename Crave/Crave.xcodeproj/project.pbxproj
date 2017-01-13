@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4239F4901E29281A00B9AB07 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239F48F1E29281A00B9AB07 /* ItemCell.swift */; };
+		4239F4941E2933C400B9AB07 /* ItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4239F4931E2933C400B9AB07 /* ItemCellView.xib */; };
 		423ACBEC1E27F40000AF3A6E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423ACBEB1E27F40000AF3A6E /* SearchController.swift */; };
 		4253625A1E1C56E600459116 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425362591E1C56E600459116 /* MoreController.swift */; };
 		427BD0631E1D665C00F3E276 /* BottomBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4239F48F1E29281A00B9AB07 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4239F4931E2933C400B9AB07 /* ItemCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCellView.xib; sourceTree = "<group>"; };
 		423ACBEB1E27F40000AF3A6E /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		425362591E1C56E600459116 /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarAdapter.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		425362551E1C2B7900459116 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4239F4931E2933C400B9AB07 /* ItemCellView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 				42BE13CD1E2552C1008D04BD /* MenuController.swift */,
 				4281FEAC1E2687EA008DDB2E /* FavoritesController.swift */,
 				423ACBEB1E27F40000AF3A6E /* SearchController.swift */,
+				4239F48F1E29281A00B9AB07 /* ItemCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3319D4B1DB2B1460024E577 /* LaunchScreen.storyboard in Resources */,
+				4239F4941E2933C400B9AB07 /* ItemCellView.xib in Resources */,
 				C39AC5111E1982AD00261557 /* Milkshake.ttf in Resources */,
 				C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */,
 				C3319D461DB2B1460024E577 /* Main.storyboard in Resources */,
@@ -401,6 +408,7 @@
 				C3EC44561E19014B00711602 /* Rating.swift in Sources */,
 				C3EC44671E192F4D00711602 /* RatingViewController.swift in Sources */,
 				C339D75E1DB3F90400BC4D66 /* SearchViewController.swift in Sources */,
+				4239F4901E29281A00B9AB07 /* ItemCell.swift in Sources */,
 				C339D73E1DB310A400BC4D66 /* MapView.swift in Sources */,
 				C339D76C1DB40F1B00BC4D66 /* Delegates.swift in Sources */,
 				C339D75C1DB3F8FC00BC4D66 /* CravingsViewController.swift in Sources */,
