@@ -27,7 +27,7 @@ class RestaurantController: UIViewController, UITableViewDelegate, UITableViewDa
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		let _ = TopBarAdapter(viewController: self, title: "Crave")
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)  
 		
 		self.menuTable.dataSource = self

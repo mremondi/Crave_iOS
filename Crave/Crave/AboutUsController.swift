@@ -17,7 +17,7 @@ class AboutUsController: UIViewController, NavViewInterface {
 
         tvEmail.isEditable = false
 		
-		let _ = TopBarAdapter(viewController: self, title: "Crave")
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)
 
 

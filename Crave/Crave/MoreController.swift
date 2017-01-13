@@ -24,7 +24,7 @@ class MoreController: UIViewController, MoreTransitionDelegate, NavViewInterface
 		btnAboutUs.titleEdgeInsets = UIEdgeInsetsMake(0, -btnAboutUs.imageView!.frame.size.width + margin, 0, btnAboutUs.imageView!.frame.size.width);
 		btnAboutUs.imageEdgeInsets = UIEdgeInsetsMake(0, btnAboutUs.frame.size.width - btnAboutUs.imageView!.frame.size.width - margin, 0, -btnAboutUs.titleLabel!.frame.size.width);
 		
-		let _ = TopBarAdapter(viewController: self, title: "Crave")
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)
     }
 

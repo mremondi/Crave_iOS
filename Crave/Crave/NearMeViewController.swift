@@ -30,7 +30,7 @@ class NearMeViewController: UIViewController, MapTransitionDelegate, NavViewInte
         //Listener for updater
         NotificationCenter.default.addObserver(self, selector: #selector(NearMeViewController.drawMap), name:NSNotification.Name(rawValue: "NotificationIdentifier"), object: nil)
 		
-		let _ = TopBarAdapter(viewController: self, title: "Near Me")
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)
         
         //Connect the mapView to the biew in the nearMe view controller view

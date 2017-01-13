@@ -19,14 +19,12 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		let _ = TopBarAdapter(viewController: self, title: ("Cravings"))
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)  
 		
 		self.favoritesTable.dataSource = self
 		self.favoritesTable.delegate = self
 		self.favoritesTable.register(UINib(nibName: "ItemCellView", bundle: nil), forCellReuseIdentifier: "itemCell")
-
-		//self.favoritesTable.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
 		self.favoritesTable.reloadData()
 
     }
@@ -38,8 +36,6 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = self.favoritesTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
 		cell.formatCell(item: self.favorites[indexPath.row])
-//		cell.textLabel?.text = self.favorites[indexPath.row].name
-//		cell.textLabel?.textAlignment = .center
 		
 		// TODO: Make sure you are only getting ratings from the user...
 

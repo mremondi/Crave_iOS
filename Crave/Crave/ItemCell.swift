@@ -10,7 +10,8 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
-
+	var item: MenuItem?
+	
 	@IBOutlet weak var itemName: UILabel!
 	@IBOutlet weak var itemRating: UILabel!
 	@IBOutlet weak var itemPrice: UILabel!
@@ -48,7 +49,7 @@ class ItemCell: UITableViewCell {
 				itemRating.layer.backgroundColor  = UIColor.green.cgColor
 			}
 			
-			itemRating.text = "\(averageRating)"
+			itemRating.text = String(format: "%.2f", averageRating)
 		}
 		else{
 			itemRating.text = "0.0"

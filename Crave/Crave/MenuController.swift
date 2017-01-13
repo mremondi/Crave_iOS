@@ -26,8 +26,6 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		self.menuItemTable.dataSource = self
 		self.menuItemTable.delegate = self
 		self.menuItemTable.register(UINib(nibName: "ItemCellView", bundle: nil), forCellReuseIdentifier: "itemCell")
-
-		//self.menuItemTable.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
 		self.menuItemTable.reloadData()
 	
 		for section in (menu?.getSections())!{
@@ -79,7 +77,6 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		vc?.item = item!
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
-
 	
 	func goToSearch(){
 		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController

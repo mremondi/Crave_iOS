@@ -25,7 +25,7 @@ class ItemController: UIViewController, NavViewInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let _ = TopBarAdapter(viewController: self, title: "Crave")
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)       
 		
 		restaurantNameLabel.text = item.restaurantName
@@ -48,7 +48,7 @@ class ItemController: UIViewController, NavViewInterface {
 				ratingLabel.layer.backgroundColor  = UIColor.green.cgColor
 			}
 			
-			ratingLabel.text = "\(averageRating)"
+			ratingLabel.text = String(format: "%.2f", averageRating)
 		}
 		else{
 			ratingLabel.layer.backgroundColor  =  UIColor.red.cgColor

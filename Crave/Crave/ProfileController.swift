@@ -33,7 +33,7 @@ class ProfileController: UIViewController, NavViewInterface {
 		
 		btnLogout.addTarget(self, action: #selector(self.logoutButtonPressed), for: .touchDown)
 		
-		let _ = TopBarAdapter(viewController: self, title: "Profile")
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)        
 
 		// Do any additional setup after loading the view.

@@ -11,7 +11,10 @@ import UIKit
 class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, NavViewInterface {
 	
 	var searchItems: [MenuItem] = []
+	var searchRestaurants: [Restaurant] = []
 	var buttonSearchMap = [UIButton: MenuItem]()
+	
+	var searchType = "Items"
 
 	@IBOutlet weak var searchBar: UISearchBar!
 	@IBOutlet weak var searchTable: UITableView!
@@ -19,27 +22,22 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let _ = TopBarAdapter(viewController: self, title: ("Cravings"))
+		let _ = TopBarAdapter(viewController: self, title: nil)
 		let _ = BottomBarAdapter(viewController: self)  
 		
 		self.hideKeyboardWhenTappedAround()
 		self.dismissKeyboard()
 		
 		self.searchBar.delegate = self
-		
+
 		self.searchTable.dataSource = self
 		self.searchTable.delegate = self
-		self.searchTable.register(ItemCell.self, forCellReuseIdentifier: "itemCell")
 		self.searchTable.register(UINib(nibName: "ItemCellView", bundle: nil), forCellReuseIdentifier: "itemCell")
 		self.searchTable.reloadData()
     }
 	
+	
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-		// TODO: Allow filter to be applied
-		// Filter codes are:
-		// PLH
-		// PHL
-		// RATING
 		searchItems.removeAll()
 		self.searchBar.endEditing(true)
 		requests.requestSearch(query: searchBar.text!, filter: "RATING", vc: self)
@@ -52,15 +50,14 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = self.searchTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
 		cell.formatCell(item: self.searchItems[indexPath.row])
-//		cell.textLabel?.text = self.searchItems[indexPath.row].name
-//		cell.textLabel?.textAlignment = .center
 		
-		let button = UIButton()
-		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
-		button.addTarget(self, action: #selector(self.searchClick), for: .touchUpInside)
-		buttonSearchMap[button] = self.searchItems[indexPath.row]
+//		let button = UIButton()
+//		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
+//		button.addTarget(self, action: #selector(self.searchClick), for: .touchUpInside)
+//		buttonSearchMap[button] = self.searchItems[indexPath.row]
+//		
+//		cell.contentView.addSubview(button)
 		
-		cell.contentView.addSubview(button)
 		return cell
 	}
 	

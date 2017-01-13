@@ -67,7 +67,7 @@ public class BottomBarAdapter {
 	@objc func goToSearch(){
 		requests.getAllItems()
 		
-		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchViewController
+		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController
 		viewController.navigationController?.pushViewController(vc!, animated: false)
 		
 	}

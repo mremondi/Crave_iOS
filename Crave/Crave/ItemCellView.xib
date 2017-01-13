@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="378" height="64"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5br-uP-4i6" id="mcB-1l-i3j">
-                <rect key="frame" x="0.0" y="0.0" width="378" height="63.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="378" height="63"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AK-25-nFF">
@@ -66,7 +66,7 @@
                 <outlet property="itemRating" destination="5iu-nr-aOc" id="biG-fP-GP8"/>
                 <outlet property="restaurantName" destination="7l0-xy-rsy" id="XHs-GY-Cle"/>
             </connections>
-            <point key="canvasLocation" x="-117" y="-188"/>
+            <point key="canvasLocation" x="-172" y="-154"/>
         </tableViewCell>
     </objects>
 </document>

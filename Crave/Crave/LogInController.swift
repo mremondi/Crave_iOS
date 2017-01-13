@@ -35,9 +35,9 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 			}
 		}
 		else{
-			if(defaults.string(forKey: "email") != Optional.none && defaults.string(forKey: "password") != Optional.none){
-				let email = defaults.string(forKey: "email")
-				let password = defaults.string(forKey: "password")
+			let email = defaults.string(forKey: "email")
+			let password = defaults.string(forKey: "password")
+			if(email != Optional.none && password != Optional.none){
 				login(email: email!, password: password!)
 			}
 		}
@@ -48,8 +48,6 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 		self.dismissKeyboard()
 		
 		locationManagerClass.enableLocation()
-
-		
 	}
 	
 	@objc func loginButtonPressed(){
@@ -87,10 +85,15 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 			
 		//If the login is a success
 		else{
-			
 			let defaults = UserDefaults.standard
-			defaults.set(etEmail.text!, forKey: "email")
-			defaults.set(etPassword.text!, forKey: "password")
+			
+			// need these if statements for when autologin works
+			if(etEmail.text != ""){
+				defaults.set(etEmail.text!, forKey: "email")
+			}
+			if (etPassword.text != ""){
+				defaults.set(etPassword.text!, forKey: "password")
+			}
 			defaults.set("loggedIn", forKey: "isLoggedIn")
 			NotificationCenter.default.removeObserver(self)
 			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
