@@ -51,13 +51,6 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 		let cell = self.searchTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
 		cell.formatCell(item: self.searchItems[indexPath.row])
 		
-//		let button = UIButton()
-//		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
-//		button.addTarget(self, action: #selector(self.searchClick), for: .touchUpInside)
-//		buttonSearchMap[button] = self.searchItems[indexPath.row]
-//		
-//		cell.contentView.addSubview(button)
-		
 		return cell
 	}
 	

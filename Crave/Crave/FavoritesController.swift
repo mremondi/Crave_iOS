@@ -38,13 +38,6 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 		cell.formatCell(item: self.favorites[indexPath.row])
 		
 		// TODO: Make sure you are only getting ratings from the user...
-
-		let button = UIButton()
-		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
-		button.addTarget(self, action: #selector(self.favoriteClick), for: .touchUpInside)
-		buttonFavoriteMap[button] = self.favorites[indexPath.row]
-		
-		cell.contentView.addSubview(button)
 		return cell
 	}
 	

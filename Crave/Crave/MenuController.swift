@@ -54,13 +54,6 @@ class MenuController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 		let cell = self.menuItemTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
 		cell.formatCell(item: item)
-
-		let button = UIButton()
-		button.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.size.width, height: cell.frame.size.height)
-		button.addTarget(self, action: #selector(self.itemClick), for: .touchUpInside)
-		buttonItemMap[button] = self.menuSections[indexPath.section].getItems()[indexPath.row]
-
-		cell.contentView.addSubview(button)
 		return cell
 	}
 	
