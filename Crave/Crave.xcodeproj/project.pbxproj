@@ -124,6 +124,7 @@
 		425362551E1C2B7900459116 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3EC446A1E192F9600711602 /* RatingViewController.xib */,
 				4239F4931E2933C400B9AB07 /* ItemCellView.xib */,
 				424145721E2BD3DA00843BF2 /* RestaurantCellView.xib */,
 			);
@@ -208,7 +209,6 @@
 				C339D7691DB40D9C00BC4D66 /* Extensions.swift */,
 				C339D76B1DB40F1B00BC4D66 /* Delegates.swift */,
 				C3319D401DB2B1460024E577 /* AppDelegate.swift */,
-				C3EC446A1E192F9600711602 /* RatingViewController.xib */,
 				C3EC44681E192F5500711602 /* CosmosDistrib.swift */,
 				C3319D441DB2B1460024E577 /* Main.storyboard */,
 				C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */,
@@ -572,6 +572,7 @@
 				);
 				INFOPLIST_FILE = Crave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Crave.Crave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

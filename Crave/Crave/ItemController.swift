@@ -94,8 +94,8 @@ class ItemController: UIViewController, NavViewInterface {
 			requests.sendUserRating(itemID: self.item.id, rating: String(ratingVC.cosmosStarRating.rating), userID: profile.getID())
 			
 			//Send back to view of that restaurant
-			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
-			self.navigationController?.pushViewController(vc!, animated: false)
+//			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+//			self.navigationController?.pushViewController(vc!, animated: false)
 			
 			//Alert View about rating success
 			let alert = UIAlertController(title: "Successful Rating", message: "Your rating has been recorded. Thank you!", preferredStyle: UIAlertControllerStyle.alert)
