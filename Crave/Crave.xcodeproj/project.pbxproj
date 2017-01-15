@@ -10,6 +10,8 @@
 		4239F4901E29281A00B9AB07 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239F48F1E29281A00B9AB07 /* ItemCell.swift */; };
 		4239F4941E2933C400B9AB07 /* ItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4239F4931E2933C400B9AB07 /* ItemCellView.xib */; };
 		423ACBEC1E27F40000AF3A6E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423ACBEB1E27F40000AF3A6E /* SearchController.swift */; };
+		424145731E2BD3DA00843BF2 /* RestaurantCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424145721E2BD3DA00843BF2 /* RestaurantCellView.xib */; };
+		424145751E2BD52300843BF2 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424145741E2BD52300843BF2 /* RestaurantCell.swift */; };
 		4253625A1E1C56E600459116 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425362591E1C56E600459116 /* MoreController.swift */; };
 		427BD0631E1D665C00F3E276 /* BottomBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */; };
 		4281FEAD1E2687EA008DDB2E /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281FEAC1E2687EA008DDB2E /* FavoritesController.swift */; };
@@ -53,6 +55,8 @@
 		4239F48F1E29281A00B9AB07 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		4239F4931E2933C400B9AB07 /* ItemCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCellView.xib; sourceTree = "<group>"; };
 		423ACBEB1E27F40000AF3A6E /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		424145721E2BD3DA00843BF2 /* RestaurantCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCellView.xib; sourceTree = "<group>"; };
+		424145741E2BD52300843BF2 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		425362591E1C56E600459116 /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		427BD0621E1D665C00F3E276 /* BottomBarAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarAdapter.swift; sourceTree = "<group>"; };
 		4281FEAC1E2687EA008DDB2E /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				4239F4931E2933C400B9AB07 /* ItemCellView.xib */,
+				424145721E2BD3DA00843BF2 /* RestaurantCellView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				4281FEAC1E2687EA008DDB2E /* FavoritesController.swift */,
 				423ACBEB1E27F40000AF3A6E /* SearchController.swift */,
 				4239F48F1E29281A00B9AB07 /* ItemCell.swift */,
+				424145741E2BD52300843BF2 /* RestaurantCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				4239F4941E2933C400B9AB07 /* ItemCellView.xib in Resources */,
 				C39AC5111E1982AD00261557 /* Milkshake.ttf in Resources */,
 				C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */,
+				424145731E2BD3DA00843BF2 /* RestaurantCellView.xib in Resources */,
 				C3319D461DB2B1460024E577 /* Main.storyboard in Resources */,
 				C3EC446B1E192F9600711602 /* RatingViewController.xib in Resources */,
 			);
@@ -380,6 +387,7 @@
 				4239F4901E29281A00B9AB07 /* ItemCell.swift in Sources */,
 				C339D73E1DB310A400BC4D66 /* MapView.swift in Sources */,
 				C339D76C1DB40F1B00BC4D66 /* Delegates.swift in Sources */,
+				424145751E2BD52300843BF2 /* RestaurantCell.swift in Sources */,
 				42F69E4B1E1ED762005031AB /* RegisterController.swift in Sources */,
 				C3EC44411E18473400711602 /* MenuSection.swift in Sources */,
 				C339D7701DB4191700BC4D66 /* LocationManager.swift in Sources */,
