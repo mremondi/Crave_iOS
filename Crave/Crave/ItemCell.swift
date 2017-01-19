@@ -64,4 +64,41 @@ class ItemCell: UITableViewCell {
 			itemPrice.isHidden = true
 		}
 	}
+	
+	func formatCellRating(item: MenuItem, rating: Rating){
+		
+		itemName.text = item.name
+		restaurantName.text = item.restaurantName
+		
+		if (rating.rating != "null"){
+			let rating = Double(rating.rating)!
+			var averageRating = 0.0
+			if (rating != 0){
+				averageRating = rating
+			}
+			if(rating < 1.5){
+				itemRating.layer.backgroundColor  =  UIColor.red.cgColor
+			}
+			else if (rating > 1.5 && rating < 3.5){
+				itemRating.layer.backgroundColor  = UIColor.yellow.cgColor
+			}
+			else{
+				itemRating.layer.backgroundColor  = UIColor.green.cgColor
+			}
+			
+			itemRating.text = String(format: "%.2f", averageRating)
+		}
+		else{
+			itemRating.text = "0.0"
+		}
+		itemRating.layer.masksToBounds = true
+		itemRating.layer.cornerRadius = 4
+		
+		if (item.price != "null"){
+			itemPrice.text = "$" + String(format: "%.2f", Double(item.price)!)
+		}
+		else{
+			itemPrice.isHidden = true
+		}
+	}
 }

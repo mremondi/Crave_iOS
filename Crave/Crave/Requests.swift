@@ -77,6 +77,7 @@ public class Requests{
 	
 	func requestSearch(query: String, filter: String, vc: SearchController){
 		url = ca.API_ENDPOINT + ca.ITEM_SEARCH_ENDPOINT
+		let query = query.replace(target: " ", withString: "%20")
 		let params = query + "/" + filter + "/" + String(locationManagerClass.getLocationLatitude()) + "/" + String(locationManagerClass.getLocationLongitude())
 		url = url + params
 		
@@ -113,6 +114,7 @@ public class Requests{
 	// if I have time its great using the scope bar but for now not worth it
 	func requestSearchRestaurants(query: String, vc: SearchController){
 		url = ca.API_ENDPOINT + ca.RESTAURANTS_SEARCH_ENDPOINT
+		let query = query.replace(target: " ", withString: "%20")
 		let params = query
 		url = url + params
 		
@@ -223,7 +225,7 @@ public class Requests{
 			Alamofire.request(url).responseJSON { response in
 				guard response.result.error == nil else {
 					// got an error in getting the data, need to handle it
-					print("error calling POST on /todos/1")
+					print("error calling request menus by id")
 					print(response.result.error!)
 					return
 				}
@@ -322,7 +324,7 @@ public class Requests{
         Alamofire.request(url).responseJSON { response in
             guard response.result.error == nil else {
                 // got an error in getting the data, need to handle it
-                print("error calling POST on /todos/1")
+                print("error calling get section items")
                 print(response.result.error!)
                 return
             }
@@ -420,7 +422,7 @@ public class Requests{
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling request login")
                     print(response.result.error!)
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LoginIdentifier"), object: nil, userInfo: ["Result" : "Fail"])
                     return
@@ -464,7 +466,7 @@ public class Requests{
 			.responseJSON { response in
 				guard response.result.error == nil else {
 					// got an error in getting the data, need to handle it
-					print("error calling POST on /todos/1")
+					print("error calling register")
 					print(response.result.error!)
 					NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RegisterIdentifier"), object: nil, userInfo: ["Result" : "Fail"])
 					return
@@ -509,7 +511,7 @@ public class Requests{
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling request update")
                     print(response.result.error!)
                     return
                 }
@@ -535,7 +537,7 @@ public class Requests{
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling change password")
                     print(response.result.error!)
                     return
                 }
@@ -557,7 +559,7 @@ public class Requests{
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling logout")
                     print(response.result.error!)
                     return
                 }
@@ -577,7 +579,7 @@ public class Requests{
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling get all restaurants")
                     print(response.result.error!)
                     return
                 }
@@ -597,7 +599,7 @@ public class Requests{
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling get all items")
                     print(response.result.error!)
                     return
                 }
@@ -691,7 +693,7 @@ public class Requests{
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling Get user ratings")
                     print(response.result.error!)
                     return
                 }
@@ -730,7 +732,7 @@ public class Requests{
                 .responseJSON { response in
                     guard response.result.error == nil else {
                         // got an error in getting the data, need to handle it
-                        print("error calling POST on /todos/1")
+                        print("error calling get items for cravings")
                         print(response.result.error!)
                         return
                     }
@@ -776,20 +778,19 @@ public class Requests{
     
     func sendUserRating(itemID: String, rating: String, userID: String){
         url = ca.API_ENDPOINT + ca.ITEMS_ENDPOINT + "/" + itemID + "/" + rating + "/" + userID
+		print(url)
         //Sending the request
-        Alamofire.request(url, method: .put)
+		Alamofire.request(url, method: .put)
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // got an error in getting the data, need to handle it
-                    print("error calling POST on /todos/1")
+                    print("error calling POST send user rating")
                     print(response.result.error!)
                     return
                 }
                 
                 if let value = response.result.value {
                     _ = JSON(value)
-                    
-                    
                 }
         }
     }

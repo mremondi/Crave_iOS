@@ -61,6 +61,10 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 		else{
 			searchBar.placeholder = "Enter any meal name or food description"
 		}
+		self.searchBar.text = ""
+		self.searchItems = []
+		self.searchRestaurants = []
+		self.searchTable.reloadData()
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

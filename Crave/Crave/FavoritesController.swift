@@ -35,7 +35,7 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = self.favoritesTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
-		cell.formatCell(item: self.favorites[indexPath.row])
+		cell.formatCellRating(item: self.favorites[indexPath.row], rating: self.ratings[indexPath.row])
 		
 		// TODO: Make sure you are only getting ratings from the user...
 		return cell
