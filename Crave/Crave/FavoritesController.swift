@@ -12,6 +12,10 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	var favorites: [MenuItem] = []
 	var ratings:[Rating] = []
+	
+	// This dictonary uses the item id that is in the rating and item to map the correct rating
+	var favoritesRatingMap = [String: Rating]()
+	
 	var buttonFavoriteMap = [UIButton: MenuItem]()
 
 	@IBOutlet weak var favoritesTable: UITableView!
@@ -35,7 +39,14 @@ class FavoritesController: UIViewController, UITableViewDelegate, UITableViewDat
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = self.favoritesTable.dequeueReusableCell(withIdentifier: "itemCell")! as! ItemCell
-		cell.formatCellRating(item: self.favorites[indexPath.row], rating: self.ratings[indexPath.row])
+		
+		let item = self.favorites[indexPath.row]
+		let rating = self.favoritesRatingMap[item.id]
+		
+		cell.formatCellRating(item: item, rating: rating!)
+		
+		
+		//cell.formatCellRating(item: self.favorites[indexPath.row], rating: self.ratings[indexPath.row])
 		
 		// TODO: Make sure you are only getting ratings from the user...
 		return cell

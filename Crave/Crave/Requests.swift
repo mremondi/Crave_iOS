@@ -711,6 +711,7 @@ public class Requests{
                         let ratingObj = Rating(itemID: String(describing: itemID), id: String(id), rating: String(describing: rating))
                         
                         ratingsList.append(ratingObj)
+						vc.favoritesRatingMap[ratingObj.itemID] = ratingObj
                     }
                     
                     if (ratingsList.count == todo.count){
@@ -768,7 +769,8 @@ public class Requests{
                             vc.ratings = ratingList
                             vc.favorites = itemList
                             //vc.filteredData = vc.data
-                            vc.favoritesTable.reloadData()
+							
+							vc.favoritesTable.reloadData()
                         }
                     }
             }
