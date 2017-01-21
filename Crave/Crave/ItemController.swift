@@ -91,11 +91,11 @@ class ItemController: UIViewController, NavViewInterface {
 		// Create second button (Rate button) sends in a rating and brings the user back to the "main" nearMe view
 		let buttonTwo = DefaultButton(title: "RATE", height: 60) {
 			//Send in rating
-			requests.sendUserRating(itemID: self.item.id, rating: String(ratingVC.cosmosStarRating.rating), userID: profile.getID())
-			
-			//Send back to view of that restaurant
-//			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
-//			self.navigationController?.pushViewController(vc!, animated: false)
+			var rating = ratingVC.cosmosStarRating.rating;
+			if (rating > 2 && rating < 3){
+				rating = 3;
+			}
+			requests.sendUserRating(itemID: self.item.id, rating: String(rating), userID: profile.getID())
 			
 			//Alert View about rating success
 			let alert = UIAlertController(title: "Successful Rating", message: "Your rating has been recorded. Thank you!", preferredStyle: UIAlertControllerStyle.alert)

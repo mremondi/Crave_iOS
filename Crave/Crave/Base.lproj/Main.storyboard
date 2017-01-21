@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-db-oVI">
-                                <rect key="frame" x="96.5" y="274.5" width="184" height="118.5"/>
+                                <rect key="frame" x="95.5" y="274.5" width="184" height="118.5"/>
                                 <fontDescription key="fontDescription" name="Milkshake" family="Milkshake" pointSize="80"/>
                                 <color key="textColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -424,7 +424,7 @@
                                         <rect key="frame" x="0.0" y="28" width="327" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z00-yG-cmK" id="xzb-ah-ieT">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -734,7 +734,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kRb-Pc-ePJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EHU-1A-djO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EHU-1A-djO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
