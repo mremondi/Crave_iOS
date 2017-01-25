@@ -29,10 +29,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
         if CLLocationManager.locationServicesEnabled() {
             switch(CLLocationManager.authorizationStatus()) {
             case .notDetermined, .restricted, .denied:
-                locationManager.requestAlwaysAuthorization()
                 locationManager.requestWhenInUseAuthorization()
-            case .authorizedAlways, .authorizedWhenInUse:
+            case .authorizedWhenInUse:
                 break
+			default:
+				break
             }
         } else {
             print("Location services are not enabled")
