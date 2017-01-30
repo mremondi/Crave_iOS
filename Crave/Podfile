@@ -1,13 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, ‘10.0’
+platform :ios, '10.0'
 use_frameworks!
 
-target ‘Crave’ do	
-	pod 'GoogleMaps’
+target 'Crave' do	
+	pod 'GoogleMaps'
 	pod 'Alamofire', '~> 4.0'
 	pod 'SwiftyJSON'
 	pod 'Cosmos', '~> 7.0'
-	pod 'PopupDialog', '~> 0.5’
+	pod 'PopupDialog', '~> 0.5'
 	pod 'Appsee'
 
 end
