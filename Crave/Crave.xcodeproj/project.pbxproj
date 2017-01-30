@@ -28,6 +28,7 @@
 		BF5AE6641E3F445700110B4B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6601E3F445700110B4B /* Login.storyboard */; };
 		BF5AE6651E3F445700110B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6621E3F445700110B4B /* Main.storyboard */; };
 		BF5AE6681E3F456400110B4B /* NearMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6661E3F456400110B4B /* NearMe.storyboard */; };
+		BF5AE66B1E3F463F00110B4B /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6691E3F463F00110B4B /* Restaurant.storyboard */; };
 		C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31CB96D1DB30B7400918582 /* CraveApi.swift */; };
 		C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D401DB2B1460024E577 /* AppDelegate.swift */; };
 		C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3319D471DB2B1460024E577 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		BF5AE6611E3F445700110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Login.storyboard; sourceTree = SOURCE_ROOT; };
 		BF5AE6631E3F445700110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		BF5AE6671E3F456400110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/NearMe.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE66A1E3F463F00110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Restaurant.storyboard; sourceTree = SOURCE_ROOT; };
 		C31CB96D1DB30B7400918582 /* CraveApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraveApi.swift; sourceTree = "<group>"; };
 		C3319D3D1DB2B1460024E577 /* Crave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3319D401DB2B1460024E577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				BF5AE6601E3F445700110B4B /* Login.storyboard */,
 				BF5AE6621E3F445700110B4B /* Main.storyboard */,
+				BF5AE6691E3F463F00110B4B /* Restaurant.storyboard */,
 				BF5AE6661E3F456400110B4B /* NearMe.storyboard */,
 				C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */,
 			);
@@ -340,6 +343,7 @@
 				424145731E2BD3DA00843BF2 /* RestaurantCellView.xib in Resources */,
 				C3EC446B1E192F9600711602 /* RatingViewController.xib in Resources */,
 				BF5AE6681E3F456400110B4B /* NearMe.storyboard in Resources */,
+				BF5AE66B1E3F463F00110B4B /* Restaurant.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +464,14 @@
 				BF5AE6671E3F456400110B4B /* Base */,
 			);
 			name = NearMe.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE6691E3F463F00110B4B /* Restaurant.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE66A1E3F463F00110B4B /* Base */,
+			);
+			name = Restaurant.storyboard;
 			sourceTree = "<group>";
 		};
 		C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */ = {

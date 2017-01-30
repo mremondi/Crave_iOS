@@ -309,103 +309,6 @@
             </objects>
             <point key="canvasLocation" x="2775.1999999999998" y="-1232.8335832083958"/>
         </scene>
-        <!--Restaurant Controller-->
-        <scene sceneID="c3A-iT-CcW">
-            <objects>
-                <viewController storyboardIdentifier="restaurant" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wRr-uo-Vho" customClass="RestaurantController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mfa-kz-GMM"/>
-                        <viewControllerLayoutGuide type="bottom" id="eY1-dP-fGs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZrP-ow-Rhp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-KQ-yxJ">
-                                <rect key="frame" x="24" y="28" width="327" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="smq-xa-2CV"/>
-                                </constraints>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-ZS-trV">
-                                <rect key="frame" x="24" y="193" width="327" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="q97-od-ksi"/>
-                                </constraints>
-                                <color key="separatorColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="Z00-yG-cmK">
-                                        <rect key="frame" x="0.0" y="28" width="327" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z00-yG-cmK" id="xzb-ah-ieT">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78Z-o6-aTS">
-                                <rect key="frame" x="24" y="535" width="327" height="36"/>
-                                <state key="normal" title="Get Directions" image="directions">
-                                    <color key="titleColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzD-An-6LW">
-                                <rect key="frame" x="24" y="579" width="327" height="36"/>
-                                <state key="normal" title="Phone" image="call">
-                                    <color key="titleColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzH-GA-8uL">
-                                <rect key="frame" x="24" y="623" width="327" height="36"/>
-                                <state key="normal" title="Website" image="ic_launch_black_24dp">
-                                    <color key="titleColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" text="Menus:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l9-0N-Wu1">
-                                <rect key="frame" x="8" y="156" width="79" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="CgX-hm-D7u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jzH-GA-8uL" firstAttribute="centerX" secondItem="ZrP-ow-Rhp" secondAttribute="centerX" id="0QW-rD-H8G"/>
-                            <constraint firstItem="Dey-KQ-yxJ" firstAttribute="leading" secondItem="ZrP-ow-Rhp" secondAttribute="leadingMargin" constant="8" id="0aV-bI-38C"/>
-                            <constraint firstItem="hzD-An-6LW" firstAttribute="top" secondItem="78Z-o6-aTS" secondAttribute="bottom" constant="8" id="6GJ-Az-3ID"/>
-                            <constraint firstItem="Dey-KQ-yxJ" firstAttribute="top" secondItem="mfa-kz-GMM" secondAttribute="bottom" constant="8" id="6Nh-Ma-wE1"/>
-                            <constraint firstItem="dgl-ZS-trV" firstAttribute="leading" secondItem="ZrP-ow-Rhp" secondAttribute="leadingMargin" constant="8" id="7eN-Sp-sVk"/>
-                            <constraint firstItem="eY1-dP-fGs" firstAttribute="top" secondItem="jzH-GA-8uL" secondAttribute="bottom" constant="8" id="DDG-75-srq"/>
-                            <constraint firstItem="dgl-ZS-trV" firstAttribute="top" secondItem="3l9-0N-Wu1" secondAttribute="bottom" constant="8" id="DQZ-Ti-vsr"/>
-                            <constraint firstItem="Dey-KQ-yxJ" firstAttribute="centerX" secondItem="ZrP-ow-Rhp" secondAttribute="centerX" id="F7I-Wr-2hk"/>
-                            <constraint firstItem="3l9-0N-Wu1" firstAttribute="top" secondItem="Dey-KQ-yxJ" secondAttribute="bottom" constant="8" symbolic="YES" id="IvN-KJ-jtR"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="3l9-0N-Wu1" secondAttribute="leading" constant="8" id="SkJ-wL-zf1"/>
-                            <constraint firstItem="hzD-An-6LW" firstAttribute="width" secondItem="78Z-o6-aTS" secondAttribute="width" id="ZsL-pw-Wre"/>
-                            <constraint firstItem="jzH-GA-8uL" firstAttribute="width" secondItem="78Z-o6-aTS" secondAttribute="width" id="hcz-ey-dvf"/>
-                            <constraint firstItem="hzD-An-6LW" firstAttribute="centerX" secondItem="ZrP-ow-Rhp" secondAttribute="centerX" id="pae-c5-H2m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dgl-ZS-trV" secondAttribute="trailing" constant="8" id="pn9-bG-MVl"/>
-                            <constraint firstItem="78Z-o6-aTS" firstAttribute="leading" secondItem="ZrP-ow-Rhp" secondAttribute="leadingMargin" constant="8" id="xkm-68-YPM"/>
-                            <constraint firstItem="jzH-GA-8uL" firstAttribute="top" secondItem="hzD-An-6LW" secondAttribute="bottom" constant="8" id="yHJ-eJ-CSv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="78Z-o6-aTS" secondAttribute="trailing" constant="8" id="yd1-qP-22k"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="btnDirections" destination="78Z-o6-aTS" id="RfI-u0-tts"/>
-                        <outlet property="btnPhone" destination="hzD-An-6LW" id="6We-Pp-KwJ"/>
-                        <outlet property="btnWebsite" destination="jzH-GA-8uL" id="QWS-9c-xC1"/>
-                        <outlet property="ivRestaurantLogo" destination="Dey-KQ-yxJ" id="KJI-A2-poC"/>
-                        <outlet property="menuTable" destination="dgl-ZS-trV" id="jca-Yj-Epw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-Bo-QoA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3701.5999999999999" y="-1322.7886056971515"/>
-        </scene>
         <!--Menu Controller-->
         <scene sceneID="dMD-J2-ewp">
             <objects>
@@ -647,9 +550,6 @@
     </scenes>
     <resources>
         <image name="aboutUs" width="36" height="36"/>
-        <image name="call" width="36" height="36"/>
-        <image name="directions" width="36" height="36"/>
-        <image name="ic_launch_black_24dp" width="36" height="36"/>
         <image name="launchImage" width="16" height="16"/>
         <image name="profile" width="36" height="36"/>
     </resources>

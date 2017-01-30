@@ -55,7 +55,7 @@ class NearMeViewController: UIViewController, MapTransitionDelegate, NavViewInte
     func InfoWindowClicked(id: String) {
 
         //The view controller variable for the restaurant view controlled
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "restaurant") as? RestaurantController
+        let vc = UIStoryboard(name: "Restaurant", bundle: nil).instantiateInitialViewController() as? RestaurantController
         
         //Initialize one of the variables of the restaurant view controller
         vc?.restaurantID = id
