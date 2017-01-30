@@ -96,7 +96,7 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 			}
 			defaults.set("loggedIn", forKey: "isLoggedIn")
 			NotificationCenter.default.removeObserver(self)
-			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+            let vc = UIStoryboard(name: "NearMe", bundle: nil).instantiateInitialViewController() as? NearMeViewController
 			self.navigationController?.pushViewController(vc!, animated: true)
 		}
 	}

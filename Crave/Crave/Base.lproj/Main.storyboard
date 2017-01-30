@@ -33,24 +33,6 @@
             </objects>
             <point key="canvasLocation" x="6919" y="-1322"/>
         </scene>
-        <!--nearMe-->
-        <scene sceneID="Gr6-P8-MJi">
-            <objects>
-                <viewController storyboardIdentifier="nearMe" title="nearMe" id="UXf-kA-PRu" customClass="NearMeViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="euw-pS-OEJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="fqp-WU-epC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OaW-wu-b2a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b5h-I8-CTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1960" y="176"/>
-        </scene>
         <!--More-->
         <scene sceneID="kci-f2-djZ">
             <objects>
@@ -116,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-db-oVI">
-                                <rect key="frame" x="95.5" y="274.5" width="184" height="118.5"/>
+                                <rect key="frame" x="96" y="274.5" width="184" height="118.5"/>
                                 <fontDescription key="fontDescription" name="Milkshake" family="Milkshake" pointSize="80"/>
                                 <color key="textColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
