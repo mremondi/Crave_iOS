@@ -76,6 +76,8 @@ class ProfileController: UIViewController, NavViewInterface {
 		                              preferredStyle: UIAlertControllerStyle.alert)
 		alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
 		self.present(alert, animated: true, completion: nil)
+        
+        // Why is this here? viewDidLoad should not be manually called
 		self.viewDidLoad()
 	}
 	
