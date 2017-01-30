@@ -55,7 +55,7 @@ class LogInController: UIViewController, LoginInitializationDelegate {
 	}
 	
 	@objc func btnRegisterClick(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "register") as? RegisterController
+		let vc = UIStoryboard(name: "Register", bundle: nil).instantiateInitialViewController() as? RegisterController
 		self.navigationController?.pushViewController(vc!, animated: true)
 	}
 

@@ -72,7 +72,7 @@ class RegisterController: UIViewController {
 			defaults.set(etPassword1.text!, forKey: "password")
 			
 			NotificationCenter.default.removeObserver(self)
-			let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+			let vc = UIStoryboard(name: "NearMe", bundle: nil).instantiateInitialViewController() as? NearMeViewController
 			self.navigationController?.pushViewController(vc!, animated: true)
 		}
 	}

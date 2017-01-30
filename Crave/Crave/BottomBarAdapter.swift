@@ -67,25 +67,25 @@ public class BottomBarAdapter {
 	@objc func goToSearch(){
 		requests.getAllItems()
 		
-		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController
+		let vc = UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController() as? SearchController
 		viewController.navigationController?.pushViewController(vc!, animated: false)
 		
 	}
 	
 	@objc func goToFavorites(){
-		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "favorites") as? FavoritesController
+		let vc = UIStoryboard(name: "Favorites", bundle: nil).instantiateInitialViewController() as? FavoritesController
 		requests.requestUserRatings(id: profile.getID(), vc: vc!)
 		viewController.navigationController?.pushViewController(vc!, animated: false)
 	}
 	
 	@objc func goToMore(){
-		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreController
+		let vc = UIStoryboard(name: "More", bundle: nil).instantiateInitialViewController() as? MoreController
 		viewController.navigationController?.pushViewController(vc!, animated: false)
 		
 	}
 	
 	@objc func goToNearMe(){
-		let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+		let vc = UIStoryboard(name: "NearMe", bundle: nil).instantiateInitialViewController() as? NearMeViewController
 		viewController.navigationController?.pushViewController(vc!, animated: false)
 		
 	}

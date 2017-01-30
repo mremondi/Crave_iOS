@@ -75,25 +75,25 @@ class NearMeViewController: UIViewController, MapTransitionDelegate, NavViewInte
 	func goToSearch(){
 		requests.getAllItems()
 		
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController
+		let vc = UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController() as? SearchController
 		self.navigationController?.pushViewController(vc!, animated: false)
 		
 	}
 	
 	func goToFavorites(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "favorites") as? FavoritesController
+		let vc = UIStoryboard(name: "Favorites", bundle: nil).instantiateInitialViewController() as? FavoritesController
 		requests.requestUserRatings(id: profile.getID(), vc: vc!)
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 	
 	func goToMore(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreController
+		let vc = UIStoryboard(name: "More", bundle: nil).instantiateInitialViewController() as? MoreController
 		self.navigationController?.pushViewController(vc!, animated: false)
 		
 	}
 	
 	func goToNearMe(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+		let vc = UIStoryboard(name: "NearMe", bundle: nil).instantiateInitialViewController() as? NearMeViewController
 		self.navigationController?.pushViewController(vc!, animated: false)
 		
 	}

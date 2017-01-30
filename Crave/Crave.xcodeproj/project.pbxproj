@@ -26,9 +26,16 @@
 		42F69E4D1E1EE5B1005031AB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E4C1E1EE5B1005031AB /* ProfileController.swift */; };
 		629739D6EBAE30F8D0DD267B /* Pods_Crave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54140294E73E5A90303013E4 /* Pods_Crave.framework */; };
 		BF5AE6641E3F445700110B4B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6601E3F445700110B4B /* Login.storyboard */; };
-		BF5AE6651E3F445700110B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6621E3F445700110B4B /* Main.storyboard */; };
 		BF5AE6681E3F456400110B4B /* NearMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6661E3F456400110B4B /* NearMe.storyboard */; };
 		BF5AE66B1E3F463F00110B4B /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6691E3F463F00110B4B /* Restaurant.storyboard */; };
+		BF5AE66E1E3F46FB00110B4B /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE66C1E3F46FB00110B4B /* Favorites.storyboard */; };
+		BF5AE6711E3F471A00110B4B /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE66F1E3F471A00110B4B /* Register.storyboard */; };
+		BF5AE6741E3F472C00110B4B /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6721E3F472C00110B4B /* More.storyboard */; };
+		BF5AE6771E3F473900110B4B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6751E3F473900110B4B /* Search.storyboard */; };
+		BF5AE67A1E3F476000110B4B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6781E3F476000110B4B /* Profile.storyboard */; };
+		BF5AE67D1E3F477200110B4B /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE67B1E3F477200110B4B /* Menu.storyboard */; };
+		BF5AE6801E3F478600110B4B /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE67E1E3F478600110B4B /* Item.storyboard */; };
+		BF5AE6831E3F479600110B4B /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5AE6811E3F479600110B4B /* About.storyboard */; };
 		C31CB96E1DB30B7400918582 /* CraveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31CB96D1DB30B7400918582 /* CraveApi.swift */; };
 		C3319D411DB2B1460024E577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3319D401DB2B1460024E577 /* AppDelegate.swift */; };
 		C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3319D471DB2B1460024E577 /* Assets.xcassets */; };
@@ -75,9 +82,16 @@
 		54140294E73E5A90303013E4 /* Pods_Crave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94716F2416C1071B15E4D3F5 /* Pods-Crave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crave/Pods-Crave.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5AE6611E3F445700110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Login.storyboard; sourceTree = SOURCE_ROOT; };
-		BF5AE6631E3F445700110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		BF5AE6671E3F456400110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/NearMe.storyboard; sourceTree = SOURCE_ROOT; };
 		BF5AE66A1E3F463F00110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Restaurant.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE66D1E3F46FB00110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Favorites.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE6701E3F471A00110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Register.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE6731E3F472C00110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/More.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE6761E3F473900110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Search.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE6791E3F476000110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE67C1E3F477200110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Menu.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE67F1E3F478600110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/Item.storyboard; sourceTree = SOURCE_ROOT; };
+		BF5AE6821E3F479600110B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Crave/Base.lproj/About.storyboard; sourceTree = SOURCE_ROOT; };
 		C31CB96D1DB30B7400918582 /* CraveApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraveApi.swift; sourceTree = "<group>"; };
 		C3319D3D1DB2B1460024E577 /* Crave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3319D401DB2B1460024E577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,7 +192,14 @@
 			isa = PBXGroup;
 			children = (
 				BF5AE6601E3F445700110B4B /* Login.storyboard */,
-				BF5AE6621E3F445700110B4B /* Main.storyboard */,
+				BF5AE6811E3F479600110B4B /* About.storyboard */,
+				BF5AE67E1E3F478600110B4B /* Item.storyboard */,
+				BF5AE67B1E3F477200110B4B /* Menu.storyboard */,
+				BF5AE6781E3F476000110B4B /* Profile.storyboard */,
+				BF5AE6751E3F473900110B4B /* Search.storyboard */,
+				BF5AE6721E3F472C00110B4B /* More.storyboard */,
+				BF5AE66F1E3F471A00110B4B /* Register.storyboard */,
+				BF5AE66C1E3F46FB00110B4B /* Favorites.storyboard */,
 				BF5AE6691E3F463F00110B4B /* Restaurant.storyboard */,
 				BF5AE6661E3F456400110B4B /* NearMe.storyboard */,
 				C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */,
@@ -337,13 +358,20 @@
 				C3319D4B1DB2B1460024E577 /* LaunchScreen.storyboard in Resources */,
 				4239F4941E2933C400B9AB07 /* ItemCellView.xib in Resources */,
 				BF5AE6641E3F445700110B4B /* Login.storyboard in Resources */,
-				BF5AE6651E3F445700110B4B /* Main.storyboard in Resources */,
+				BF5AE6771E3F473900110B4B /* Search.storyboard in Resources */,
 				C39AC5111E1982AD00261557 /* Milkshake.ttf in Resources */,
 				C3319D481DB2B1460024E577 /* Assets.xcassets in Resources */,
+				BF5AE6741E3F472C00110B4B /* More.storyboard in Resources */,
 				424145731E2BD3DA00843BF2 /* RestaurantCellView.xib in Resources */,
+				BF5AE66E1E3F46FB00110B4B /* Favorites.storyboard in Resources */,
 				C3EC446B1E192F9600711602 /* RatingViewController.xib in Resources */,
+				BF5AE67D1E3F477200110B4B /* Menu.storyboard in Resources */,
+				BF5AE6801E3F478600110B4B /* Item.storyboard in Resources */,
 				BF5AE6681E3F456400110B4B /* NearMe.storyboard in Resources */,
+				BF5AE6831E3F479600110B4B /* About.storyboard in Resources */,
+				BF5AE67A1E3F476000110B4B /* Profile.storyboard in Resources */,
 				BF5AE66B1E3F463F00110B4B /* Restaurant.storyboard in Resources */,
+				BF5AE6711E3F471A00110B4B /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,14 +478,6 @@
 			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
-		BF5AE6621E3F445700110B4B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF5AE6631E3F445700110B4B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF5AE6661E3F456400110B4B /* NearMe.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -472,6 +492,70 @@
 				BF5AE66A1E3F463F00110B4B /* Base */,
 			);
 			name = Restaurant.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE66C1E3F46FB00110B4B /* Favorites.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE66D1E3F46FB00110B4B /* Base */,
+			);
+			name = Favorites.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE66F1E3F471A00110B4B /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE6701E3F471A00110B4B /* Base */,
+			);
+			name = Register.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE6721E3F472C00110B4B /* More.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE6731E3F472C00110B4B /* Base */,
+			);
+			name = More.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE6751E3F473900110B4B /* Search.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE6761E3F473900110B4B /* Base */,
+			);
+			name = Search.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE6781E3F476000110B4B /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE6791E3F476000110B4B /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE67B1E3F477200110B4B /* Menu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE67C1E3F477200110B4B /* Base */,
+			);
+			name = Menu.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE67E1E3F478600110B4B /* Item.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE67F1E3F478600110B4B /* Base */,
+			);
+			name = Item.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5AE6811E3F479600110B4B /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5AE6821E3F479600110B4B /* Base */,
+			);
+			name = About.storyboard;
 			sourceTree = "<group>";
 		};
 		C3319D491DB2B1460024E577 /* LaunchScreen.storyboard */ = {

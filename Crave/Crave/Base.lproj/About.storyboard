@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="21i-oJ-bD3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Milkshake.ttf">
+            <string>Milkshake</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--About Us Controller-->
+        <scene sceneID="nwN-s4-llY">
+            <objects>
+                <viewController storyboardIdentifier="aboutUs" id="21i-oJ-bD3" customClass="AboutUsController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pGO-6k-WFI"/>
+                        <viewControllerLayoutGuide type="bottom" id="12E-TB-ohH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pQT-RU-iML">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ2-us-eFo">
+                                <rect key="frame" x="96" y="274" width="184" height="119"/>
+                                <fontDescription key="fontDescription" name="Milkshake" family="Milkshake" pointSize="80"/>
+                                <color key="textColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Remondi 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebJ-RS-mEQ">
+                                <rect key="frame" x="101" y="403" width="173" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="mikeremondi@gmail.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iJo-ny-ddB">
+                                <rect key="frame" x="0.0" y="446" width="375" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" red="0.73725490199999999" green="0.086274509799999996" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ebJ-RS-mEQ" firstAttribute="centerX" secondItem="pQT-RU-iML" secondAttribute="centerX" id="38c-5c-m8b"/>
+                            <constraint firstItem="iJo-ny-ddB" firstAttribute="height" secondItem="ebJ-RS-mEQ" secondAttribute="height" id="NhF-7k-42d"/>
+                            <constraint firstAttribute="width" secondItem="iJo-ny-ddB" secondAttribute="width" id="WjD-YD-Kzg"/>
+                            <constraint firstItem="ebJ-RS-mEQ" firstAttribute="top" secondItem="BQ2-us-eFo" secondAttribute="bottom" constant="10" id="eUo-Yn-6ME"/>
+                            <constraint firstItem="iJo-ny-ddB" firstAttribute="centerX" secondItem="pQT-RU-iML" secondAttribute="centerX" id="eVR-m9-h5H"/>
+                            <constraint firstItem="BQ2-us-eFo" firstAttribute="centerX" secondItem="pQT-RU-iML" secondAttribute="centerX" id="kIc-ut-Llo"/>
+                            <constraint firstItem="iJo-ny-ddB" firstAttribute="top" secondItem="ebJ-RS-mEQ" secondAttribute="bottom" constant="5" id="vUb-kn-NdY"/>
+                            <constraint firstItem="BQ2-us-eFo" firstAttribute="centerY" secondItem="pQT-RU-iML" secondAttribute="centerY" id="wn2-qn-2GQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvEmail" destination="iJo-ny-ddB" id="zpi-08-pMl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7h-dU-L8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="-2055"/>
+        </scene>
+    </scenes>
+</document>

@@ -93,14 +93,14 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
 		if(self.currentScope == self.ITEM_SCOPE_TAG){
 			let item = self.searchItems[indexPath.row]
-			let vc = self.storyboard?.instantiateViewController(withIdentifier: "item") as? ItemController
+			let vc = UIStoryboard(name: "Item", bundle: nil).instantiateInitialViewController() as? ItemController
 			vc?.item = item
 			self.navigationController?.pushViewController(vc!, animated: false)
 			return
 		}
 		else{
 			let restaurant = self.searchRestaurants[indexPath.row]
-			let vc = self.storyboard?.instantiateViewController(withIdentifier: "restaurant") as? RestaurantController
+			let vc = UIStoryboard(name: "Restaurants", bundle: nil).instantiateInitialViewController() as? RestaurantController
 			vc?.restaurantID = restaurant.getId()
 			self.navigationController?.pushViewController(vc!, animated: false)
 			return 
@@ -109,24 +109,24 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 	}
 	
 	func goToSearch(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as? SearchController
+		let vc = UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController() as? SearchController
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 	
 	func goToFavorites(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "favorites") as? FavoritesController
+		let vc = UIStoryboard(name: "Favorites", bundle: nil).instantiateInitialViewController() as? FavoritesController
 		requests.requestUserRatings(id: profile.getID(), vc: vc!)
 		self.navigationController?.pushViewController(vc!, animated: false)
 	}
 	
 	func goToMore(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "more") as? MoreController
+		let vc = UIStoryboard(name: "More", bundle: nil).instantiateInitialViewController() as? MoreController
 		self.navigationController?.pushViewController(vc!, animated: false)
 		
 	}
 	
 	func goToNearMe(){
-		let vc = self.storyboard?.instantiateViewController(withIdentifier: "nearMe") as? NearMeViewController
+		let vc = UIStoryboard(name: "NearMe", bundle: nil).instantiateInitialViewController() as? NearMeViewController
 		self.navigationController?.pushViewController(vc!, animated: false)
 		
 	}
