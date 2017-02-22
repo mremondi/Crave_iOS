@@ -9,5 +9,5 @@ target 'Crave' do
 	pod 'Cosmos', '~> 7.0'
 	pod 'PopupDialog', '~> 0.5'
 	pod 'Appsee'
-
+    pod 'Firebase/Core'
 end

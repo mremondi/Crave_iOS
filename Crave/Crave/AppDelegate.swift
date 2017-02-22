@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 import Appsee
+import Firebase
 
 //Global Variables
 //let ColbyLat = 44.56362
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        FIRApp.configure()
         GMSServices.provideAPIKey("AIzaSyDYB7hpothkX4P8pvkuvoswkhhmciARvlY")
 		
 		Appsee.start("15780eee7d9a4bfb92bcdb6d6d22bba0")
