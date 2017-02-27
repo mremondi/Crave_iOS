@@ -11,6 +11,7 @@ import GoogleMaps
 import CoreLocation
 import Appsee
 import Firebase
+import UserNotifications
 
 //Global Variables
 //let ColbyLat = 44.56362
@@ -23,7 +24,7 @@ let VCUtils = ViewControllerUtils()
 var curAllItemList: [MenuItem] = []
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -33,13 +34,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         GMSServices.provideAPIKey("AIzaSyDYB7hpothkX4P8pvkuvoswkhhmciARvlY")
-		
-		Appsee.start("15780eee7d9a4bfb92bcdb6d6d22bba0")
-        
+		        
         locationManagerClass.enableLocation()
-        
+		
+		registerForRemoteNotification()
         return true
     }
+	
+	func registerForRemoteNotification() {
+		let center  = UNUserNotificationCenter.current()
+		center.delegate = self
+		center.requestAuthorization(options: [.alert, .badge]) { (granted, error) in
+			if error == nil{
+				UIApplication.shared.registerForRemoteNotifications()
+			}
+		}
+	}
+	
+	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+		print("User Info = ",notification.request.content.userInfo)
+		completionHandler([.alert, .badge, .sound])
+	}
+ 
+	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+		print("User Info = ",response.notification.request.content.userInfo)
+		completionHandler()
+	}
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

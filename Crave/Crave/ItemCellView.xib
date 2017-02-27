@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="378" height="64"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5br-uP-4i6" id="mcB-1l-i3j">
-                <rect key="frame" x="0.0" y="0.0" width="378" height="63"/>
+                <rect key="frame" x="0.0" y="0.0" width="378" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AK-25-nFF">
@@ -34,13 +34,13 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iu-nr-aOc">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$4.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iu-nr-aOc">
                         <rect key="frame" x="293" y="11" width="24" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$4.99" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J71-C7-Whb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J71-C7-Whb">
                         <rect key="frame" x="325" y="11" width="46" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -61,9 +61,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="itemName" destination="5AK-25-nFF" id="coC-E5-gGZ"/>
-                <outlet property="itemPrice" destination="J71-C7-Whb" id="PCt-6T-8si"/>
-                <outlet property="itemRating" destination="5iu-nr-aOc" id="biG-fP-GP8"/>
+                <outlet property="itemName" destination="5AK-25-nFF" id="3RG-Gm-sdV"/>
+                <outlet property="itemPrice" destination="5iu-nr-aOc" id="htB-Ht-ca8"/>
+                <outlet property="itemRating" destination="J71-C7-Whb" id="tpo-V4-9Tw"/>
                 <outlet property="restaurantName" destination="7l0-xy-rsy" id="XHs-GY-Cle"/>
             </connections>
             <point key="canvasLocation" x="-172" y="-154"/>

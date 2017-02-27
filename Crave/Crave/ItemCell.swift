@@ -12,9 +12,14 @@ class ItemCell: UITableViewCell {
 
 	var item: MenuItem?
 	
-	@IBOutlet weak var itemName: UILabel!
+	let redBorder = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+	let greenBorder = UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
+	let yellowBorder = UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
+
+	
 	@IBOutlet weak var itemRating: UILabel!
 	@IBOutlet weak var itemPrice: UILabel!
+	@IBOutlet weak var itemName: UILabel!
 	@IBOutlet weak var restaurantName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,13 +45,13 @@ class ItemCell: UITableViewCell {
 				averageRating = rating/numberOfRatings
 			}
 			if(rating < 1.5){
-				itemRating.layer.backgroundColor  =  UIColor.red.cgColor
+				self.layer.addBorder(edge: UIRectEdge.right, color: self.redBorder, thickness: 8)
 			}
 			else if (rating > 1.5 && rating < 3.5){
-				itemRating.layer.backgroundColor  = UIColor.yellow.cgColor
+				self.layer.addBorder(edge: UIRectEdge.right, color: self.yellowBorder, thickness: 8)
 			}
 			else{
-				itemRating.layer.backgroundColor  = UIColor.green.cgColor
+				self.layer.addBorder(edge: UIRectEdge.right, color: self.greenBorder, thickness: 8)
 			}
 			
 			itemRating.text = String(format: "%.2f", averageRating)
@@ -66,7 +71,6 @@ class ItemCell: UITableViewCell {
 	}
 	
 	func formatCellRating(item: MenuItem, rating: Rating){
-		
 		itemName.text = item.name
 		restaurantName.text = item.restaurantName
 		
@@ -77,13 +81,13 @@ class ItemCell: UITableViewCell {
 				averageRating = rating
 			}
 			if(rating < 1.5){
-				itemRating.layer.backgroundColor  =  UIColor.red.cgColor
+				self.layer.addBorder(edge: UIRectEdge.right, color: self.redBorder, thickness: 8)
 			}
 			else if (rating > 1.5 && rating < 3.5){
-				itemRating.layer.backgroundColor  = UIColor.yellow.cgColor
+				self.layer.addBorder(edge: UIRectEdge.right, color: self.yellowBorder, thickness: 8)
 			}
 			else{
-				itemRating.layer.backgroundColor  = UIColor.green.cgColor
+				self.layer.addBorder(edge: UIRectEdge.right, color: self.greenBorder, thickness: 8)
 			}
 			
 			itemRating.text = String(format: "%.2f", averageRating)
@@ -100,5 +104,34 @@ class ItemCell: UITableViewCell {
 		else{
 			itemPrice.isHidden = true
 		}
+	}
+}
+
+extension CALayer {
+	
+	func addBorder(edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
+		
+		let border = CALayer()
+		
+		switch edge {
+		case UIRectEdge.top:
+			border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: thickness)
+			break
+		case UIRectEdge.bottom:
+			border.frame = CGRect(x: 0, y: self.frame.height - thickness, width: self.frame.width, height: thickness)
+			break
+		case UIRectEdge.left:
+			border.frame = CGRect(x: 0, y: 0, width: thickness, height: self.frame.height)
+			break
+		case UIRectEdge.right:
+			border.frame = CGRect(x: self.frame.width - thickness, y: 0, width: thickness, height: self.frame.height)
+			break
+		default:
+			break
+		}
+		
+		border.backgroundColor = color.cgColor;
+		
+		self.addSublayer(border)
 	}
 }
