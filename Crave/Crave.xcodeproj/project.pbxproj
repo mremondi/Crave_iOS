@@ -19,6 +19,7 @@
 		429DD9DE1E1F0E9B0006CDEC /* TopBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429DD9DD1E1F0E9B0006CDEC /* TopBarAdapter.swift */; };
 		429DD9E11E217E140006CDEC /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429DD9E01E217E140006CDEC /* RestaurantController.swift */; };
 		42BE13CE1E2552C1008D04BD /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE13CD1E2552C1008D04BD /* MenuController.swift */; };
+		42D6AC1F1E64BB6000356796 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42D6AC1E1E64BB6000356796 /* GoogleService-Info.plist */; };
 		42F69E451E1EAB23005031AB /* NavViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E441E1EAB23005031AB /* NavViewInterface.swift */; };
 		42F69E471E1EB47B005031AB /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E461E1EB47B005031AB /* AboutUsController.swift */; };
 		42F69E491E1ECC0F005031AB /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F69E481E1ECC0F005031AB /* LogInController.swift */; };
@@ -75,6 +76,7 @@
 		429DD9DD1E1F0E9B0006CDEC /* TopBarAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarAdapter.swift; sourceTree = "<group>"; };
 		429DD9E01E217E140006CDEC /* RestaurantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
 		42BE13CD1E2552C1008D04BD /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		42D6AC1E1E64BB6000356796 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42F69E441E1EAB23005031AB /* NavViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewInterface.swift; sourceTree = "<group>"; };
 		42F69E461E1EB47B005031AB /* AboutUsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
 		42F69E481E1ECC0F005031AB /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				BF5AE65B1E3F42F200110B4B /* Storyboards */,
 				C3319D471DB2B1460024E577 /* Assets.xcassets */,
 				C3319D4C1DB2B1460024E577 /* Info.plist */,
+				42D6AC1E1E64BB6000356796 /* GoogleService-Info.plist */,
 				42F69E441E1EAB23005031AB /* NavViewInterface.swift */,
 			);
 			path = Crave;
@@ -373,6 +376,7 @@
 				BF5AE66E1E3F46FB00110B4B /* Favorites.storyboard in Resources */,
 				C3EC446B1E192F9600711602 /* RatingViewController.xib in Resources */,
 				BF5AE67D1E3F477200110B4B /* Menu.storyboard in Resources */,
+				42D6AC1F1E64BB6000356796 /* GoogleService-Info.plist in Resources */,
 				BF5AE6801E3F478600110B4B /* Item.storyboard in Resources */,
 				BF5AE6681E3F456400110B4B /* NearMe.storyboard in Resources */,
 				BF5AE6831E3F479600110B4B /* About.storyboard in Resources */,

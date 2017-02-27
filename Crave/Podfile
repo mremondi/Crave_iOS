@@ -10,4 +10,5 @@ target 'Crave' do
 	pod 'PopupDialog', '~> 0.5'
 	pod 'Appsee'
     pod 'Firebase/Core'
+	pod 'Firebase/Messaging'
 end
