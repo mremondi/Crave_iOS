@@ -12,9 +12,9 @@ class ItemCell: UITableViewCell {
 
 	var item: MenuItem?
 	
-	let redBorder = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
-	let greenBorder = UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
-	let yellowBorder = UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
+	let redBorder = UIColor(red:0.79, green:0.00, blue:0.16, alpha:1.0)
+	let greenBorder = UIColor(red:0.00, green:1.00, blue:0.40, alpha:1.0)
+	let yellowBorder = UIColor(red:0.63, green:1.00, blue:0.00, alpha:1.0)
 
 	
 	@IBOutlet weak var itemRating: UILabel!
