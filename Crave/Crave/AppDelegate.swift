@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+		
+		FIRApp.configure()
+
 		if #available(iOS 10.0, *) {
 			let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
 			UNUserNotificationCenter.current().requestAuthorization(
@@ -52,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		application.registerForRemoteNotifications()
 		
 		// [END register_for_notifications]
-		FIRApp.configure()
 		
 		// [START add_token_refresh_observer]
 		// Add observer for InstanceID token refresh callback.
@@ -106,8 +108,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
 	}
 	
-	func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
-		FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: .prod)
+	func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){		
+		#if PROD_BUILD
+			FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: .prod)
+		#else
+			FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: .sandbox)
+		#endif
 	}
 
 	
