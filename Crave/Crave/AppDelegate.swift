@@ -109,10 +109,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	
 	func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){		
-		#if PROD_BUILD
+		#if RELEASE
 			FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: .prod)
+			print("here1")
 		#else
 			FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: .sandbox)
+			print("here")
 		#endif
 	}
 
