@@ -100,7 +100,7 @@ class SearchController: UIViewController, UISearchBarDelegate, UITableViewDelega
 		}
 		else{
 			let restaurant = self.searchRestaurants[indexPath.row]
-			let vc = UIStoryboard(name: "Restaurants", bundle: nil).instantiateInitialViewController() as? RestaurantController
+			let vc = UIStoryboard(name: "Restaurant", bundle: nil).instantiateInitialViewController() as? RestaurantController
 			vc?.restaurantID = restaurant.getId()
 			self.navigationController?.pushViewController(vc!, animated: false)
 			return 

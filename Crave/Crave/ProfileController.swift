@@ -45,8 +45,9 @@ class ProfileController: UIViewController, NavViewInterface {
 		requests.requestLogout()
 		let defaults = UserDefaults.standard
 		defaults.set(Optional.none, forKey: "isLoggedIn")
-		let vc = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() as? LogInController
-		self.navigationController?.pushViewController(vc!, animated: true)
+		let nav = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() as! UINavigationController
+		let vc = nav.topViewController as! LogInController
+		self.navigationController?.pushViewController(vc, animated: true)
 	}
 	
 	//Function that calls the view controller function for when the update button is pressed
